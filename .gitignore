@@ -1,0 +1,2 @@
+# 本机的 Claude Code 权限设置，只对这台机器有意义，不进仓库。
+.claude/settings.local.json

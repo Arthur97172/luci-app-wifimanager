@@ -1,0 +1,18 @@
+{
+	"admin/network/wifimanager": {
+		"title": "WiFi Manager",
+		"order": 16,
+		"action": {
+			"type": "view",
+			"path": "wifimanager"
+		},
+		"depends": {
+			"acl": [ "luci-app-wifimanager" ],
+			"uci": {
+				"wireless": {
+					"@wifi-device": true
+				}
+			}
+		}
+	}
+}

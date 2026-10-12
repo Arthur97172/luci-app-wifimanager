@@ -1,0 +1,15 @@
+{
+	"luci-app-wifimanager": {
+		"description": "Grant access to LuCI app WiFi Manager",
+		"read": {
+			"ubus": {
+				"iwinfo": [ "assoclist" ],
+				"luci-rpc": [ "getWirelessDevices" ]
+			},
+			"uci": [ "wireless", "network" ]
+		},
+		"write": {
+			"uci": [ "wireless" ]
+		}
+	}
+}

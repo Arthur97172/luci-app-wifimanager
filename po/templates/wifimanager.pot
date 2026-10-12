@@ -1,0 +1,276 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "%d MLO interface(s) override the auto-generated MLD ifname."
+msgstr ""
+
+msgid "%d MLO interface(s) still have fewer than two radios selected."
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "AP MLO is usually paired with WPA3-SAE or OWE"
+msgstr ""
+
+msgid "Access Point"
+msgstr ""
+
+msgid "Client"
+msgstr ""
+
+msgid "Ad-Hoc"
+msgstr ""
+
+msgid "Mesh"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Active MLD ifnames"
+msgstr ""
+
+msgid "Add MLO-ready interface"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid ""
+"At least two configured radios are required before an MLO interface can be "
+"created."
+msgstr ""
+
+msgid "Attached network(s)"
+msgstr ""
+
+msgid "BSSID"
+msgstr ""
+
+msgid "Configured radios"
+msgstr ""
+
+msgid "Custom ifname overrides the default ap-mldX / sta-mldX naming"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disassociate on low ACK"
+msgstr ""
+
+msgid "Edit wireless interface"
+msgstr ""
+
+msgid "Enable MLO"
+msgstr ""
+
+msgid "Enable OCV"
+msgstr ""
+
+msgid "Enable U-APSD"
+msgstr ""
+
+msgid "Enable WDS / 4-address mode"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Encryption"
+msgstr ""
+
+msgid ""
+"For AP MLO, WPA3-SAE with Management Frame Protection set to Required is the "
+"most compatible starting point in this tree."
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Grant access to LuCI app WiFi Manager"
+msgstr ""
+
+msgid "Hide SSID"
+msgstr ""
+
+msgid "Interface name"
+msgstr ""
+
+msgid ""
+"Logical network names from <code>/etc/config/network</code>, for example "
+"<code>lan</code>."
+msgstr ""
+
+msgid "MAC address"
+msgstr ""
+
+msgid "MLD runtime"
+msgstr ""
+
+msgid "MLO"
+msgstr ""
+
+msgid ""
+"MLO is configured, but no active runtime MLD interface is currently reported."
+msgstr ""
+
+msgid "MLO requires at least two radio devices"
+msgstr ""
+
+msgid "MLO-enabled"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
+
+msgid "Needs at least two radios"
+msgstr ""
+
+msgid "Networks"
+msgstr ""
+
+msgid "No MLO-enabled wireless interface is configured yet."
+msgstr ""
+
+msgid "No active interface was reported yet"
+msgstr ""
+
+msgid "No encryption"
+msgstr ""
+
+msgid "No radio is configured. MLO needs at least two radios."
+msgstr ""
+
+msgid "No runtime state"
+msgstr ""
+
+msgid "No wireless interfaces are configured yet."
+msgstr ""
+
+msgid "OWE"
+msgstr ""
+
+msgid "Only one radio is configured. MLO needs at least two radios."
+msgstr ""
+
+msgid "Optional"
+msgstr ""
+
+msgid "Optional override for the generated interface MAC address."
+msgstr ""
+
+msgid ""
+"Optional override. Leave empty to use auto-generated names such as <code>ap-"
+"mld0</code> or <code>sta-mld0</code>."
+msgstr ""
+
+msgid "Passphrase"
+msgstr ""
+
+msgid "Passphrase is required for the selected encryption"
+msgstr ""
+
+msgid "Present"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Quick Add AP MLO"
+msgstr ""
+
+msgid "Quick Add STA MLO"
+msgstr ""
+
+msgid "Radio devices"
+msgstr ""
+
+msgid "Radios"
+msgstr ""
+
+msgid "Refresh Runtime Status"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Runtime"
+msgstr ""
+
+msgid ""
+"Runtime detection looks healthy. Auto-generated MLD names appear as <code>ap-"
+"mldX</code> or <code>sta-mldX</code>."
+msgstr ""
+
+msgid "Runtime radios"
+msgstr ""
+
+msgid "SSID"
+msgstr ""
+
+msgid "Save & Apply, then verify driver support if this persists"
+msgstr ""
+
+msgid "Section is disabled in UCI"
+msgstr ""
+
+msgid "Security"
+msgstr ""
+
+msgid "Select at least one radio device"
+msgstr ""
+
+msgid "Select one radio for normal Wi-Fi, or two or more radios for MLO."
+msgstr ""
+
+msgid "Single-link"
+msgstr ""
+
+msgid "Stations"
+msgstr ""
+
+msgid "WPA/WPA2 mixed PSK"
+msgstr ""
+
+msgid "WPA2-PSK"
+msgstr ""
+
+msgid "WPA2/WPA3 mixed"
+msgstr ""
+
+msgid "WPA3-SAE"
+msgstr ""
+
+msgid ""
+"When enabled, this <code>wifi-iface</code> spans multiple radios through a "
+"multi-value <code>device</code> list."
+msgstr ""
+
+msgid "WiFi Manager"
+msgstr ""
+
+msgid "WiFi Manager Overview"
+msgstr ""
+
+msgid "Wireless Interfaces"
+msgstr ""
+
+msgid "Wireless interfaces"
+msgstr ""
+
+msgid "channel %s"
+msgstr ""
+
+msgid "ifname"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "unknown"
+msgstr ""
+
+msgid "unset"
+msgstr ""
