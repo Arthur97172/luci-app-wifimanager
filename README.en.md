@@ -5,12 +5,45 @@
 A **WiFi Manager** page under LuCI's Network menu for managing Wi-Fi MLO (Multi-Link Operation,
 Wi-Fi 7 / 802.11be) interfaces.
 
-## The problem it solves
+## Installation
 
-In OpenWrt an MLO interface is a `wifi-iface` carrying `mlo=1` whose `device` list names
-**two or more** radios. The driver aggregates those radios into one MLD (multi-link
-device) and auto-generates an interface name such as `ap-mld0` / `sta-mld0`. Hand-writing
-that UCI is easy to get wrong, so this package provides a dedicated page.
+> The version number in the package name must match `PKG_VERSION` / `PKG_RELEASE` in the
+> [Makefile](Makefile) (currently `1.0.0-r1`).
+
+**Minimum supported: OpenWrt / ImmortalWrt 24.10** (earlier versions are not supported).
+
+opkg (OpenWrt / ImmortalWrt 24.10 and earlier):
+
+```bash
+opkg install luci-app-wifimanager-*.ipk
+```
+
+apk (OpenWrt / ImmortalWrt 25.12+):
+
+```bash
+apk add --allow-untrusted luci-app-wifimanager-*.apk
+```
+
+The Simplified Chinese UI requires a **separately installed** translation package — the main
+package ships no translations, so the UI stays in English without it:
+
+```bash
+opkg install luci-i18n-wifimanager-zh-cn*.ipk                 # 24.10 and earlier
+apk add --allow-untrusted luci-i18n-wifimanager-zh-cn*.apk    # 25.12+
+```
+
+### Build from source
+
+```sh
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+git clone https://github.com/Arthur97172/luci-app-wifimanager.git package/luci-app-wifimanager
+make menuconfig   # LuCI -> Applications -> luci-app-wifimanager
+make package/luci-app-wifimanager/compile V=s
+```
+
+Output: `luci-app-wifimanager_1.0.0-r1_all.ipk`.
 
 ## Where it lives
 
@@ -33,6 +66,13 @@ Clicking a row opens the editor, which has three tabs:
 - **Advanced** — Interface name, MAC address, BSSID, WDS / 4-address mode, U-APSD, OCV,
   Disassociate on low ACK
 
+## The problem it solves
+
+In OpenWrt an MLO interface is a `wifi-iface` carrying `mlo=1` whose `device` list names
+**two or more** radios. The driver aggregates those radios into one MLD (multi-link
+device) and auto-generates an interface name such as `ap-mld0` / `sta-mld0`. Hand-writing
+that UCI is easy to get wrong, so this package provides a dedicated page.
+
 ## Things worth knowing
 
 - **MLO needs at least two radios.** With fewer, the page says so plainly and Quick Add
@@ -52,15 +92,6 @@ Clicking a row opens the editor, which has three tabs:
 - `luci-base` — the page's modules and the menu parent; pulls in `rpcd-mod-luci`, which
   provides the `luci-rpc` ubus object
 - `rpcd-mod-iwinfo` — the runtime column reads associated stations via `iwinfo.assoclist`
-
-## Building
-
-```sh
-make menuconfig      # LuCI -> Applications -> luci-app-wifimanager
-make package/luci-app-wifimanager/compile V=s
-```
-
-Output: `luci-app-wifimanager_1.0.0-r1_all.ipk`.
 
 ## Tests
 
