@@ -5,6 +5,8 @@
 本包在 LuCI 的「网络」菜单里提供 **WiFi Manager** 页面，用于管理 Wi-Fi MLO（Multi-Link
 Operation，Wi-Fi 7 / 802.11be 多链路）接口。
 
+![WiFi Manager 页面](screenshot.png)
+
 ## 安装
 
 > 包名中的版本号必须与 [Makefile](Makefile) 的 `PKG_VERSION` / `PKG_RELEASE` 保持一致

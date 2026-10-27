@@ -5,6 +5,8 @@
 A **WiFi Manager** page under LuCI's Network menu for managing Wi-Fi MLO (Multi-Link Operation,
 Wi-Fi 7 / 802.11be) interfaces.
 
+![WiFi Manager page](screenshot.png)
+
 ## Installation
 
 > The version number in the package name must match `PKG_VERSION` / `PKG_RELEASE` in the
