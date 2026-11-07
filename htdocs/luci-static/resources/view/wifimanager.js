@@ -121,6 +121,78 @@ function radioMap(radios) {
 	return out;
 }
 
+// The overview cards and status text carry their own colors, so they have to
+// follow the active theme. Bootstrap and Argon expose different variable names
+// and Argon 2.x even switches themes by loading a second stylesheet, so instead
+// of sniffing theme internals, derive the mode from the computed body colors:
+// every one of them flips those when it goes dark.
+const LIGHT_PALETTE = {
+	cardBackground: '#fafafa',
+	cardBorder: '#d7d7d7',
+	mutedText: '#666',
+	okText: '#2f6f3e',
+	warningText: '#8a6d3b',
+	errorText: '#b94a48',
+	primaryBadge: '#2d6cdf',
+	neutralBadge: '#6c757d',
+	okBadge: '#2f6f3e',
+	errorBadge: '#b94a48',
+	modeBadge: '#495057'
+};
+
+const DARK_PALETTE = {
+	cardBackground: '#2d2d2d',
+	cardBorder: '#3c3c3c',
+	mutedText: '#adb5bd',
+	okText: '#7ee2a8',
+	warningText: '#f6c177',
+	errorText: '#ffa9ae',
+	primaryBadge: '#3b6fe0',
+	neutralBadge: '#6c757d',
+	okBadge: '#1f7a4d',
+	errorBadge: '#c73850',
+	modeBadge: '#6c757d'
+};
+
+function colorLuminance(color) {
+	let match = /rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)(?:[,\s/]+([\d.]+))?\s*\)/.exec(color || '');
+
+	if (!match)
+		return null;
+
+	// A fully transparent background says nothing about the theme.
+	if (match[4] !== undefined && parseFloat(match[4]) === 0)
+		return null;
+
+	let channels = match.slice(1, 4).map(function(value) {
+		let channel = parseFloat(value) / 255;
+		return (channel <= 0.03928) ? channel / 12.92 : Math.pow((channel + 0.055) / 1.055, 2.4);
+	});
+
+	return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+}
+
+function isDarkTheme() {
+	// The test sandbox has no document/getComputedStyle; treat it as light.
+	if (typeof document == 'undefined' || typeof getComputedStyle != 'function' || !document.body)
+		return false;
+
+	let style = getComputedStyle(document.body);
+	let background = colorLuminance(style.backgroundColor);
+
+	if (background !== null)
+		return background < 0.4;
+
+	// Some themes paint the page background on a parent element; light text is
+	// then the reliable signal that the theme is dark.
+	let foreground = colorLuminance(style.color);
+	return foreground !== null && foreground > 0.5;
+}
+
+function currentPalette() {
+	return isDarkTheme() ? DARK_PALETTE : LIGHT_PALETTE;
+}
+
 function renderBadge(label, background, foreground) {
 	return E('span', {
 		'style': 'display:inline-block;margin:0 .35em .35em 0;padding:.15em .55em;border-radius:999px;background:%s;color:%s;font-size:12px;line-height:1.3;white-space:nowrap;'.format(background, foreground || '#fff')
@@ -323,37 +395,42 @@ function collectSummary(runtime, radios) {
 	return summary;
 }
 
-function renderMetric(label, value) {
+function renderMetric(label, value, palette) {
 	return E('div', {
-		'style': 'flex:1 1 10em;min-width:10em;padding:.85em 1em;border:1px solid #d7d7d7;border-radius:10px;background:#fafafa;'
+		'style': 'flex:1 1 10em;min-width:10em;padding:.85em 1em;border:1px solid %s;border-radius:10px;background:%s;box-sizing:border-box;'.format(palette.cardBorder, palette.cardBackground)
 	}, [
-		E('div', { 'style': 'font-size:12px;color:#666;margin-bottom:.25em;' }, label),
+		E('div', { 'style': 'font-size:12px;color:%s;margin-bottom:.25em;'.format(palette.mutedText) }, label),
 		E('div', { 'style': 'font-size:22px;font-weight:600;line-height:1.2;' }, value)
 	]);
 }
 
 function renderSummaryBox(runtime, summary, addApMlo, addStaMlo, refreshStatus) {
+	let palette = currentPalette();
 	let warningList = summary.warnings.length
 		? E('ul', { 'style': 'margin:.75em 0 0 1.2em;' },
 			summary.warnings.map(w => E('li', { 'style': 'margin:.25em 0;' }, w)))
-		: E('div', { 'style': 'margin-top:.75em;color:#2f6f3e;' },
+		: E('div', { 'style': 'margin-top:.75em;color:%s;'.format(palette.okText) },
 			_('Runtime detection looks healthy. Auto-generated MLD names appear as <code>ap-mldX</code> or <code>sta-mldX</code>.'));
 
-		return E('div', {
-			'class': 'cbi-section',
-			'data-mlo-summary-box': '1'
-		}, [
-			E('h3', _('WiFi Manager Overview')),
-			E('div', {
-				'style': 'display:flex;gap:.75em;flex-wrap:wrap;margin:.5em 0 1em 0;'
-			}, [
-			renderMetric(_('Configured radios'), String(runtime.radios.length)),
-			renderMetric(_('Wireless interfaces'), String(summary.totalIfaces)),
-			renderMetric(_('MLO-enabled'), String(summary.mloIfaces)),
-			renderMetric(_('Active MLD ifnames'), runtime.activeMldIfnames.length ? runtime.activeMldIfnames.join(', ') : _('none'))
-		]),
+	return E('div', {
+		'class': 'cbi-section',
+		'data-mlo-summary-box': '1'
+	}, [
+		E('h3', _('WiFi Manager Overview')),
 		E('div', {
-			'style': 'display:flex;gap:.5em;flex-wrap:wrap;margin-bottom:.5em;'
+			'style': 'display:flex;gap:.75em;flex-wrap:wrap;margin:.5em 0 1em 0;padding-inline:var(--section-inset, 10px);box-sizing:border-box;'
+		}, [
+			renderMetric(_('Configured radios'), String(runtime.radios.length), palette),
+			renderMetric(_('Wireless interfaces'), String(summary.totalIfaces), palette),
+			renderMetric(_('MLO-enabled'), String(summary.mloIfaces), palette),
+			renderMetric(_('Active MLD ifnames'), runtime.activeMldIfnames.length ? runtime.activeMldIfnames.join(', ') : _('none'), palette)
+		]),
+		// Reusing the theme's own add-button container keeps this row on the same
+		// left inset as the GridSection's "Add MLO-ready interface" button in
+		// both bootstrap (10px) and Argon (1rem), without hardcoding either.
+		E('div', {
+			'class': 'cbi-section-create',
+			'style': 'display:inline-flex;flex-wrap:wrap;align-items:center;max-width:100%;gap:var(--control-gap, .5em);'
 		}, [
 			E('button', {
 				'class': 'cbi-button cbi-button-add',
@@ -385,25 +462,26 @@ function renderSectionOverview(section_id, radiosByName) {
 	let cfg = uci.get('wireless', section_id) || {};
 	let devices = uniqueValues(cfg.device);
 	let networks = uniqueValues(cfg.network);
+	let palette = currentPalette();
 	let issues = [];
 
 	if (cfg.mlo == '1' && devices.length < 2)
-		issues.push(E('div', { 'style': 'color:#b94a48;margin-top:.25em;' }, _('Needs at least two radios')));
+		issues.push(E('div', { 'style': 'color:%s;margin-top:.25em;'.format(palette.errorText) }, _('Needs at least two radios')));
 
 	if (cfg.mlo == '1' && cfg.mode == 'ap' && ![ 'sae', 'sae-mixed', 'owe' ].includes(cfg.encryption))
-		issues.push(E('div', { 'style': 'color:#8a6d3b;margin-top:.25em;' }, _('AP MLO is usually paired with WPA3-SAE or OWE')));
+		issues.push(E('div', { 'style': 'color:%s;margin-top:.25em;'.format(palette.warningText) }, _('AP MLO is usually paired with WPA3-SAE or OWE')));
 
 	if (cfg.mlo == '1' && cfg.ifname && cfg.ifname.indexOf('mld') < 0)
-		issues.push(E('div', { 'style': 'color:#8a6d3b;margin-top:.25em;' }, _('Custom ifname overrides the default ap-mldX / sta-mldX naming')));
+		issues.push(E('div', { 'style': 'color:%s;margin-top:.25em;'.format(palette.warningText) }, _('Custom ifname overrides the default ap-mldX / sta-mldX naming')));
 
 		return E('div', {
 			'data-mlo-overview-section': section_id,
 			'style': 'min-width:17em;'
 		}, [
 			E('div', { 'style': 'margin-bottom:.2em;' }, [
-			renderBadge(cfg.mlo == '1' ? _('MLO') : _('Single-link'), cfg.mlo == '1' ? '#2d6cdf' : '#6c757d'),
-			renderBadge((cfg.mode || 'ap').toUpperCase(), '#495057'),
-			renderBadge(cfg.disabled == '1' ? _('Disabled') : _('Enabled'), cfg.disabled == '1' ? '#b94a48' : '#2f6f3e')
+			renderBadge(cfg.mlo == '1' ? _('MLO') : _('Single-link'), cfg.mlo == '1' ? palette.primaryBadge : palette.neutralBadge),
+			renderBadge((cfg.mode || 'ap').toUpperCase(), palette.modeBadge),
+			renderBadge(cfg.disabled == '1' ? _('Disabled') : _('Enabled'), cfg.disabled == '1' ? palette.errorBadge : palette.okBadge)
 			]),
 			renderMetaLine(_('SSID'), cfg.ssid || E('em', _('unset'))),
 			renderMetaLine(_('Radios'), devices.length
@@ -418,14 +496,15 @@ function renderSectionOverview(section_id, radiosByName) {
 function renderRuntimeCell(section_id, runtime) {
 	let cfg = uci.get('wireless', section_id) || {};
 	let state = runtime.sections[section_id];
+	let palette = currentPalette();
 
 	if (cfg.disabled == '1') {
 		return E('div', {
 			'data-mlo-runtime-section': section_id,
 			'style': 'min-width:15em;'
 		}, [
-			renderBadge(_('Disabled'), '#b94a48'),
-			E('div', { 'style': 'margin-top:.25em;color:#666;' }, _('Section is disabled in UCI'))
+			renderBadge(_('Disabled'), palette.errorBadge),
+			E('div', { 'style': 'margin-top:.25em;color:%s;'.format(palette.mutedText) }, _('Section is disabled in UCI'))
 		]);
 	}
 
@@ -434,10 +513,10 @@ function renderRuntimeCell(section_id, runtime) {
 			'data-mlo-runtime-section': section_id,
 			'style': 'min-width:15em;'
 		}, [
-			renderBadge(_('No runtime state'), '#6c757d'),
-			E('div', { 'style': 'margin-top:.25em;color:#666;' }, _('No active interface was reported yet')),
+			renderBadge(_('No runtime state'), palette.neutralBadge),
+			E('div', { 'style': 'margin-top:.25em;color:%s;'.format(palette.mutedText) }, _('No active interface was reported yet')),
 			cfg.mlo == '1'
-				? E('div', { 'style': 'margin-top:.25em;color:#8a6d3b;' }, _('Save & Apply, then verify driver support if this persists'))
+				? E('div', { 'style': 'margin-top:.25em;color:%s;'.format(palette.warningText) }, _('Save & Apply, then verify driver support if this persists'))
 				: null
 		]);
 	}
@@ -447,8 +526,8 @@ function renderRuntimeCell(section_id, runtime) {
 		'style': 'min-width:15em;'
 	}, [
 		E('div', { 'style': 'margin-bottom:.2em;' }, compactChildren([
-			renderBadge(state.up ? _('Active') : _('Present'), state.up ? '#2f6f3e' : '#6c757d'),
-			state.mldDetected ? renderBadge(_('MLD runtime'), '#2d6cdf') : null
+			renderBadge(state.up ? _('Active') : _('Present'), state.up ? palette.okBadge : palette.neutralBadge),
+			state.mldDetected ? renderBadge(_('MLD runtime'), palette.primaryBadge) : null
 		])),
 		renderMetaLine(_('ifname'), state.ifnames.length ? state.ifnames.join(', ') : E('em', _('unknown'))),
 		renderMetaLine(_('Runtime radios'), state.radios.join(', ')),
