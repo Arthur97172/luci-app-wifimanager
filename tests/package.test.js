@@ -27,11 +27,11 @@ function rpcMethods() {
 	return out;
 }
 
-test('package: the Makefile carries the 2.0.2 identity and its dependencies', function() {
+test('package: the Makefile carries the 2.0.3 identity and its dependencies', function() {
 	const source = lib.read(MAKEFILE);
 
 	includes(source, 'PKG_NAME:=luci-app-wifimanager');
-	includes(source, 'PKG_VERSION:=2.0.2');
+	includes(source, 'PKG_VERSION:=2.0.3');
 	includes(source, 'PKG_RELEASE:=1');
 	includes(source, 'PKG_LICENSE:=GPL-3.0-only');
 	includes(source, 'LUCI_DEPENDS:=+luci-base');
@@ -223,6 +223,39 @@ test('package: every LuCI module factory returns a class', function() {
 		}
 		else {
 			ok(false, file + ' does not return a LuCI class');
+		}
+	}
+});
+
+test('package: every module declares the LuCI modules it uses', function() {
+	// A missing 'require dom' fails only at render time, as
+	// "ReferenceError: dom is not defined", so check the directives instead.
+	const ids = [ 'dom', 'ui', 'fs', 'poll', 'request', 'session',
+		'form', 'view', 'baseclass', 'uci' ];
+
+	function strip(source) {
+		return source.replace(/\/\*[\s\S]*?\*\//g, '')
+			.replace(/(^|[^:])\/\/[^\n]*/g, '$1')
+			.replace(/'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"/g, ' ');
+	}
+
+	for (const file of lib.listFiles('htdocs/luci-static/resources', '.js')) {
+		const source = lib.read(file);
+		const code = strip(source);
+		const provided = new Set();
+
+		for (const match of source.matchAll(/'require ([^']+)';/g)) {
+			const spec = match[1];
+			const alias = spec.match(/ as (\w+)$/);
+
+			provided.add(alias ? alias[1] : spec.split('.').pop());
+		}
+
+		for (const id of ids) {
+			const used = code.match(new RegExp('(?<![.\\w$])' + id + '\\.[A-Za-z_$]', 'g'));
+
+			if (used)
+				ok(provided.has(id), file + ' uses ' + id + '. but does not require ' + id);
 		}
 	}
 });

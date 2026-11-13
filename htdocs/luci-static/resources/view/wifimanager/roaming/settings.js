@@ -9,6 +9,8 @@
 'require wifimanager.utils.roaming-advice as adviceUtil';
 'require wifimanager.utils.neighbors as neighbours';
 'require wifimanager.utils.radio as radioUtil';
+'require dom';
+'require ui';
 
 const card = widgets.card;
 const table = widgets.table;

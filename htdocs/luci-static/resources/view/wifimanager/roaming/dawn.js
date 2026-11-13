@@ -3,6 +3,8 @@
 'require wifimanager.utils.rpc as rpc';
 'require wifimanager.utils.widgets as widgets';
 'require wifimanager.utils.format as format';
+'require dom';
+'require ui';
 
 const card = widgets.card;
 const table = widgets.table;

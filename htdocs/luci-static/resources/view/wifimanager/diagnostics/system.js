@@ -4,6 +4,7 @@
 'require wifimanager.utils.widgets as widgets';
 'require wifimanager.utils.format as format';
 'require wifimanager.utils.diagnosis as diagnosis';
+'require dom';
 
 const card = widgets.card;
 const table = widgets.table;

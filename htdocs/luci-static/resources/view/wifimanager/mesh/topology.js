@@ -5,6 +5,7 @@
 'require wifimanager.utils.mesh as mesh';
 'require wifimanager.utils.topology as topology';
 'require wifimanager.utils.format as format';
+'require dom';
 
 const card = widgets.card;
 const table = widgets.table;

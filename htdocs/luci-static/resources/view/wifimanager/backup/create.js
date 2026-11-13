@@ -5,6 +5,8 @@
 'require wifimanager.utils.format as format';
 'require wifimanager.utils.backup as backup';
 'require wifimanager.utils.validation as validation';
+'require dom';
+'require ui';
 
 const card = widgets.card;
 const badge = widgets.badge;

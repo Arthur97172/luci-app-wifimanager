@@ -5,6 +5,7 @@
 'require wifimanager.utils.format as format';
 'require wifimanager.utils.radio as radio';
 'require wifimanager.utils.network as network';
+'require dom';
 
 const card = widgets.card;
 const kv = widgets.kv;

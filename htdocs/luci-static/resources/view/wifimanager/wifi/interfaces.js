@@ -4,6 +4,7 @@
 'require wifimanager.utils.widgets as widgets';
 'require wifimanager.utils.radio as radio';
 'require wifimanager.utils.wireless-form as wirelessForm';
+'require dom';
 
 const card = widgets.card;
 const table = widgets.table;

@@ -4,6 +4,7 @@
 'require wifimanager.utils.widgets as widgets';
 'require wifimanager.utils.format as format';
 'require wifimanager.utils.backup as backup';
+'require dom';
 
 const card = widgets.card;
 const alert = widgets.alert;

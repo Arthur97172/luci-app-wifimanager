@@ -8,6 +8,7 @@
 'require wifimanager.utils.format as format';
 'require wifimanager.utils.validation as validation';
 'require wifimanager.utils.uci as uciutil';
+'require ui';
 
 const card = widgets.card;
 const table = widgets.table;

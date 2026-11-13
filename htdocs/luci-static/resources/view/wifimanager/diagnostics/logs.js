@@ -2,6 +2,7 @@
 'require view';
 'require wifimanager.utils.rpc as rpc';
 'require wifimanager.utils.widgets as widgets';
+'require dom';
 
 const card = widgets.card;
 const alert = widgets.alert;

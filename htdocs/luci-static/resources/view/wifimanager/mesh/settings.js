@@ -7,6 +7,7 @@
 'require wifimanager.utils.radio as radio';
 'require wifimanager.utils.validation as validation';
 'require wifimanager.utils.uci as uciutil';
+'require ui';
 
 const listValues = function(value) {
 	if (value == null)

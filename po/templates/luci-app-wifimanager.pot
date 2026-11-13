@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: luci-app-wifimanager 2.0.2\n"
+"Project-Id-Version: luci-app-wifimanager 2.0.3\n"
 "Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
 "POT-Creation-Date: 2026-11-12 00:00+0800\n"
 "PO-Revision-Date: 2026-11-12 00:00+0800\n"

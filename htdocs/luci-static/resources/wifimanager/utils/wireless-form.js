@@ -5,6 +5,7 @@
 'require wifimanager.utils.widgets as widgets';
 'require wifimanager.utils.wireless as wireless';
 'require wifimanager.utils.radio as radio';
+'require dom';
 
 /*
  * One dialog shared by the Wireless and MLO pages.  It edits the same

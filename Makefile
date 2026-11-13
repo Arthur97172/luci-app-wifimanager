@@ -6,7 +6,7 @@
 #
 
 PKG_NAME:=luci-app-wifimanager
-PKG_VERSION:=2.0.2
+PKG_VERSION:=2.0.3
 PKG_RELEASE:=1
 
 PKG_LICENSE:=GPL-3.0-only
