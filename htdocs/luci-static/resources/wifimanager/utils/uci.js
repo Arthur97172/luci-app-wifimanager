@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require uci';
 
 /*
@@ -53,11 +54,11 @@ function ensureConfig(packageName) {
 	});
 }
 
-return {
+return baseclass.extend({
 	listValues: listValues,
 	getBool: getBool,
 	getInt: getInt,
 	getList: getList,
 	has: has,
 	ensureConfig: ensureConfig
-};
+});

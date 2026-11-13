@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 
 /*
  * Pure draft validation for the wireless interface editor.  The same rules
@@ -239,7 +240,7 @@ function modeName(mode) {
 	return mode || _('Unknown');
 }
 
-return {
+return baseclass.extend({
 	MODES: MODES,
 	ENCRYPTIONS: ENCRYPTIONS,
 	KEY_ENCRYPTIONS: KEY_ENCRYPTIONS,
@@ -249,4 +250,4 @@ return {
 	validate: validate,
 	payload: payload,
 	modeName: modeName
-};
+});

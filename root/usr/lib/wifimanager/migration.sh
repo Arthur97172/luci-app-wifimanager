@@ -52,6 +52,7 @@ migration_ok_json() { # message
 # Idempotent: a reinstall never reopens a decision the operator already made.
 migration_prepare() {
 	local old_valid=1 backup_id was_enabled msg
+	local prev_pending prev_was prev_backup detected_at
 
 	migration_legacy_present || {
 		wm_log "migration: no legacy installation detected."
@@ -70,18 +71,41 @@ migration_prepare() {
 		wm_log "migration: $msg"
 	fi
 
-	backup_id=$(backup_create_auto full "Before switching from Mesh Assistant")
+	# A reinstall or upgrade re-runs this while the decision is still pending.
+	# By then this package has already disabled the legacy daemon, so its live
+	# state no longer tells whether the operator had it enabled: keep the value
+	# and the backup recorded when the switch was first detected, and do not
+	# stack another pre-migration archive on top of the existing one.
+	prev_pending=$(migration_conf migration_pending)
+	prev_was=$(migration_conf migration_legacy_was_enabled)
+	prev_backup=$(migration_conf migration_backup)
+
+	backup_id=
+	if [ "$prev_pending" != 1 ] || [ -z "$prev_backup" ]; then
+		backup_id=$(backup_create_auto full "Before switching from Mesh Assistant")
+	fi
+	if [ -z "$backup_id" ]; then
+		backup_id=$prev_backup
+	fi
 	if [ -z "$backup_id" ]; then
 		wm_log "migration: the pre-migration backup failed; continuing without one."
 	fi
 
 	was_enabled=$(migration_legacy_enabled)
+	if [ "$prev_pending" = 1 ] && [ -n "$prev_was" ]; then
+		was_enabled=$prev_was
+	fi
+
+	detected_at=$(migration_conf migration_detected_at)
+	if [ "$prev_pending" != 1 ] || [ -z "$detected_at" ]; then
+		detected_at=$(date +%s)
+	fi
 
 	uci set wifimanager.settings.migration_pending=1
 	uci set wifimanager.settings.migration_legacy_present=1
 	uci set wifimanager.settings.migration_legacy_was_enabled="$was_enabled"
 	uci set wifimanager.settings.migration_old_valid="$old_valid"
-	uci set wifimanager.settings.migration_detected_at="$(date +%s)"
+	uci set wifimanager.settings.migration_detected_at="$detected_at"
 	[ -n "$backup_id" ] && uci set wifimanager.settings.migration_backup="$backup_id"
 
 	# Coexistence: two managers must never run at the same time.  This is the

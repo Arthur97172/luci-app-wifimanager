@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 
 /*
  * Validation shared by the forms and by the read-only pages that preview a
@@ -116,7 +117,7 @@ function isScopeArea(area) {
 	return Object.prototype.hasOwnProperty.call(AREAS, area);
 }
 
-return {
+return baseclass.extend({
 	isIPv4: isIPv4,
 	isNetmask: isNetmask,
 	isMac: isMac,
@@ -129,4 +130,4 @@ return {
 	isDescription: isDescription,
 	isScopeArea: isScopeArea,
 	AREAS: AREAS
-};
+});

@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require wifimanager.utils.widgets as widgets';
 
 /*
@@ -83,9 +84,9 @@ function findingsCard(report, options) {
 	});
 }
 
-return {
+return baseclass.extend({
 	TITLES: TITLES,
 	title: title,
 	severityBadge: severityBadge,
 	findingsCard: findingsCard
-};
+});

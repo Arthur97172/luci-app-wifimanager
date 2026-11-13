@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 
 /*
  * Small formatters shared by every page.  They never invent a value: a
@@ -137,7 +138,7 @@ function text(value) {
 	return String(value == null ? '' : value);
 }
 
-return {
+return baseclass.extend({
 	number: number,
 	dash: dash,
 	bytesFromKb: bytesFromKb,
@@ -150,4 +151,4 @@ return {
 	dateFromEpoch: dateFromEpoch,
 	mac: mac,
 	text: text
-};
+});

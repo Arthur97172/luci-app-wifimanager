@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 
 /*
  * Ranking for the automatic channel recommendation.
@@ -114,9 +115,9 @@ function rank(reply) {
 	};
 }
 
-return {
+return baseclass.extend({
 	freqOf: freqOf,
 	signalWeight: signalWeight,
 	overlapSpan: overlapSpan,
 	rank: rank
-};
+});

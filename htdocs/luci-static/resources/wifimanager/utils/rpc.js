@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require rpc';
 
 /*
@@ -39,7 +40,7 @@ const countryList = rpc.declare({
 	expect: { results: [] }
 });
 
-return {
+return baseclass.extend({
 	freqList: freqList,
 	countryList: countryList,
 
@@ -91,4 +92,4 @@ return {
 	meshDumbap: declare('mesh_dumbap'),
 	meshUndumbap: declare('mesh_undumbap'),
 	roamingApply: declare('roaming_apply')
-};
+});

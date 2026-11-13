@@ -27,11 +27,11 @@ function rpcMethods() {
 	return out;
 }
 
-test('package: the Makefile carries the 2.0.1 identity and its dependencies', function() {
+test('package: the Makefile carries the 2.0.2 identity and its dependencies', function() {
 	const source = lib.read(MAKEFILE);
 
 	includes(source, 'PKG_NAME:=luci-app-wifimanager');
-	includes(source, 'PKG_VERSION:=2.0.1');
+	includes(source, 'PKG_VERSION:=2.0.2');
 	includes(source, 'PKG_RELEASE:=1');
 	includes(source, 'PKG_LICENSE:=GPL-3.0-only');
 	includes(source, 'LUCI_DEPENDS:=+luci-base');
@@ -206,6 +206,24 @@ test('package: JSON sources are valid and every JS file parses', function() {
 		const result = lib.command('node', [ '--check', '-' ], { input: lib.read(file) });
 
 		equal(result.status, 0, file + ': ' + (result.stderr || '').split('\n')[0]);
+	}
+});
+
+test('package: every LuCI module factory returns a class', function() {
+	// require() rejects a factory that returns a plain object ("factory yields
+	// invalid constructor"), so each module must return a Class subclass.
+	for (const file of lib.listFiles('htdocs/luci-static/resources', '.js')) {
+		const source = lib.read(file);
+
+		if (source.indexOf('return baseclass.extend({') !== -1) {
+			includes(source, "'require baseclass';", file + ' declares baseclass');
+		}
+		else if (source.indexOf('return view.extend({') !== -1) {
+			includes(source, "'require view';", file + ' declares view');
+		}
+		else {
+			ok(false, file + ' does not return a LuCI class');
+		}
 	}
 });
 

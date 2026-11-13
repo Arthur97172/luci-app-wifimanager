@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require wifimanager.utils.validation as validation';
 
 /*
@@ -143,7 +144,7 @@ function scopeWarnings(scope) {
 	return warnings;
 }
 
-return {
+return baseclass.extend({
 	TYPE_NAMES: TYPE_NAMES,
 	FREQUENCY_NAMES: FREQUENCY_NAMES,
 	typeName: typeName,
@@ -157,4 +158,4 @@ return {
 	affectedFiles: affectedFiles,
 	touchesConnectivity: touchesConnectivity,
 	scopeWarnings: scopeWarnings
-};
+});

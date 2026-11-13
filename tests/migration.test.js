@@ -119,6 +119,24 @@ test('migration: preparation validates, backs up and records a pending confirmat
 	includes(prepare, 'the operator already decided; state left unchanged.');
 });
 
+test('migration: a reinstall keeps the state recorded when the switch was detected', function() {
+	const source = lib.read(MIGRATION);
+	const prepare = source.slice(source.indexOf('migration_prepare()'), source.indexOf('migration_status_json()'));
+
+	// The legacy daemon is disabled by this package before a reinstall runs, so
+	// re-deriving "was enabled" from its live state would forget a 1 and postrm
+	// would never restore the service.
+	includes(prepare, 'prev_pending=$(migration_conf migration_pending)');
+	includes(prepare, 'prev_was=$(migration_conf migration_legacy_was_enabled)');
+	includes(prepare, 'prev_backup=$(migration_conf migration_backup)');
+	includes(prepare, 'if [ "$prev_pending" = 1 ] && [ -n "$prev_was" ]; then');
+	includes(prepare, 'was_enabled=$prev_was');
+	includes(prepare, 'if [ "$prev_pending" != 1 ] || [ -z "$prev_backup" ]; then');
+	includes(prepare, 'backup_id=$prev_backup');
+	includes(prepare, 'detected_at=$(migration_conf migration_detected_at)');
+	includes(prepare, 'uci set wifimanager.settings.migration_detected_at="$detected_at"');
+});
+
 test('migration: confirmation is explicit, validates the current config and clears pending', function() {
 	const source = lib.read(MIGRATION);
 	const confirm = source.slice(source.indexOf('migration_confirm_json()'), source.indexOf('migration_restore_legacy_json()'));

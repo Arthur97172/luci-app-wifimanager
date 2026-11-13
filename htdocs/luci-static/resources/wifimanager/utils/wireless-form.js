@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require ui';
 'require wifimanager.utils.rpc as rpc';
 'require wifimanager.utils.widgets as widgets';
@@ -509,7 +510,7 @@ function remove(entry) {
 	});
 }
 
-return {
+return baseclass.extend({
 	open: open,
 	remove: remove
-};
+});

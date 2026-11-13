@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 
 /*
  * Radio vocabulary shared by the Wireless, Mesh and Diagnostics pages.
@@ -458,7 +459,7 @@ function combinationText(combo) {
 	return parts.join('; ');
 }
 
-return {
+return baseclass.extend({
 	BAND_NAMES: BAND_NAMES,
 	BAND_NUMBERS: BAND_NUMBERS,
 	BAND_MODES: BAND_MODES,
@@ -485,4 +486,4 @@ return {
 	concurrencyLabel: concurrencyLabel,
 	capabilityHint: capabilityHint,
 	combinationText: combinationText
-};
+});

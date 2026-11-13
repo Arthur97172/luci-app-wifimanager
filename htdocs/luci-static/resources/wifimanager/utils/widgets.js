@@ -1,4 +1,5 @@
 'use strict';
+'require baseclass';
 'require ui';
 'require wifimanager.utils.rpc as wmRpc';
 
@@ -378,7 +379,7 @@ function spinner(text) {
 	]);
 }
 
-return {
+return baseclass.extend({
 	injectStyle: injectStyle,
 	page: page,
 	card: card,
@@ -406,4 +407,4 @@ return {
 	autoRefresh: autoRefresh,
 	refreshButton: refreshButton,
 	spinner: spinner
-};
+});
