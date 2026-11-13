@@ -653,12 +653,12 @@ backup_compat_warnings() { # manifest-json
 
 backup_write_manifest() { # dir id type scope description [name]
 	local dir="$1" id="$2" type="$3" scope="$4" description="$5"
-	local name="${6:-}" hostname fw json radios radio band
+	local name="${6:-}" hostname fw radios radio band
 
 	hostname=$(uci -q get system.@system[0].hostname)
 	[ -n "$hostname" ] || hostname=$(cat /proc/sys/kernel/hostname 2>/dev/null)
 
-	json=$(
+	(
 		. /usr/share/libubox/jshn.sh
 		json_init
 		json_add_int backup_format_version "$WM_BACKUP_FORMAT"
@@ -711,9 +711,9 @@ backup_write_manifest() { # dir id type scope description [name]
 backup_build_checksums() { # dir
 	local dir="$1" rel
 	: >"$dir/checksums.txt"
-	for rel in etc/config/*; do
-		[ -f "$dir/$rel" ] || continue
-		sha256sum "$dir/$rel" | awk -v r="$rel" '{ print $1 "  " r }' >>"$dir/checksums.txt"
+	for rel in "$dir"/etc/config/*; do
+		[ -f "$rel" ] || continue
+		sha256sum "$rel" | awk -v r="${rel#"$dir"/}" '{ print $1 "  " r }' >>"$dir/checksums.txt"
 	done
 	[ -s "$dir/checksums.txt" ]
 }

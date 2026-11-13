@@ -5,7 +5,7 @@
 # Modules build JSON with jshn; sourcing it here means every entry point has it.
 . /usr/share/libubox/jshn.sh 2>/dev/null
 
-WM_VERSION="2.0.0"
+WM_VERSION="2.0.1"
 WM_APP="luci-app-wifimanager"
 
 WM_CONF_DIR="/etc/wifimanager"
