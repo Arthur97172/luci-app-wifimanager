@@ -1,0 +1,5074 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: luci-app-wifimanager 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
+"POT-Creation-Date: 2026-11-12 00:00+0800\n"
+"PO-Revision-Date: 2026-11-12 00:00+0800\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: \n\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d allocation problem(s) prevent a safe radio layout."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d backup(s) in %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d client(s) are listed; %d of them are associated wirelessly."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d conflict(s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d d %d h"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d day(s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d finding(s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d h %d min"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d legacy Mesh Assistant backup(s) were found. They are shown read-only and are never converted or deleted automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d line(s) from %s. Entries are shown exactly as written."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d lines"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d min"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d of %d recorded event(s) shown."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "%d seconds"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d warning(s) describe combinations the driver may reject."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d%% of the memory is in use. Free memory before enabling more services."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%d%% of the memory is in use. Services can be killed by the kernel at any moment."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "%s (missing)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s announces no mesh parameters; it may run an older WiFi Manager release. It cannot be compared for configuration drift."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "%s error(s) and %s warning(s) were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s error(s), %s warning(s) and %s note(s) were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s free in %s."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s is enabled at boot but is not running. Run \"/etc/init.d/%s restart\" and check the system log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s is reachable only over a weak wireless backhaul (best signal %d dBm). Move the device closer or add an Ethernet backhaul."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s last announced itself %d seconds ago; the link may have dropped without the peer table noticing yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s reports %d%% memory in use. A device under memory pressure can drop mesh frames or restart."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s: finished."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s: operation finished."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "%s: operation queued."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "(no mesh ID)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "0 keeps backups until the count or size limit removes them. Encrypted archives are never removed by age; they count towards the other limits."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "1 to 32 bytes."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "2.4 GHz"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "5 GHz"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "6 GHz"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "8 to 63 printable ASCII characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k is enabled but at least one managed access point does not carry the 802.11k option. Applying the roaming settings rewrites the managed APs."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k lets a client ask for a neighbor report, 802.11v lets the AP suggest a better access point, and DAWN uses both to steer clients between APs. Without wpad support for 802.11v only the radio measurements and DAWN metrics remain."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k/v configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k/v/r and the thresholds that DAWN uses to steer clients."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11k/v/r settings and the DAWN configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11r"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11r configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11r is enabled but at least one managed access point does not carry the 802.11r option. Applying the roaming settings rewrites the managed APs."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11r is enabled but at least one managed access point has no mobility domain."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11v"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "802.11v support in wpad"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "802.11w management frame protection"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "802.11w must be 0, 1 or 2."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "A Wireless backup is created before the change. If the new interface does not appear, the previous wireless configuration is restored automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A backup always contains the network configuration it was taken from. A custom selection is still validated against the areas a restore needs to rebuild the bridge."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A backup copies configuration files only; it contains no passwords from the UI. Wi-Fi keys are part of the wireless configuration and are therefore inside an unencrypted archive, which is why the file permissions are owner-only."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A copy with a current manifest and checksums is created in the backup store. The original archive in /etc/meshassistant/backup stays untouched."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A device"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A full pre-restore backup is created before any configuration file is changed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A full pre-restore backup is created unless it is disabled in the backup settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A missing signal value is recorded as unknown instead of 0 dBm."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "A passphrase is required for this encryption mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "A passphrase is stored on the router. Leave this blank to keep it; type a new one to replace it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A port that is not already part of another bridge and does not carry the WAN uplink. If it is in the LAN bridge, the mesh engine removes it from the bridge and records what it removed so disabling the mesh can restore it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A restore validates the archive, creates the pre-restore backup, applies the selected scope, verifies the result and rolls back automatically when the device does not come back."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A roam is inferred when the same MAC is seen on a different BSS in the next sample; the exact transition time is unknown."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A runtime value the driver does not expose stays “-”; it is never guessed from the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "A standalone MLO interface can be created here without using Mesh. It needs at least two radios, and saving switches those radios to EHT mode. Mesh Settings has a separate MLO option for the mesh access point; the two paths do not share a wireless section."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A suggestion is shown only when a band has at least five associated clients; the values are a snapshot and are never applied automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "A wired backhaul is configured but no port is attached. Save and apply to let the engine attach it, or check that the port is usable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "AP interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "AP mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "AP mode is enabled on this device."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "AP mode turns this router into a bridged access point behind another router: firewall, DHCP and RA are disabled, the WAN port becomes a LAN port, and the LAN address is either obtained over DHCP or set statically. Enabling it changes the LAN address, so this page can become unreachable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "AP radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Access point"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Access point radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Access points"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Access points, mesh links, client links and their runtime state."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Action"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Actions"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Actions use the saved form values. Save the form first if you changed an option; every action commits the form before the engine runs and creates a backup on its own."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Active"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Active backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Ad-hoc"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Address advertised to DHCP clients as option 6. Leave empty to advertise this router itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Advanced"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Advisory only"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "After the restore the LAN and wireless interfaces are waited for; if they do not come back, the previous files are restored from the snapshot automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "All events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Allocation and channel problems are detected from UCI and the running radios."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Allocation checks"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Allocation conflicts"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An AP and a client (STA) interface on one radio compete for airtime and may not be supported."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An AP and the mesh share this radio; the driver decides whether both can run."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "An MLO interface needs at least two radios; saving switches them to EHT."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An encrypted archive can only be validated, restored or opened with its passphrase. There is no recovery mechanism on the router; keep the passphrase separately."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An operator AP cannot be placed on the mesh radio."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Analyze channels"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Analyzing %s runs a scan. While the scan runs the radio briefly leaves its channel, so connected clients may see a short interruption and the mesh may re-converge."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Announced devices"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Another enabled interface already uses this radio; the driver has to support both interfaces at once."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Apply"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Apply configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Apply mesh configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Apply roaming settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Apply saved configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Applying mesh configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Applying roaming settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Applying this setting creates a full pre-change backup first. If the port cannot be used, the engine keeps the wireless backhaul and reports the reason instead of blocking the mesh."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Archive"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Archive the selected configuration areas into one integrity-checked file."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Archives are created atomically and kept with owner-only permissions. The newest backups are kept according to the retention settings. The comparison covers the files stored in the newest unencrypted backup; an encrypted archive or a damaged file is reported as unknown, and files outside the backup scope are not compared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Area"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Areas"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "At least 12 characters. Encrypting requires the openssl command on the router."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "At least one managed access point does not send 802.11v transition requests even though wpad supports them."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Attached hardifs"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Attempt"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Auto"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Automatic"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic (measured by BATMAN-adv)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic backup settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic backups are disabled. Only manually created backups are kept."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic priority leaves throughput_override unset so BATMAN-adv measures the real links; the negotiated Ethernet rate is not treated as usable throughput. Manual overrides are written to the hardif sections when the mesh configuration is applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching is configured but the mesh is not applied, so the monitor is idle."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching is enabled, but no wired backhaul port is configured."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching needs the wired backhaul to be enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Available"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Avoid"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "BSSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Background"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul and AP mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul priority"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Backhaul runtime"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul switch failed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul switched"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup %s created."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup %s imported."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup & Restore"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup created: %s (%s)."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup deleted."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup details"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup overview"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup restored and verified."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup scope"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup settings saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup storage"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backup storage, retention and the most recent archives."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backups stored"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Bad signal threshold"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Bad threshold: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Band"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Before configuration changes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Best signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Both links are on the same band, so MLO brings less benefit."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Both meshassistant and wifimanager are running. Two managers write the same configuration; stop one of them."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Bridge"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Cancel"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Capabilities"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Carrier state and switch timing are read from the kernel. The active medium is the state the monitor recorded, not a measurement of traffic."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Change settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Changed files"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Changed since the newest backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel %s (%s MHz)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel %s (%s MHz, DFS)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel (config)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel / TX power (runtime)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel / width"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel recommendation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel scan"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel use"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel width"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Check"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Checking the backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Checking…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Checks"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Choose a supported encryption mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Choose a valid interface mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Choose the areas below"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Choose the areas to include. Invalid combinations are rejected before a backup is created."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Choose the medium that carries mesh traffic and the LAN behaviour of an access point."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Choose these radios in Mesh Settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Clear"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Client (STA)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client (uplink, LAN not bridged)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client (wireless client)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Client MAC"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client joined"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client joins, leaves and roams, mesh link state changes and batman-adv errors."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client left"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client roamed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Client steering"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client steering configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client steering is configured, but DAWN is not installed. 802.11k/v remain enabled on the APs; install the dawn package to get client steering."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Client steering is enabled but DAWN is not installed. 802.11k and 802.11r still work, but no service steers clients."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Client-count threshold: DAWN only starts a steering round when at least this many clients are connected to the access point, so a nearly idle AP is not emptied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Clients"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Close"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Co-channel"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Code"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Combine two selected radios into one Wi-Fi 7 Multi-Link Operation access point. Both radios are switched to EHT mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Combines the system state, the configuration checks, the mesh runtime and the roaming advice. Values are read when the page loads and refreshed while it stays visible; nothing is probed actively."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Compares the saved 802.11k/v/r flags and thresholds with the clients associated right now. Copy a suggested value into the form only after checking it against your deployment."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "Compatibility warnings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration checks"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Configuration drift between nodes is the usual reason a mesh stops forming a direct link."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration files that will be modified"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration vs runtime"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration, service and runtime are reported separately so a stopped service is not mistaken for a broken configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configuration, services, batman-adv runtime and link state, each reported separately."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Configuration-level checks across /etc/config/network, dhcp, firewall and wireless. Runtime reachability is not probed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured radio layout, runtime state and allocation checks side by side."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured to run"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured values come from UCI. Runtime values come from iwinfo; a value the driver does not expose stays “-” instead of being guessed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured values come from UCI. Up/down and channel information come from the running system and may lag behind a pending configuration change."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Configured: channel %s, %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Confirm migration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Confirm restore"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Conflict"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Connected clients"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Consistent"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Continue"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Copy"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Copy legacy backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Copying the archive to the download area…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Country code"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Create Backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Create MLO interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Create a backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Create a backup before every restore"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Create backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Create copy"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Create interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Create wireless interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Created"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Created by luci-app-meshassistant 2.7.x."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Creating backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Current channel utilization: %d%%."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Current configuration compared with the newest backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Current state"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Custom"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN (roaming)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN (syslog entries)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN client steering"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "DAWN decisions"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN has been restarted %d time(s) since it started. Repeated restarts point to a configuration or driver problem; check the DAWN log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN installed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "DAWN is managed but not running. The watchdog in the minute ticker restarts it at most once every five minutes; the last attempt is recorded in the log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN is managed by WiFi Manager but is not running. The watchdog restarts it at most once every five minutes."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN is not installed. 802.11k/v can still be enabled, but there is no client-steering service."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN is not managed by WiFi Manager yet. Apply the roaming settings while mesh networking is enabled to write the managed configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN managed by WiFi Manager"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN running"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN scores every access point a client can see and asks the client to move when another AP is clearly better. It needs 802.11k neighbor reports, 802.11v transition requests and a shared key on every AP."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN starts steering only with at least %d clients per access point, but the busiest access point currently has %d. Steering cannot start until more clients join."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN status"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DAWN steering requires mesh networking to be enabled: the engine only writes the managed DAWN configuration while mesh is on."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "DAWN watchdog restart"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DFS"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DFS channels need a channel availability check and can be vacated when radar is detected."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DHCP / DNS"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DHCP DNS server"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DHCP client"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP disabled but still active"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP expected but disabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP pool outside its subnet"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP server on a node/client"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DNS server"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Daily"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Default"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Delete"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Delete %s? A Wireless backup is created first, and the interface is restored if it cannot be removed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Delete backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Delete the archive %s? The file and its checksum are removed; this cannot be undone."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Delete wireless interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Derived from the mesh ID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Description"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination AP"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination RSSI"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Detail"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Details"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Detected"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Device"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Devices associated with this device, with the link that carries each one."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Devices reachable over the mesh and the medium each link uses."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Diagnostics"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Direct neighbors"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Direct neighbors, announced devices and the interfaces attached to the mesh bridge."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Disable this interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Disabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Disassociate clients with a low ACK ratio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Disconnect after ignored requests"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Disconnect after two ignored requests"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Disconnect duration, reconnect duration and packet loss are not observable from the station table, so those fields are recorded and shown as unavailable rather than estimated."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Disconnect immediately"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Disconnect time"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Down"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Download"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "Download backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Download started: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Duplicate DHCP server"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Duplicate IPv4 address"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "E-* findings block a safe allocation; W-* findings are warnings about combinations the driver may reject."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Each MLO link needs at least two radios, and both must be switched to EHT. A DFS channel inside the link can delay association while the radar check runs."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Each line is one backhaul the other device reports for itself. A device reached over both media is drawn with a solid and a dashed line."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Edit"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Edit wireless interface: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable 802.11k/v and client steering"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable 802.11r fast transition"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable AP mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable MLO"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable automatic backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enable mesh networking"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enabled at boot"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enabled, stopped"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encrypt newly created backups by default"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encrypt the archive with a passphrase"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encrypted"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encrypted archives use AES-256-CBC with PBKDF2-SHA256 and 200000 iterations. The passphrase must have at least 12 characters and is never stored. Archives written by an older release still restore with their original passphrase."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encrypted backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Encryption"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter a contiguous IPv4 netmask, for example 255.255.255.0."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter a mesh ID of 1 to 32 bytes."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter a passphrase of 8 to 63 printable characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter a signal level in dBm between -100 and -10."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter an SSID of 1 to 32 bytes."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter exactly four hexadecimal digits, for example 1a2b."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter the passphrase for %s."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Enter the passphrase of the uploaded archive."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Error"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Errors first, then warnings and notes. The cards below keep the raw values a finding refers to."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet + wireless"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet preference is the default: the wired link is used whenever it is stable and the wireless mesh takes over when the cable is lost."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet, with wireless fallback"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Evaluation interval"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Evaluation interval (seconds)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Event"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Event log"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Every archive is listed with its metadata. Encrypted archives need their passphrase for validation, details and restore."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Every server and node in the mesh must use the same mesh ID. The 802.11s interface is named “<mesh ID>-mesh”."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Explanation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "External"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Failed to load: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Fallback delay (seconds)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Fast BSS transition lets a client move between access points with the same SSID without a full re-authentication. All APs must share the same mobility domain; separate SSIDs per radio disable it by design."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Fields"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Files in the archive"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Filesystem"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Finding"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Findings from the radio inventory"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Firewall"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Firewall, DHCP and RA are disabled, the WAN port is bridged into the LAN, and the LAN address changes to the selected DHCP or static address. This page will likely become unreachable and must be opened at the new address. A pre-change backup is created automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Firmware"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Flags"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "For a roam, the source RSSI is the last value seen on the old BSS and the destination RSSI is the first value seen on the new one, both sampled a minute apart."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Four hexadecimal digits shared by every AP in the roaming group. Leave empty to derive the value from the mesh ID on the next apply."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Free"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Free space"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Frequency"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Full"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Gateway"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "General"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Good signal threshold"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Good threshold: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Healthy"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Hidden SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Hide the SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Highest memory use"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Hostname"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "How events are collected"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "How long the wired link must stay down before the wired hardif is detached."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "How long the wired link must stay up before it is used again."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "How much stronger another access point must be before DAWN considers a move worth it. A larger value reduces steering between similar APs."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "How often DAWN re-evaluates the client table and applies the thresholds above."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Hybrid backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "I understand the scope above and want to restore this backup now."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "IPv4 address"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "IPv4 addresses"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "If this page lost its connection, the restore may still have succeeded. Reconnect at the new address and check the last operation on the backup overview page."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Import copy"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Importing backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "In the %s band, %d client(s) report a median of %d dBm. The current thresholds (good %d dBm, bad %d dBm) differ from the suggested values (good %d dBm, bad %d dBm) by 10 dB or more."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "In use"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Information"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Init script"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Installed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Integrity is checked from the Restore page, where each archive is validated before it can be restored."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s deleted."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved and verified."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved. It is disabled, so no runtime check was run."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved. The configuration is verified; the runtime name is assigned by the driver."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface name"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Interface outside every firewall zone"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Interfaces selected in the configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Interference"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Internal flash"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Invalid"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Keep current (%s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Keep this on when this server is the only DHCP server on the LAN. Turn it off when another router already hands out addresses; the server then keeps the gateway and DNS role without running DHCP or RA."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Kernel"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "LAN address mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Labels and protection"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last %d events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last automatic backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last event"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last operation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last seen"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last switch"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Last watchdog restart"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave AP mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave a field empty to use the global threshold. A 6 GHz radio usually needs a higher good threshold than a 2.4 GHz radio because its free-space path loss is higher."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave at “Keep current” to keep the configured channel. A DFS channel can be unavailable while the radar check runs."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave at “Keep current” to keep the radio mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave at “Keep current” to keep the radio width."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leave empty to use the shared SSID above."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Leaving AP mode restores the network configuration that was saved automatically when AP mode was enabled. If that state is missing, check the standard network configuration before rebooting the device."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy (Mesh Assistant)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy Mesh Assistant archives are read in place and are never deleted or lossily converted."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy Mesh Assistant backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy Mesh Assistant init script, if it is still installed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy backup imported as %s."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy backups shown"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Less than 4 MiB is free in the backup storage location; creating a backup may fail."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Level"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Links"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Links that the other device reports for itself. The announced rate is the value that device measures; a signal and a channel use cannot be measured from here and therefore stay empty."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Load"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Load (1 / 5 / 15 min)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Loading…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Local backhaul interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Local interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Location"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Log"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Log copied to the clipboard."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Logs"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Lost on reboot"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "LuCI status overview"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MAC"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MAC address"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "MLO is only available for access point and client interfaces."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO links and the mesh share this radio; the driver decides whether both can run."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "MLO needs at least two radios."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO needs two radios that can run at the same time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO requires exactly two radios."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO-related findings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Managed DAWN configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/interfaces.js
+msgid "Managed by Mesh"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Managed by WiFi Manager"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Managed configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Manual only"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Manual throughput override"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Maximum backups kept"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Maximum storage usage"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Maximum storage usage (MiB)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Maximum transmit power"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Median signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Medium"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Medium unknown"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Memory"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Memory and client values are measured on this device; the client count covers the access points of this device only and is not the number of clients of the whole mesh."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Memory in use"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh Assistant is enabled again; WiFi Manager records the migration as declined."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh Assistant is installed on this router. WiFi Manager validated its configuration, took a pre-migration backup when it could and stopped the legacy service so two managers never run at once. Confirm the migration to finish the switch, or restore the legacy service."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh ID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh MAC"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh and backhaul areas need the Wireless and Network areas so a restore can rebuild the bridge."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh and roaming events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh applied"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh configuration applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Mesh consistency"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh diagnostics"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh enabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Mesh hard interface wiring"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Mesh interface network"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured as running and bat0 exists with operstate up."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured as running and bat0 exists, but its operstate is not up."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured as running but bat0 does not exist."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured as running, but bat0 does not exist. The service either failed to start or has not finished starting."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured but has not been applied. Neighbor data appears after the next successful apply."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured but no other mesh device is currently visible."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is configured but not applied yet. Open Mesh Settings and apply the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is enabled in the configuration but the bat0 interface does not exist. Apply the mesh configuration and check the system log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh is not configured as running, so runtime state is not compared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh link down"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh link up"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh manager and timer of WiFi Manager."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh neighbors"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh network ID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh password"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh radio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh role"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh roles, BATMAN-adv, 802.11s, backhaul and the mesh-related network settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh running"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh status"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh topology"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh-owned"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Message"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Migration confirmed. WiFi Manager manages the configuration; the Mesh Assistant service stays stopped."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Migration from Mesh Assistant"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Minimum clients"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Minimum clients per steering decision"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mismatch"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Missing"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mobility domain"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Monitor running"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "More than one 802.11s interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "More than one device announces the hostname \"%s\". Rename one of them so the topology and logs stay readable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "More than one device announces the server role. Exactly one node should be the mesh server."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mount"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mount point"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Move one Ethernet port out of the LAN bridge and attach it to bat0, so the mesh can use that cable instead of the wireless backhaul. The wireless mesh link stays available as a fallback."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Multiple default routes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Must be under /etc, /mnt, /media or /tmp. The directory is created when the setting is saved and receives owner-only permissions. A location that cannot be used falls back to /etc/wifimanager/backup."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Name"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbor"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbor and originator queries can be executed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbor details"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbors"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbors and topology need the batctl package; the configuration itself does not."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neighbors reported by this device’s batman-adv table. Signal, channel use and load are measured on this side of the link."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Neither WiFi Manager nor the legacy mesh service is enabled, so no mesh is started at boot."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Netdev"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Netmask of the static address."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Network"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Network checks"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Network finding"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Network interfaces may restart. If the LAN configuration changes, this page can become unreachable and the restore still continues on the router."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Network name"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Never"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Newest backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No DHCP, DNS, address, route, firewall-zone or mesh-bridge conflict was found in the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No MLO allocation problem was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No MLO interface is configured on this device."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No access point interface was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No access point was visible, so the ranking only reflects DFS and the current utilization."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No additional information."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No allocation conflicts were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No backup has been created yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No backup is stored yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No candidate channel was reported."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No checks."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No client is currently associated, so no signal statistics are available."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No client is currently known."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No conflict"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No conflicts were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No conflicts."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "No device announces the server role. One node has to be the mesh server."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No direct mesh neighbor is visible."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No enabled interface uses this radio."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No entries."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No event has been recorded yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No external storage is mounted at this location. Mount the volume or choose another path."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No interface is attached to bat0 yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No interface is currently attached to bat0."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No mesh link is currently visible."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "No mesh parameter mismatch was found among the devices that announced them."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No mesh peer is currently visible. This is expected on a single-node mesh; on a multi-node mesh check the backhaul and the mesh ID."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No netdev"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No network finding."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No network interfaces were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No operation has run yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No other device has announced itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No other mesh device is currently visible."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No other mesh manager is enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No problem was found in the checked subsystems."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No radio allocation or channel conflict was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No radio is suitable: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "No radio was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No radio was found. Mesh settings cannot be applied until a wireless device exists."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No radios were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No roaming problem was found in the current configuration and signal sample."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No runtime topology problem was detected."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No service information."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No switch has been recorded since boot."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No upstream resolver"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No usable storage location was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No wireless interfaces were found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Node (bridged, no DHCP)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Node (mesh point)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "None"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not applied"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Not determinable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not encrypted"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not installed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not managed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not present"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not running"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Not set"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Not writable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Nothing to show."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "OWE (enhanced open)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Older archives are removed according to the backup settings after each backup."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Oldest archives are removed until the total size fits. Between 4 and 4096 MiB."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only %d client(s) are associated in the %s band; a threshold recommendation needs at least five."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only /mnt, /media and /tmp are offered as external locations; /tmp is cleared on reboot and is not suitable for archives that must survive one. The action button copies the suggested path into the field above; nothing is saved until the page is saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only IPv4 addresses are listed. The state is the kernel operstate, which is down for interfaces that exist but carry no link."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only controls whether the read-only legacy archives are listed. They are never converted or deleted by this setting."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Only network interfaces that already exist can be selected."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only the areas in the archive scope are modified. A restore never copies the whole /etc/config directory."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only the most recent events are kept on the router; the log is trimmed when it grows past its limit."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Only these files are replaced or merged. A restore never replaces the whole /etc/config directory."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Open"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Open Mesh Settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Open Mesh Settings for the mesh MLO option"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Open the Restore page"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Open the logs"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Open the standard Wireless configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Operating Channel Validation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Operation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Operator estimate for the wired hardif. Leave empty to let BATMAN-adv measure it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Operator estimate for the wireless mesh hardif. Leave empty to let BATMAN-adv measure it."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Optional DNS server advertised to clients in AP mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Optional default gateway in AP mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Optional description"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Optional display name"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Optional hostname to set while AP mode is enabled. Leaving it empty keeps the current hostname."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional override."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional, at most 15 characters. Leave blank to let the driver choose."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional, for client interfaces."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Overlapping DHCP pools"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Overlapping IPv4 subnets"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Overview"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "PHY mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "PHY mode (%s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Packet loss"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Passphrase"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Password protection"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Peers"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Per-band overrides"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Possible"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Pre-migration backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Pre-restore backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Preferred backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Preparing download"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Product"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "RSSI"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "RX rate"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio advice"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio allocation"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Radio allocation check"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio allocation, channel plan and conflicts detected from configuration and runtime."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Radio concurrency warning"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio conflicts"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio inventory"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radios and channels"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ranks the channels the driver accepts by the access points a scan can see. A scan is only run after you confirm it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Rate"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Reading the log…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Reads the neighbor announcements of the devices currently visible. Stale announcements, memory pressure, a weak wireless-only backhaul, incomplete announcements and two devices announcing the same LAN MAC are reported. A device that stops announcing is marked offline once its announcement is two minutes old; the peer cache drops it after five minutes, after which it is no longer listed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Recent backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Recommended"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Reconnect time"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Recorded client and mesh link transitions with the gaps the sampler cannot see."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Recorded events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Refresh"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Regulatory domain. Leave at “Keep current” to keep the current country."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Related pages"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Related settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Repeat passphrase"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Repeat the passphrase"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Require the password below on the access points and on the mesh link."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Required"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Resolver points at itself"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Restart DAWN when it stops"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restarts since start"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore legacy service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore now"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore or manage backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore safety"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore stability time (seconds)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore the Mesh Assistant service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restoring backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Result"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Retention"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Retention (days)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Retention, storage location and how often backups are created automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Review radio allocation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Review radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming parameter advice"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming settings and thresholds"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roaming settings applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Role"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Roles, radios, mesh identity and the spectrum used by the mesh."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/system.js
+msgid "Router identity, load, memory, service state, network interfaces and configuration checks."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Run a scan to rank the channels this radio can use."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Running"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Runtime (batman-adv)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Runtime backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Runtime state is read from the kernel after the service started. It can lag behind a configuration change until the mesh service is re-applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Runtime unavailable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID / Mesh ID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID / mesh ID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID for %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "SSID of the regular access point. It is also used by the MLO access point and by radios without their own SSID."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Same SSID on all radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Save"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Save & apply"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Save and apply mesh settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Save and apply roaming settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Save anyway"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Save interface"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Save settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Saving commits /etc/config/wifimanager directly. Other pages keep working with the values they read at load time until they are reloaded."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Saving the form and applying the configuration…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Saving the form and starting the operation…"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Saving the interface and waiting for it to appear…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Saving writes the form to /etc/config/meshassistant. Applying also lets the mesh engine rewrite the wireless and network configuration; it creates a full pre-change backup through Backup & Restore first."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Saving writes the form to /etc/config/meshassistant. Applying also rewrites the managed AP sections, restarts hostapd and reconfigures DAWN; Wi-Fi clients may reconnect briefly."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scan now"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scanning the radio; its clients may be interrupted briefly…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scanning…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scheduled backups run from the WiFi Manager timer. \"Before configuration changes\" keeps the timer off, but the mesh engine and every restore still create their own pre-change backup."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Score"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scores assume the configured channel width; a different runtime width changes which channels overlap."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Section"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "See connected clients"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Seen on"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Select a wired port."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Select at least one area for a custom backup."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Select at least one radio."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Select exactly one mesh radio."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Select exactly one radio unless the interface uses MLO."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Select one radio, or two or more when MLO is enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Select the network the interface belongs to."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Select the radios that carry the regular access point. MLO requires exactly two."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Selected backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Selected hardifs"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Separate SSID per radio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Server (gateway)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Server (root node)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Server provides DHCP"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Service conflict"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Services"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Settings"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Severity"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Shortcuts"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Show legacy Mesh Assistant backups"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Shown in the backup list. The archive id stays timestamp based."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Signal and rate mirror the strongest neighbor on the same interface: this device does not measure a link to itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Signal is measured only on a wireless link this device terminates. Rows announced by another device show the values that device reports; a missing value stays empty instead of being guessed. Memory and client values repeat on every row of a device because the device announces them for itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Signal level in dBm above which DAWN considers a client well connected and does not steer it away."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Signal level in dBm below which DAWN considers a client a steering candidate. It must be lower than the good threshold."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Size"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Source"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source AP"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source RSSI"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Spectrum"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Standard Wireless configuration"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Standard status overview"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Standby"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Started"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "State"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Static IPv4 address"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Static address"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Static keeps a fixed management address; DHCP takes the address from the upstream router."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Static netmask"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Stations"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Status of the steering daemon and the 802.11k/v/r flags on the access points."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Steering RSSI difference"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Steering RSSI difference (dB)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Steering decisions"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Steering notes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Stopped"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Storage"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Storage location"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Storage used"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Stored in the archive manifest and shown in the list."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Stored passphrase (leave blank to keep it)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested MLO pair: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested bad threshold"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested channel: %s (%s, %s MHz wide)."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested good threshold"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested radio: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Summary"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Switch the backhaul automatically"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "System"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "System diagnostics"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "System log (syslog)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "TX power (config)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "TX rate"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Target"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The 1-minute load average is %s on %d CPU(s), above the normal range."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The 1-minute load average is %s on %d CPU(s). The router is heavily overloaded; Wi-Fi and routing may stall."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The BSSID is invalid."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The DAWN status could not be read. The values below may be stale."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The DAWN watchdog failed %d time(s) in a row. Check the DAWN configuration and the system log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "The DAWN watchdog failed to restart the service %d time(s) in a row. Check that the dawn package and its configuration are intact."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The LAN address, firewall or DHCP configuration may change. This page can become unreachable; reconnect at the address in the restored configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The LAN, firewall, DHCP and WAN configuration saved before AP mode was enabled is restored. The LAN address may change back, so this page can become unreachable."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The MAC address is invalid."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The MLO area requires the Wireless area."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "The MLO interface could not be saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The Mesh Assistant service is enabled and started again, and WiFi Manager records the migration as declined. This is refused while the WiFi Manager mesh is enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The SSID is empty."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The SSID is longer than 32 bytes."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The WiFi Manager log and the event log never contain archive passphrases. The system log includes entries from every daemon on the router."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The address this device keeps on the LAN in AP mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The announced mesh ID, routing algorithm, role, channel and HT mode are compared with this device. The mesh key is never transmitted, so it is not compared. Devices that announce none of these values or use an automatic channel are listed instead of being counted as a mismatch."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "The archive contains configuration files with Wi-Fi passphrases, the mesh key and other credentials. An unencrypted archive stores them in clear text. Keep the downloaded file private, do not send it over an untrusted channel, and delete it when it is no longer needed. The download is copied to /tmp/wifimanager-download first."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive could not be checked."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive could not be downloaded."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive could not be opened."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive could not be opened; a passphrase may be required."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive is extracted into a temporary directory; unsafe entry names, symlinks and a failed checksum are rejected."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive is not valid."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive is stored with owner-only permissions in the backup directory."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The archive is validated before anything is changed…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup could not be created."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup could not be deleted."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup could not be imported."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup could not be validated."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup list could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup settings could not be read; the values shown may be defaults."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup settings could not be saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup store could not be queried."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup store could not be read. The values below may be incomplete."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The backup was restored and verified."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The bad threshold is not lower than the good threshold in the %s band. DAWN would treat every client as both well and badly connected."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The bad threshold must be lower than the good threshold."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The bat0 interface exists but is down. No mesh traffic can flow until it comes up."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The batman-adv routing algorithm differs between nodes. Every node of one mesh must use the same algorithm."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The channel scan failed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The client list could not be read. The rows below may be incomplete."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The configuration could not be applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The configuration is archived; this can take a moment…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The configuration is being restored and verified…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The configured backup path is under /mnt or /media, but no external volume is mounted there. Saving this page will refuse the path until the volume is mounted."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The configured per-interface values, the BSSID in use and whether the interface is up right now. The BSSID is checked for validity and uniqueness in the roaming advice; a value only takes effect after the roaming settings are applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The description may not contain control characters and is limited to 200 characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The details could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The driver reported no usable channel for this band."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The effective values are written to /etc/config/dawn on apply and are shown on the DAWN status page. Steering needs mesh to be enabled and wpad with 802.11v support."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The eight newest backups. Encrypted archives need their passphrase to be opened."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The event log could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The form is committed and the mesh engine applies it. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The form is committed, then the roaming engine rewrites the AP sections, restarts hostapd and reconfigures DAWN. Wi-Fi clients may reconnect."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The form is saved and committed, then the mesh engine applies it. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The graph shows the first 8 devices; the table lists all of them."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The hard interface list is what batman-adv has actually attached. The selected list is what the configuration asks for; when they differ, the mesh has not been applied yet or an interface disappeared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The installed configuration did not parse when the migration was prepared. Check the affected file before confirming; the pre-migration backup stays available."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface could not be deleted."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface could not be saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The interface name %s is already in use."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The interface name may contain at most 15 letters, digits, dots, dashes or underscores."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface was not saved. Select different radios or another mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The last automatic backhaul switch failed: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The legacy backup could not be imported."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The legacy meshassistant daemon and WiFi Manager are running at the same time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; finish the migration and disable it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The legacy meshassistant service is still enabled. It is not running now, but it will start after the next reboot and may then fight over the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The location was copied into the field above. Save the settings to use it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The log could not be copied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The log could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The log could not be read: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The log is empty."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The managed AP sections, DAWN configuration and service are rewritten. Wi-Fi clients may reconnect briefly."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The managed access points use different mobility domains (%s). Fast transition only works between APs with the same domain."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The manifest format and application are checked before anything is applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The maximum number of backups must be between 1 and 200."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The maximum storage usage must be between 4 and 4096 MiB."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh IDs announced by the devices differ. Nodes with different mesh IDs cannot form direct 802.11s links with each other."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The mesh diagnostics could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The mesh engine is applying the configuration…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The mesh engine owns the sections it creates (mesh_<radio>, wifi_ap_<radio>, wifi_ap_mlo). Edit other wireless interfaces on the standard Wireless page."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The mesh engine rewrites the wireless and network configuration. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios use different HT modes in the %s band."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios use different channels in the %s band."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The minute ticker checks a DAWN configuration that WiFi Manager manages and restarts the service when it is not running. At most one recovery attempt is made every five minutes, and each attempt is recorded in the log and the event log. A DAWN that was released again is never restarted."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The monitor samples the wired link carrier, not just the presence of the interface, and detaches the wired hardif from bat0 after the fallback delay. It restores it only after the cable has stayed up for the stability time, so a flapping cable does not move traffic back and forth. The wireless mesh link is never touched."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The name is too long (64 characters maximum)."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The name may only contain letters, digits, dots, dashes, underscores and spaces."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The neighbor table could not be read, so the topology may be incomplete."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The neighbor table could not be read. The lists below may be empty although the mesh is running."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The network %s does not exist."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "The network checks are unavailable. The rest of this page is unaffected."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The network name contains invalid characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The oldest archives are removed after a new one is created. Between 1 and 200."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The one radio that carries the 802.11s mesh backhaul."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The operation did not finish in time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The operation failed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The passphrase is not stored anywhere. Without it the archive cannot be restored or opened."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The passphrase is only sent to the router for this action and is not stored in the browser."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The passphrase is too long (128 characters maximum)."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The passphrase must be 8 to 63 printable ASCII characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The peer count is read from the WiFi Manager peer cache, which is refreshed by the mesh engine and travels with the event log. It is not a live batctl query."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The pre-restore backup is disabled in the backup settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The pre-restore backup is disabled in the backup settings; only the in-memory snapshot protects a failed restore."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The pre-restore backup is disabled. A restore that fails can then only be rolled back with the in-memory snapshot taken right before it starts."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The pre-restore backup is disabled. Every restore still keeps an in-memory snapshot for rollback, but there is no archive to fall back to afterwards."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The radio %s does not exist."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The radio allocation check could not be run. Saving without it may apply a combination the driver rejects."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The radio inventory could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The radio inventory could not be read: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The radio is disabled; enable it before scanning."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/backhaul.js
+msgid "The radio is the wireless device behind the hardif. TX and RX rates are measured on the wireless station of the best neighbor; “Rate” is the link throughput batman-adv reports. A wired hardif has no radio and no station rates, so those cells stay empty."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The request failed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The restore failed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The retention period must be between 0 and 3650 days."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The roaming advice could not be loaded; only the configured values are known."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The roaming capabilities could not be read; the checks below may be incomplete."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The roaming engine is applying the configuration…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The roaming settings could not be applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The router did not answer."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The same radio is selected more than once."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The saved values are applied now. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The scan is a snapshot of the access points visible from this radio; it does not prove a channel will stay free."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The scan is read-only; it changes no configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The selected PHY mode does not support this channel width."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The selected radios may not support this combination:"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The server is the gateway of the mesh and provides DHCP, DNS and firewall duties. A node bridges the mesh into its LAN but runs no DHCP server. A client uses the mesh only as an uplink and keeps its LAN separate."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The shared key is never shown here. Edits made to the managed DAWN file outside WiFi Manager are overwritten on the next apply."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "The station count is read from the running interface; “No netdev” means the configured interface is not attached to a netdev yet. Signal and rates belong to the station with the strongest signal on that interface; an interface without stations shows no value."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The station table and the mesh link state are sampled once a minute, so a client that joins and leaves between two samples is not recorded."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The storage location must be an absolute path under /etc, /mnt, /media or /tmp without \"..\"."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The system information could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The two passphrases do not match."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The uploaded archive is checked and stored…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "The values this engine writes to the managed DAWN configuration. Change them on the roaming settings page; DAWN only steers clients while mesh networking is enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The wireless diagnostics could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The wireless interfaces could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "These archives live in /etc/meshassistant/backup. They are listed and validated in place; they are never deleted or rewritten by WiFi Manager. A copy with a current manifest can be created from the Restore page."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "These are the configured values from /etc/config/wireless. The running hostapd picks them up after the roaming settings are applied."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "These checks compare configuration only. They do not restart radios and do not change anything."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "These devices sent no mesh parameters, most likely because they run an older announcement version. They were not compared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "These devices use an automatic channel. The channel could not be compared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "These differences do not block the restore, but check them first: the archive may come from different hardware or firmware."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "These settings apply to the whole backup store, not only to automatic archives."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This LuCI version has no upload support; copy the archive over SSH and use \"Import copy\" for legacy archives."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This archive was created by Mesh Assistant. It is read in place and is never rewritten by WiFi Manager."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This browser does not allow copying from the page. Select the text and copy it manually."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This device"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This is the channel the radio already uses."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This is the mesh radio; another interface here depends on the driver and may reduce mesh throughput."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This legacy Mesh Assistant archive is read in place. It is not converted, rewritten or deleted by the restore."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/interfaces.js
+msgid "This list is read from /etc/config/wireless and from the running system, including each interface’s runtime state. Mesh-owned interfaces are edited in Mesh Settings. A Wireless backup is created before every save or delete."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This log file does not exist yet. It is created when the first entry is written."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "This radio combination cannot be used:"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This radio is disabled in the wireless configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This radio reports no frequency band, so no spectrum settings are available."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This setting only preselects encryption on the Create backup page; it never changes an archive that already exists."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This wpad build does not support 802.11v, so an access point cannot send a BSS transition request. The thresholds below then only affect the DAWN metrics."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This wpad build has no 802.11v support. 802.11k and DAWN start, but the AP cannot send BSS transition requests, so steering is advisory only."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This wpad build has no 802.11v support. DAWN can collect metrics, but the AP cannot send a BSS transition request, so it cannot steer a client away."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Thresholds"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Time"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Topology"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Topology monitoring"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Total"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Transmit power in dBm. Leave empty to keep the current value."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Turn the mesh on or off on this device. Turning it off restores the LAN, DHCP, hostname and services that the mesh engine changed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Type"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "U-APSD"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unavailable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Unchanged"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unified diagnosis"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unified wireless, MLO, mesh and roaming control for this device."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unknown"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unknown band"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unknown device"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unknown error"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Unknown radio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Until the count or size limit is reached"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Up"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Upload backup"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Uploads are accepted from the browser only. A legacy Mesh Assistant archive can be copied into the current store with \"Import copy\"; the original stays read-only."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Uptime"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Use"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Use MLO across the selected radios"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Use a passphrase of at least 12 characters."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Use a wired backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Use one SSID on every radio, or a separate SSID per radio. Separate SSIDs turn off seamless 802.11r roaming between them."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Use passphrase"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Valid"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Validate, inspect, download or restore a stored configuration archive."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Validation"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Validation extracts the archive and checks its checksums. It is required before a restore and is not repeated automatically."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Values are read at page load; the page refreshes while it stays visible."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Values as stored in /etc/config/meshassistant. They describe intent and are not proof of what is running."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Verified"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Version"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Visible devices"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "WAN port inside the LAN bridge"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "WAN shares the LAN device"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "WDS"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA/WPA2 mixed"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA2-PSK"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA2/WPA3 mixed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WPA2/WPA3 passphrase, 8 to 63 printable characters. The value is written to UCI and never shown in logs."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA3-SAE"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Warning"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Watchdog"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Watchdog failures"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Weakest backhaul signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Weakest signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Weekly"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Whether DAWN may ask a client to move to another access point. 0 disables kicking, 1 only advises, 2 disconnects a client that does not move and 3 disconnects it immediately."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "While client steering is enabled and mesh networking is on, WiFi Manager owns /etc/config/dawn: it writes the metric sections, per-band thresholds and a shared key derived from the mesh password, and restarts DAWN. A pre-existing DAWN configuration is backed up first and restored when client steering is turned off."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wi-Fi 7 Multi-Link Operation across two radios."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wi-Fi 7 Multi-Link Operation combines two radios into one access point."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wi-Fi network SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager log"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager operation log, mesh and roaming events, and the system log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager takes over the Mesh Assistant configuration. The Mesh Assistant service stays stopped; its configuration and backups are not deleted. Continue?"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired backhaul configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Wired backhaul wiring"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired carrier"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired link rate"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired port"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired port in use"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired throughput override (Mbit/s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless diagnostics"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless link"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless radios, access points, MLO interfaces and wireless security only."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless settings are part of the restore; Wi-Fi clients will reconnect."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless stations and devices learned on the LAN bridge. A signal strength exists only for a wireless station; a bridged device is shown without one instead of a guessed value."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless throughput override (Mbit/s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless, MLO, mesh, backhaul, roaming, DAWN, network, DHCP/DNS, firewall, system and WiFi Manager settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless, with Ethernet fallback"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Writable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Yes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "advisory only: it never changes the selection and only uses configuration and mesh settings already known to the router."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "attempt %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "auto"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "bat0 MAC"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 bridged on a client"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "bat0 device"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "bat0 exists"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 in the LAN zone on a client"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 missing from the LAN zone"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 not bridged into the LAN"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "bat0 operstate"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "batctl"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "batctl could not query bat0"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "batman-adv error"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "batman-adv hard interfaces"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "channel differs from runtime"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "configured TX power and runtime TX power differ"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "configured channel and runtime channel differ"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "dashed line: wireless backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "dnsmasq (DHCP/DNS)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "driver default"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "global"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "hostapd (access points)"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "lan (missing)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "link down"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "link up"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "meshassistant (legacy)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "missing"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "not set"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "odhcpd (DHCPv6)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "runtime TX power unavailable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "runtime channel unavailable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "runtime not readable"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "signal unknown"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "solid line: Ethernet backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "unknown band"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "wifimanager (this package)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "wpad (supplicant)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "“Available” is the kernel estimate of memory that can be given to new workloads without swapping; “free” is unallocated memory."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "“Installed” reflects the presence of /etc/init.d; “enabled” is the boot-time decision; “running” is the current process state."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "“Not installed” means /etc/init.d has no matching script; it does not by itself indicate a fault."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "WiFi Manager Backup or OpenWrt Sysupgrade Backup?"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "WiFi Manager Backup stores and restores only the configuration files in the selected scope. A restore replaces or merges those files, can restart the network, and can make this page unreachable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "OpenWrt Sysupgrade Backup is a separate mechanism: it covers the whole system configuration and is applied by the firmware during an upgrade. WiFi Manager neither creates nor replaces it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Use a Sysupgrade backup before flashing firmware. Use a WiFi Manager backup to undo a WiFi, mesh or roaming change without touching the rest of the system."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Even a Full backup is limited to the configuration files WiFi Manager knows about; it is not a system image."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Mesh disabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "WiFi channel"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "CPU load"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Nodes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Node role"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Link status"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "One row per device. MAC address, role, CPU load, channel, memory and client count are the values that device announces for itself; a value an older announcement does not carry stays empty instead of being guessed. Signal is the strongest backhaul signal reported for that device. Node state is normal, weak signal (a wireless-only backhaul below -75 dBm) or offline (no announcement for two minutes)."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "FT over DS (fast transition over the distribution system)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Off sends the fast-transition frames over the air, which is the hostapd default and works without a wired path between the access points. On sends them over the distribution system; enable it only when every AP of the mobility domain is reachable over the wired network. hostapd supports one transport per interface, so this selects DS instead of air rather than both."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Over DS"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Over the air"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "FT transport"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Node state"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Normal"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Weak signal"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Offline"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "The LAN MAC address %s is announced by more than one device (%s). Their rows are merged into one device; one of them may have a cloned MAC or a stale announcement."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/create.js
+msgid "The Roaming area requires the Wireless area."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/backup.js
+msgid "DAWN is selected without Roaming. The DAWN configuration and the wireless roaming options are restored together, so the wireless configuration changes as well."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/backup.js
+msgid "DHCP/DNS or Firewall is selected without Network. Those files are restored, but the network interfaces they refer to are not part of this backup."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/backup.js
+msgid "Wireless (includes MLO)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Last automatic backup result"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Succeeded"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Failed"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "The last automatic backup failed (%s). No archive was created; manual backups and the next scheduled attempt are unaffected."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/roaming-advice.js
+msgid "The BSSID %s of access point %s is not a valid unicast MAC address. A neighbor report built from it is invalid, so 802.11k cannot help clients find that AP."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/roaming-advice.js
+msgid "The access points %s share the BSSID %s. A neighbor report cannot tell them apart; give each radio a unique MAC address."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/roaming-advice.js
+msgid "802.11r is enabled, but the access points of SSID %s do not share the same authentication configuration (%s). Fast transition fails between APs with different encryption, PMF or keys."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Runtime state"
+msgstr ""
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Neighbouring access point scan"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scanning %s takes the radio off its channel for a few seconds. Connected clients may see a short interruption and the mesh may re-converge."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "The scan failed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Not scanned"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "%d access point(s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scan this radio"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "%s: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The scans returned no access point. The radio may be the only one in range, or the driver may report nothing while it is up."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scan a radio to list the access points it can hear. Each scan runs only after you confirm it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "No neighbouring access point needs attention: none broadcasts one of your SSIDs with a different security setting."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Security"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "A scan is a snapshot of one moment and of one radio; it does not prove that a neighbour is permanent or reachable from the other access points."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "“Yours” marks a BSSID configured on this router. A foreign access point that uses one of your SSIDs with a different security setting breaks fast transition for that SSID."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The list is read from the driver. A hidden neighbour cannot be shown, and a driver that returns no scan result is reported as a failure rather than as an empty area."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Each radio scans on its own channel, so the merged list may mix 2.4, 5 and 6 GHz observations."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Neighbouring access points"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Lists the access points the selected radio can hear and compares foreign APs that use your SSIDs. A scan briefly takes the radio off its channel and only runs after you confirm it."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Reported"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Not reported"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver did not report its capabilities for this radio, so the wireless settings fall back to the generic checks and ask before a combination is saved."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Usable channels"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "PHY modes"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver reported no usable band."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Interface modes:"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Reported interface combinations:"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Combinations limit how many interfaces of each mode the driver accepts on one radio. The channel count of one combination is not shown as a limit because a single radio always uses one channel."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver reported no interface combinations, so running several interfaces on this radio cannot be confirmed."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Hardware capability"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Bands, interface modes and interface combinations the driver reports for each radio. Values the driver does not report stay “not reported”; nothing here is inferred from the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WEP"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA/WPA2"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA2"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA2/WPA3"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA3"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "OWE"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA-Enterprise"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Yours"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Other network"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Same SSID, different security"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Same SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "%d neighbouring access point(s) broadcast %s, which this router also uses. Check whether they belong to your network; a client may otherwise connect to a foreign AP and lose this network."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "A neighbouring access point of SSID %s uses %s, while your access points use %s. A client cannot roam between them with the same security settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "unknown security"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "The BSSID %s was seen with different SSIDs in one scan (%s). Verify that this is not a spoofed or misconfigured access point."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report this interface mode on this radio."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report a usable channel in this band."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report this PHY mode in this band."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The reported interface combinations do not allow this mix."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not advertise the configured channel as usable."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver did not report its capabilities, so this combination cannot be confirmed."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Access Point (AP)"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "AP VLAN"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "802.11s mesh point"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Ad-Hoc (IBSS)"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Monitor"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "No PHY mode reported"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Supported"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Not supported"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Driver reports AP + STA: %s."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "total ≤ %d"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "channels ≤ %d"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The saved wired port %s carries the WAN uplink. The engine will not use it and keeps the wireless backhaul; select another port."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The WAN uplink port cannot be used for the wired backhaul."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Some devices run the mesh with a key and others without one. Nodes with a different mesh protection cannot form direct links. The key itself is never announced, so its value is not compared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh encryption differs between nodes. Every node must use the same 802.11s encryption."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios have no frequency band in common. At least two nodes must run the mesh on the same band to link directly."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/backhaul.js
+msgid "LAN bridge"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "No direct neighbor is currently known to batman-adv."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batctl is not installed, so the neighbor table cannot be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Direct batman-adv neighbours of this node and when each was last heard. The table is read live from batctl and is empty when bat0 is not running."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Originators"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Originator"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Table row"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batman-adv has not learned any originator yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batctl is not installed, so the originator table cannot be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Nodes batman-adv can reach and the path it selected, as printed by batctl originators. Only the local view of this node is shown; the topology page combines the announcements of every node."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The DAWN log is empty."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Roaming diagnostics"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The roaming diagnostics could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN, the 802.11k/v/r flags on each access point, recent roaming events and the DAWN log."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN service"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Watchdog enabled"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Consecutive watchdog failures"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Steering mode"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "%s seconds"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The service state is read from init.d; the parameters are the values the managed DAWN configuration holds. DAWN is managed only while mesh networking and 802.11k or 802.11v are enabled."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11k/v/r status"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11k configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11v configured"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "No access point is configured."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11v is enabled but this wpad build cannot send BSS transition requests. The radio flags are written, yet no steering request reaches the client."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The flags are the values stored in /etc/config/wireless for each AP section. hostapd reads them at start, so a change takes effect after Wi-Fi is reloaded."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Recent roaming events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "No roaming event has been recorded yet."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "All roaming events"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The sampler compares the station table every 15 seconds. A join and a leave between two samples are not visible, and disconnect duration, reconnect duration and packet loss are recorded as unavailable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN log"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Open the log viewer"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The last 80 lines that syslog carries for the dawn service."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Every visible device is drawn. The rings follow the routing hops from this device; a line runs from one device to the next hop on the path to it, using the medium the link was reported with. Two devices joined by both media are drawn with solid and dashed links."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "802.11k neighbor reports"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "802.11v client steering"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination SSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source BSSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination BSSID"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "The station table and the mesh link state are sampled every 15 seconds, so a client that joins and leaves between two samples is not recorded."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "For a roam, the source RSSI is the last value seen on the old BSS and the destination RSSI is the first value seen on the new one, up to 15 seconds apart."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Enable 802.11k neighbor reports"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "802.11k lets a client ask its access point for a list of neighbouring access points. DAWN and the client use these radio measurements to decide where to roam."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Enable 802.11v client steering"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "802.11v lets the access point suggest a better access point to a client. DAWN uses it to steer clients; without wpad support for 802.11v the neighbor reports still work, but no steering request is sent."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "DAWN is not installed. 802.11k and 802.11v can still be enabled, but there is no client-steering service."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Always"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "If the restored configuration cuts off the path to this router, the automatic rollback cannot reach it either. Be ready to reach the device over the local network, the serial console or failsafe mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "The restored configuration is applied before it is verified: network, wireless, mesh and DAWN are started from the restored files and checked. If they do not come up, the previous files are restored from the snapshot, reloaded and the restore is reported as rolled back."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/settings.js
+msgid "Every restore first creates a full pre-restore backup. This cannot be turned off: the in-memory snapshot used for the automatic rollback does not survive a reboot, so the archive is the copy that remains."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "Mesh runtime"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "bat0 up"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "bat0 down"
+msgstr ""

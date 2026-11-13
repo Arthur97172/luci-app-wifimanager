@@ -1,15 +1,73 @@
 {
 	"luci-app-wifimanager": {
-		"description": "Grant access to LuCI app WiFi Manager",
+		"description": "Grant access to the WiFi Manager views and its ubus object",
 		"read": {
 			"ubus": {
-				"iwinfo": [ "assoclist" ],
-				"luci-rpc": [ "getWirelessDevices" ]
+				"wifimanager": [
+					"status",
+					"radio_inventory",
+					"radio_advice",
+					"radio_check",
+					"network_check",
+					"channel_advice",
+					"roaming_advice",
+					"roaming_neighbor_scan",
+					"mesh_status",
+					"mesh_events",
+					"backhaul_status",
+					"diagnostics",
+					"logs",
+					"op_status",
+					"migration_status"
+				],
+				"luci-rpc": [
+					"getWirelessDevices",
+					"getBoardJSON",
+					"getHostHints"
+				],
+				"network.interface": [
+					"dump",
+					"status"
+				],
+				"iwinfo": [
+					"freqlist",
+					"countrylist"
+				]
 			},
-			"uci": [ "wireless", "network" ]
+			"uci": [
+				"wifimanager",
+				"meshassistant",
+				"wireless",
+				"network",
+				"dhcp",
+				"firewall",
+				"system",
+				"dawn"
+			]
 		},
 		"write": {
-			"uci": [ "wireless" ]
+			"ubus": {
+				"wifimanager": [
+					"wireless_iface_save",
+					"wireless_iface_delete",
+					"mesh_apply",
+					"mesh_disable",
+					"mesh_dumbap",
+					"mesh_undumbap",
+					"roaming_apply",
+					"migration_confirm",
+					"migration_restore_legacy"
+				]
+			},
+			"uci": [
+				"wifimanager",
+				"meshassistant",
+				"wireless",
+				"network",
+				"dhcp",
+				"firewall",
+				"system"
+			]
 		}
 	}
 }

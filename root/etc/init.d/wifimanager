@@ -1,0 +1,60 @@
+#!/bin/sh /etc/rc.common
+# WiFi Manager background services.
+#
+# Three procd instances:
+#   peer     - announces this node and records announcements from other nodes;
+#              only while the mesh is enabled, because without bat0 there is
+#              nothing to announce.
+#   ticker   - roam/link event sampling, the DAWN watchdog and the automatic
+#              backup timer.
+#   backhaul - automatic backhaul switching while the mesh is enabled; each
+#              pass checks the saved configuration and does nothing unless
+#              automatic switching is turned on.
+#
+# All configuration changes are made by the rpcd plugin's workers; this script
+# only keeps the long-running parts alive.
+
+START=99
+STOP=10
+USE_PROCD=1
+
+start_service() {
+	mkdir -p /etc/wifimanager/logs /etc/wifimanager/runtime \
+		/etc/wifimanager/config /var/run/wifimanager 2>/dev/null
+	chmod 700 /etc/wifimanager /etc/wifimanager/runtime /var/run/wifimanager 2>/dev/null
+	touch /etc/wifimanager/logs/wifimanager.log 2>/dev/null
+	chmod 600 /etc/wifimanager/logs/wifimanager.log 2>/dev/null
+
+	if [ "$(uci -q get meshassistant.config.enabled)" = 1 ] &&
+		command -v socat >/dev/null 2>&1; then
+		procd_open_instance peer
+		procd_set_param command /usr/lib/wifimanager/worker.sh peer-daemon
+		procd_set_param respawn 3600 5 0
+		procd_set_param term_timeout 5
+		procd_close_instance
+	fi
+
+	if [ "$(uci -q get meshassistant.config.enabled)" = 1 ]; then
+		procd_open_instance backhaul
+		procd_set_param command /usr/lib/wifimanager/worker.sh backhaul-daemon
+		procd_set_param respawn 3600 5 0
+		procd_set_param term_timeout 5
+		procd_close_instance
+	fi
+
+	procd_open_instance ticker
+	procd_set_param command /usr/lib/wifimanager/worker.sh ticker
+	procd_set_param respawn 3600 30 0
+	procd_set_param term_timeout 5
+	procd_close_instance
+}
+
+stop_service() {
+	rm -f /var/run/wifimanager/peers /var/run/wifimanager/names \
+		/var/run/wifimanager/peer.pid 2>/dev/null
+}
+
+reload_service() {
+	stop
+	start
+}

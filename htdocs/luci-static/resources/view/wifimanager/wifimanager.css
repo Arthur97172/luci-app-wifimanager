@@ -1,0 +1,208 @@
+/*
+ * WiFi Manager page styling.  Kept deliberately small: layout and status
+ * marks only, so the page still looks like the rest of LuCI in any theme.
+ */
+
+.wm-page {
+	max-width: 100%;
+}
+
+.wm-subtitle {
+	margin: -0.25rem 0 1rem 0;
+	opacity: 0.8;
+}
+
+.wm-card {
+	margin-bottom: 1rem;
+}
+
+.wm-card > h3 {
+	margin-top: 0;
+}
+
+.wm-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.wm-toolbar .wm-grow {
+	flex: 1 1 auto;
+}
+
+.wm-toolbar button {
+	margin: 0;
+}
+
+.wm-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.wm-table {
+	width: 100%;
+}
+
+.wm-table th,
+.wm-table td {
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.wm-table td.wm-wrap,
+.wm-table th.wm-wrap {
+	white-space: normal;
+	min-width: 14rem;
+}
+
+.wm-kv {
+	width: 100%;
+}
+
+.wm-kv th {
+	text-align: left;
+	font-weight: normal;
+	opacity: 0.75;
+	width: 40%;
+	white-space: nowrap;
+}
+
+.wm-kv td {
+	word-break: break-word;
+}
+
+.wm-badge {
+	display: inline-block;
+	padding: 0 0.5em;
+	border: 1px solid currentColor;
+	border-radius: 0.75em;
+	font-size: 85%;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+.wm-badge-ok { color: #1b7f3b; }
+.wm-badge-warn { color: #a15c00; }
+.wm-badge-error { color: #b3261e; }
+.wm-badge-info { color: #1a5fb4; }
+.wm-badge-muted { color: #666; }
+
+.wm-muted {
+	opacity: 0.75;
+}
+
+.wm-empty {
+	font-style: italic;
+}
+
+.wm-list {
+	margin: 0;
+	padding-inline-start: 1.25rem;
+}
+
+.wm-loading {
+	margin: 0.75rem 0;
+}
+
+.wm-hint {
+	margin: 0.5rem 0;
+	padding: 0.5rem 0.75rem;
+	border-inline-start: 3px solid currentColor;
+	opacity: 0.85;
+}
+
+.wm-event-detail {
+	font-size: 90%;
+	opacity: 0.8;
+	white-space: normal;
+}
+
+/* Mesh topology: a star graph drawn with inline SVG. */
+.wm-topo {
+	display: block;
+	width: 100%;
+	height: auto;
+	color: inherit;
+}
+
+.wm-topo text {
+	fill: currentColor;
+	font-family: inherit;
+	font-size: 12px;
+}
+
+.wm-topo .wm-topo-label {
+	font-weight: 600;
+}
+
+.wm-topo .wm-topo-muted {
+	font-size: 10px;
+	opacity: 0.7;
+}
+
+.wm-topo .wm-topo-center {
+	fill: currentColor;
+	fill-opacity: 0.08;
+	stroke: currentColor;
+	stroke-width: 2;
+}
+
+.wm-topo .wm-topo-node {
+	stroke: currentColor;
+	stroke-width: 2;
+}
+
+.wm-topo .wm-topo-node-wired { fill: #1b7f3b; }
+.wm-topo .wm-topo-node-wlan { fill: #1a5fb4; }
+.wm-topo .wm-topo-node-hybrid { fill: #7b3fb3; }
+.wm-topo .wm-topo-node-unknown { fill: #888; }
+
+.wm-topo .wm-topo-node-state-weak { stroke: #b58900; stroke-width: 3; }
+.wm-topo .wm-topo-node-state-offline { stroke: #c01c28; stroke-width: 3; fill-opacity: 0.35; }
+
+.wm-topo .wm-topo-line {
+	fill: none;
+}
+
+.wm-topo .wm-topo-line-wired {
+	stroke: #1b7f3b;
+	stroke-width: 3;
+}
+
+.wm-topo .wm-topo-line-wlan {
+	stroke: #1a5fb4;
+	stroke-width: 3;
+	stroke-dasharray: 7 5;
+}
+
+.wm-topo .wm-topo-line-unknown {
+	stroke: #888;
+	stroke-width: 2;
+	stroke-dasharray: 2 5;
+}
+
+.wm-topo-key-wired { color: #1b7f3b; }
+.wm-topo-key-wlan { color: #1a5fb4; }
+.wm-topo-key-weak { color: #b58900; }
+.wm-topo-key-offline { color: #c01c28; }
+
+@media (prefers-color-scheme: dark) {
+	.wm-badge-ok { color: #7ee2a8; }
+	.wm-badge-warn { color: #ffcc80; }
+	.wm-badge-error { color: #ff9e9a; }
+	.wm-badge-info { color: #9ecbff; }
+	.wm-badge-muted { color: #bbb; }
+	.wm-topo .wm-topo-node-wired { fill: #7ee2a8; }
+	.wm-topo .wm-topo-node-wlan { fill: #9ecbff; }
+	.wm-topo .wm-topo-node-hybrid { fill: #d3a8ff; }
+	.wm-topo .wm-topo-node-state-weak { stroke: #ffcc80; }
+	.wm-topo .wm-topo-node-state-offline { stroke: #ff9e9a; }
+	.wm-topo .wm-topo-line-wired { stroke: #7ee2a8; }
+	.wm-topo .wm-topo-line-wlan { stroke: #9ecbff; }
+	.wm-topo-key-wired { color: #7ee2a8; }
+	.wm-topo-key-wlan { color: #9ecbff; }
+	.wm-topo-key-weak { color: #ffcc80; }
+	.wm-topo-key-offline { color: #ff9e9a; }
+}

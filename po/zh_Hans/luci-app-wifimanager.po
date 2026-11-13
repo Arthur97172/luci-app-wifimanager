@@ -1,0 +1,4231 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: luci-app-wifimanager 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
+"POT-Creation-Date: 2026-11-12 00:00+0800\n"
+"PO-Revision-Date: 2026-11-12 00:00+0800\n"
+"Last-Translator: Arthur97172 <arthur97172@outlook.com>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%d allocation problem(s) prevent a safe radio layout."
+msgstr ""
+
+msgid "%d backup(s) in %s"
+msgstr ""
+
+msgid "%d client(s) are listed; %d of them are associated wirelessly."
+msgstr ""
+
+msgid "%d conflict(s)"
+msgstr ""
+
+msgid "%d d %d h"
+msgstr ""
+
+msgid "%d day(s)"
+msgstr ""
+
+msgid "%d finding(s)"
+msgstr ""
+
+msgid "%d h %d min"
+msgstr ""
+
+msgid "%d legacy Mesh Assistant backup(s) were found. They are shown read-only and are never converted or deleted automatically."
+msgstr ""
+
+msgid "%d line(s) from %s. Entries are shown exactly as written."
+msgstr ""
+
+msgid "%d lines"
+msgstr ""
+
+msgid "%d min"
+msgstr ""
+
+msgid "%d of %d recorded event(s) shown."
+msgstr ""
+
+msgid "%d s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "%d seconds"
+msgstr "%d 秒"
+
+msgid "%d warning(s) describe combinations the driver may reject."
+msgstr ""
+
+msgid "%d%% of the memory is in use. Free memory before enabling more services."
+msgstr "内存已使用 %d%%。在启用更多服务前请释放内存。"
+
+msgid "%d%% of the memory is in use. Services can be killed by the kernel at any moment."
+msgstr "内存已使用 %d%%。内核随时可能终止服务。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "%s (missing)"
+msgstr "%s（缺失）"
+
+msgid "%s announces no mesh parameters; it may run an older WiFi Manager release. It cannot be compared for configuration drift."
+msgstr "%s 未通告任何 mesh 参数，可能运行较旧的 WiFi管家版本，无法进行配置漂移比较。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "%s error(s) and %s warning(s) were found."
+msgstr "发现 %s 个错误和 %s 个警告。"
+
+msgid "%s error(s), %s warning(s) and %s note(s) were found."
+msgstr "发现 %s 个错误、%s 个警告和 %s 条提示。"
+
+msgid "%s free in %s."
+msgstr ""
+
+msgid "%s is enabled at boot but is not running. Run \"/etc/init.d/%s restart\" and check the system log."
+msgstr "%s 已设置为开机启动，但当前未运行。请执行“/etc/init.d/%s restart”并检查系统日志。"
+
+msgid "%s is reachable only over a weak wireless backhaul (best signal %d dBm). Move the device closer or add an Ethernet backhaul."
+msgstr "%s 仅能通过较弱的无线回传连接（最佳信号 %d dBm）。请将设备移近或增加有线回传。"
+
+msgid "%s last announced itself %d seconds ago; the link may have dropped without the peer table noticing yet."
+msgstr "%s 上次通告距今已有 %d 秒，链路可能已断开但邻居表尚未察觉。"
+
+msgid "%s reports %d%% memory in use. A device under memory pressure can drop mesh frames or restart."
+msgstr "%s 报告内存使用率 %d%%。内存压力可能导致设备丢弃 mesh 帧或重启。"
+
+msgid "%s: finished."
+msgstr ""
+
+msgid "%s: operation finished."
+msgstr ""
+
+msgid "%s: operation queued."
+msgstr ""
+
+msgid "(no mesh ID)"
+msgstr ""
+
+msgid "0 keeps backups until the count or size limit removes them. Encrypted archives are never removed by age; they count towards the other limits."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "1 to 32 bytes."
+msgstr "1 到 32 字节。"
+
+msgid "2.4 GHz"
+msgstr ""
+
+msgid "5 GHz"
+msgstr ""
+
+msgid "6 GHz"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "8 to 63 printable ASCII characters."
+msgstr "8 到 63 个可打印 ASCII 字符。"
+
+msgid "802.11k"
+msgstr ""
+
+msgid "802.11k is enabled but at least one managed access point does not carry the 802.11k option. Applying the roaming settings rewrites the managed APs."
+msgstr "已启用 802.11k，但至少一个受管接入点未携带 802.11k 选项。应用漫游设置会重写这些受管 AP。"
+
+msgid "802.11k lets a client ask for a neighbor report, 802.11v lets the AP suggest a better access point, and DAWN uses both to steer clients between APs. Without wpad support for 802.11v only the radio measurements and DAWN metrics remain."
+msgstr ""
+
+msgid "802.11k/v configured"
+msgstr ""
+
+msgid "802.11k/v/r and the thresholds that DAWN uses to steer clients."
+msgstr "802.11k/v/r 以及 DAWN 引导客户端所使用的阈值。"
+
+msgid "802.11k/v/r settings and the DAWN configuration."
+msgstr ""
+
+msgid "802.11r"
+msgstr ""
+
+msgid "802.11r configured"
+msgstr ""
+
+msgid "802.11r is enabled but at least one managed access point does not carry the 802.11r option. Applying the roaming settings rewrites the managed APs."
+msgstr "已启用 802.11r，但至少一个受管接入点未携带 802.11r 选项。应用漫游设置会重写这些受管 AP。"
+
+msgid "802.11r is enabled but at least one managed access point has no mobility domain."
+msgstr "已启用 802.11r，但至少一个受管接入点没有移动域。"
+
+msgid "802.11v"
+msgstr ""
+
+msgid "802.11v support in wpad"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "802.11w management frame protection"
+msgstr "802.11w 管理帧保护"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "802.11w must be 0, 1 or 2."
+msgstr "802.11w 必须为 0、1 或 2。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "A Wireless backup is created before the change. If the new interface does not appear, the previous wireless configuration is restored automatically."
+msgstr "更改前会创建无线备份。如果新接口未出现，将自动恢复之前的无线配置。"
+
+msgid "A backup always contains the network configuration it was taken from. A custom selection is still validated against the areas a restore needs to rebuild the bridge."
+msgstr ""
+
+msgid "A backup copies configuration files only; it contains no passwords from the UI. Wi-Fi keys are part of the wireless configuration and are therefore inside an unencrypted archive, which is why the file permissions are owner-only."
+msgstr ""
+
+msgid "A copy with a current manifest and checksums is created in the backup store. The original archive in /etc/meshassistant/backup stays untouched."
+msgstr ""
+
+msgid "A device"
+msgstr "某设备"
+
+msgid "A full pre-restore backup is created before any configuration file is changed."
+msgstr ""
+
+msgid "A full pre-restore backup is created unless it is disabled in the backup settings."
+msgstr ""
+
+msgid "A missing signal value is recorded as unknown instead of 0 dBm."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "A passphrase is required for this encryption mode."
+msgstr "此加密模式需要密码。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "A passphrase is stored on the router. Leave this blank to keep it; type a new one to replace it."
+msgstr "路由器上已保存密码。留空则保留；输入新密码则替换。"
+
+msgid "A port that is not already part of another bridge and does not carry the WAN uplink. If it is in the LAN bridge, the mesh engine removes it from the bridge and records what it removed so disabling the mesh can restore it."
+msgstr "该端口尚未属于其他网桥，也不承载 WAN 上行。如果它在 LAN 网桥中，mesh 引擎会将其移出网桥并记录移除了什么，以便关闭 mesh 时恢复。"
+
+msgid "A restore validates the archive, creates the pre-restore backup, applies the selected scope, verifies the result and rolls back automatically when the device does not come back."
+msgstr ""
+
+msgid "A roam is inferred when the same MAC is seen on a different BSS in the next sample; the exact transition time is unknown."
+msgstr ""
+
+msgid "A runtime value the driver does not expose stays “-”; it is never guessed from the configuration."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "A standalone MLO interface can be created here without using Mesh. It needs at least two radios, and saving switches those radios to EHT mode. Mesh Settings has a separate MLO option for the mesh access point; the two paths do not share a wireless section."
+msgstr "可在此创建独立 MLO 接口，无需使用 Mesh。它需要至少两个射频，保存后这些射频会切换到 EHT 模式。Mesh 设置中另有用于 Mesh 接入点的 MLO 选项；两条路径不共用无线配置节。"
+
+msgid "A suggestion is shown only when a band has at least five associated clients; the values are a snapshot and are never applied automatically."
+msgstr "仅当某频段有至少五个已关联客户端时才显示建议；这些数值只是一次快照，绝不会自动应用。"
+
+msgid "A wired backhaul is configured but no port is attached. Save and apply to let the engine attach it, or check that the port is usable."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "AP interface"
+msgstr "AP 接口"
+
+msgid "AP mode"
+msgstr "AP 模式"
+
+msgid "AP mode is enabled on this device."
+msgstr "本设备已启用 AP 模式。"
+
+msgid "AP mode turns this router into a bridged access point behind another router: firewall, DHCP and RA are disabled, the WAN port becomes a LAN port, and the LAN address is either obtained over DHCP or set statically. Enabling it changes the LAN address, so this page can become unreachable."
+msgstr ""
+
+msgid "AP radios"
+msgstr "AP 射频"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Access point"
+msgstr "接入点"
+
+msgid "Access point radios"
+msgstr "接入点射频"
+
+msgid "Access points"
+msgstr "接入点"
+
+msgid "Access points, mesh links, client links and their runtime state."
+msgstr "接入点、Mesh 链路、客户端链路及其运行状态。"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Actions use the saved form values. Save the form first if you changed an option; every action commits the form before the engine runs and creates a backup on its own."
+msgstr ""
+
+msgid "Active"
+msgstr "活动"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Active backhaul"
+msgstr "当前回程"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Ad-hoc"
+msgstr "自组网（Ad-hoc）"
+
+msgid "Address advertised to DHCP clients as option 6. Leave empty to advertise this router itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Advanced"
+msgstr "高级"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Advisory only"
+msgstr "仅建议"
+
+msgid "After the restore the LAN and wireless interfaces are waited for; if they do not come back, the previous files are restored from the snapshot automatically."
+msgstr ""
+
+msgid "All events"
+msgstr "全部事件"
+
+msgid "Allocation and channel problems are detected from UCI and the running radios."
+msgstr ""
+
+msgid "Allocation checks"
+msgstr "分配检查"
+
+msgid "Allocation conflicts"
+msgstr "分配冲突"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An AP and a client (STA) interface on one radio compete for airtime and may not be supported."
+msgstr "同一电台上的 AP 与客户端（STA）接口会争用空口时间，驱动也可能不支持。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An AP and the mesh share this radio; the driver decides whether both can run."
+msgstr "AP 与 Mesh 共用该电台；两者能否同时运行取决于驱动。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "An MLO interface needs at least two radios; saving switches them to EHT."
+msgstr "MLO 接口需要至少两个射频；保存后会将其切换到 EHT。"
+
+msgid "An encrypted archive can only be validated, restored or opened with its passphrase. There is no recovery mechanism on the router; keep the passphrase separately."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "An operator AP cannot be placed on the mesh radio."
+msgstr "不能把操作者 AP 放在 Mesh 电台上。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Analyze channels"
+msgstr "分析信道"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Analyzing %s runs a scan. While the scan runs the radio briefly leaves its channel, so connected clients may see a short interruption and the mesh may re-converge."
+msgstr "分析 %s 会执行一次扫描。扫描期间电台会短暂离开当前信道，已连接的客户端可能出现短暂中断，Mesh 也可能重新收敛。"
+
+msgid "Announced devices"
+msgstr "已通告设备"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Another enabled interface already uses this radio; the driver has to support both interfaces at once."
+msgstr "该电台已有其他已启用接口；需要驱动支持同时运行多个接口。"
+
+msgid "Apply"
+msgstr "应用"
+
+msgid "Apply configuration"
+msgstr "应用配置"
+
+msgid "Apply mesh configuration"
+msgstr "应用 Mesh 配置"
+
+msgid "Apply roaming settings"
+msgstr "应用漫游设置"
+
+msgid "Apply saved configuration"
+msgstr ""
+
+msgid "Applying mesh configuration"
+msgstr "正在应用 Mesh 配置"
+
+msgid "Applying roaming settings"
+msgstr "正在应用漫游设置"
+
+msgid "Applying this setting creates a full pre-change backup first. If the port cannot be used, the engine keeps the wireless backhaul and reports the reason instead of blocking the mesh."
+msgstr ""
+
+msgid "Archive"
+msgstr "归档"
+
+msgid "Archive the selected configuration areas into one integrity-checked file."
+msgstr "将选定的配置区域归档为一个经过完整性校验的文件。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Archives are created atomically and kept with owner-only permissions. The newest backups are kept according to the retention settings. The comparison covers the files stored in the newest unencrypted backup; an encrypted archive or a damaged file is reported as unknown, and files outside the backup scope are not compared."
+msgstr "归档文件以原子方式创建，并保持仅所有者可访问的权限。最新备份按保留设置保存。对比范围仅限最新未加密备份中存储的文件；加密归档或损坏文件会被报告为未知，备份范围之外的文件不参与对比。"
+
+msgid "Area"
+msgstr "领域"
+
+msgid "Areas"
+msgstr "区域"
+
+msgid "At least 12 characters. Encrypting requires the openssl command on the router."
+msgstr "至少 12 个字符。加密需要路由器上安装 openssl 命令。"
+
+msgid "At least one managed access point does not send 802.11v transition requests even though wpad supports them."
+msgstr "至少一个受管接入点未发送 802.11v 转换请求，尽管 wpad 支持该功能。"
+
+msgid "Attached hardifs"
+msgstr "已挂接硬接口"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Attempt"
+msgstr "尝试次数"
+
+msgid "Auto"
+msgstr "自动"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Automatic"
+msgstr "自动"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic (measured by BATMAN-adv)"
+msgstr "自动（由 BATMAN-adv 测量）"
+
+msgid "Automatic backup settings"
+msgstr "自动备份设置"
+
+msgid "Automatic backups"
+msgstr "自动备份"
+
+msgid "Automatic backups are disabled. Only manually created backups are kept."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic priority leaves throughput_override unset so BATMAN-adv measures the real links; the negotiated Ethernet rate is not treated as usable throughput. Manual overrides are written to the hardif sections when the mesh configuration is applied."
+msgstr "自动优先级不写入 throughput_override，由 BATMAN-adv 自行测量真实链路；协商的以太网速率不视为可用吞吐量。手动覆盖值在应用 Mesh 配置时写入 hardif 配置段。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching"
+msgstr "自动切换"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching is configured but the mesh is not applied, so the monitor is idle."
+msgstr "已配置自动切换，但 Mesh 尚未应用，监控处于空闲状态。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching is enabled, but no wired backhaul port is configured."
+msgstr "已启用自动切换，但未配置有线回程端口。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Automatic switching needs the wired backhaul to be enabled."
+msgstr "自动切换需要先启用有线回程。"
+
+msgid "Available"
+msgstr "可用"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Avoid"
+msgstr "避免"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "BSSID"
+msgstr "BSSID"
+
+msgid "Background"
+msgstr "后台"
+
+msgid "Backhaul"
+msgstr "回传"
+
+msgid "Backhaul and AP mode"
+msgstr "回传与 AP 模式"
+
+msgid "Backhaul configuration"
+msgstr "回传配置"
+
+msgid "Backhaul interfaces"
+msgstr "回传接口"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul priority"
+msgstr "回程优先级"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Backhaul runtime"
+msgstr "回程运行状态"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul switch failed"
+msgstr "回程切换失败"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Backhaul switched"
+msgstr "回程已切换"
+
+msgid "Backup"
+msgstr "备份"
+
+msgid "Backup %s created."
+msgstr "备份 %s 已创建。"
+
+msgid "Backup %s imported."
+msgstr "备份 %s 已导入。"
+
+msgid "Backup & Restore"
+msgstr "备份与恢复"
+
+msgid "Backup created: %s (%s)."
+msgstr "备份已创建：%s（%s）。"
+
+msgid "Backup deleted."
+msgstr "备份已删除。"
+
+msgid "Backup details"
+msgstr "备份详情"
+
+msgid "Backup overview"
+msgstr "备份概览"
+
+msgid "Backup restored and verified."
+msgstr "备份已恢复并通过验证。"
+
+msgid "Backup scope"
+msgstr "备份范围"
+
+msgid "Backup settings"
+msgstr "备份设置"
+
+msgid "Backup settings saved."
+msgstr "备份设置已保存。"
+
+msgid "Backup storage"
+msgstr "备份存储"
+
+msgid "Backup storage, retention and the most recent archives."
+msgstr "备份存储、保留策略和最近的归档。"
+
+msgid "Backups"
+msgstr "备份"
+
+msgid "Backups stored"
+msgstr "已存备份"
+
+msgid "Bad signal threshold"
+msgstr "弱信号阈值"
+
+msgid "Bad threshold: %s"
+msgstr "弱信号阈值：%s"
+
+msgid "Band"
+msgstr "频段"
+
+msgid "Before configuration changes"
+msgstr "配置变更前"
+
+msgid "Best signal"
+msgstr "最佳信号"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Both links are on the same band, so MLO brings less benefit."
+msgstr "两条链路位于同一频段，MLO 带来的收益较小。"
+
+msgid "Both meshassistant and wifimanager are running. Two managers write the same configuration; stop one of them."
+msgstr ""
+
+msgid "Bridge"
+msgstr "网桥"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Capabilities"
+msgstr "能力"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Carrier state and switch timing are read from the kernel. The active medium is the state the monitor recorded, not a measurement of traffic."
+msgstr "载波状态和切换时间来自内核。活动回程是监控记录的状态，而不是流量测量结果。"
+
+msgid "Change settings"
+msgstr "修改设置"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Changed files"
+msgstr "已更改文件"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Changed since the newest backup"
+msgstr "与最新备份相比已更改"
+
+msgid "Channel"
+msgstr "信道"
+
+msgid "Channel %s (%s MHz)"
+msgstr ""
+
+msgid "Channel %s (%s MHz, DFS)"
+msgstr ""
+
+msgid "Channel (config)"
+msgstr "信道（配置）"
+
+msgid "Channel / TX power (runtime)"
+msgstr "信道 / 发射功率（运行时）"
+
+msgid "Channel / width"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel recommendation"
+msgstr "信道建议"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Channel scan"
+msgstr "信道扫描"
+
+msgid "Channel use"
+msgstr "信道使用"
+
+msgid "Channel width"
+msgstr "信道宽度"
+
+msgid "Check"
+msgstr "检查"
+
+msgid "Checking the backup"
+msgstr "正在检查备份"
+
+msgid "Checking…"
+msgstr "正在检查…"
+
+msgid "Checks"
+msgstr "检查"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Choose a supported encryption mode."
+msgstr "请选择受支持的加密模式。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Choose a valid interface mode."
+msgstr "请选择有效的接口模式。"
+
+msgid "Choose the areas below"
+msgstr "在下方选择区域"
+
+msgid "Choose the areas to include. Invalid combinations are rejected before a backup is created."
+msgstr ""
+
+msgid "Choose the medium that carries mesh traffic and the LAN behaviour of an access point."
+msgstr "选择承载 Mesh 流量的介质以及接入点的 LAN 行为。"
+
+msgid "Choose these radios in Mesh Settings"
+msgstr "在 Mesh 设置中选择这些射频"
+
+msgid "Clear"
+msgstr "正常"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Client (STA)"
+msgstr "客户端（STA）"
+
+msgid "Client (uplink, LAN not bridged)"
+msgstr "客户端（上行，LAN 不桥接）"
+
+msgid "Client (wireless client)"
+msgstr "客户端（无线客户端）"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Client MAC"
+msgstr "客户端 MAC"
+
+msgid "Client joined"
+msgstr "客户端接入"
+
+msgid "Client joins, leaves and roams, mesh link state changes and batman-adv errors."
+msgstr ""
+
+msgid "Client left"
+msgstr "客户端离开"
+
+msgid "Client roamed"
+msgstr "客户端漫游"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Client steering"
+msgstr "客户端引导"
+
+msgid "Client steering configured"
+msgstr "客户端引导已配置"
+
+msgid "Client steering is configured, but DAWN is not installed. 802.11k/v remain enabled on the APs; install the dawn package to get client steering."
+msgstr ""
+
+msgid "Client steering is enabled but DAWN is not installed. 802.11k and 802.11r still work, but no service steers clients."
+msgstr "已启用客户端引导，但未安装 DAWN。802.11k 和 802.11r 仍然有效，但没有服务负责引导客户端。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Client-count threshold: DAWN only starts a steering round when at least this many clients are connected to the access point, so a nearly idle AP is not emptied."
+msgstr "客户端数阈值：只有接入点上至少连接这么多客户端时，DAWN 才会开始一轮引导，避免几乎空闲的 AP 被清空。"
+
+msgid "Clients"
+msgstr "客户端"
+
+msgid "Close"
+msgstr "关闭"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Co-channel"
+msgstr "同频干扰"
+
+msgid "Code"
+msgstr "代码"
+
+msgid "Combine two selected radios into one Wi-Fi 7 Multi-Link Operation access point. Both radios are switched to EHT mode."
+msgstr ""
+
+msgid "Combines the system state, the configuration checks, the mesh runtime and the roaming advice. Values are read when the page loads and refreshed while it stays visible; nothing is probed actively."
+msgstr "汇总系统状态、配置检查、mesh 运行状态和漫游建议。数值在页面加载时读取并在页面可见时刷新；不会主动探测。"
+
+msgid "Compares the saved 802.11k/v/r flags and thresholds with the clients associated right now. Copy a suggested value into the form only after checking it against your deployment."
+msgstr "将已保存的 802.11k/v/r 标志和阈值与当前关联的客户端进行比较。请结合实际部署确认后，再把建议值填入表单。"
+
+msgid "Compatibility warnings"
+msgstr "兼容性警告"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Configuration checks"
+msgstr "配置检查"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Configuration drift between nodes is the usual reason a mesh stops forming a direct link."
+msgstr "节点之间的配置漂移是 mesh 无法建立直接链路的常见原因。"
+
+msgid "Configuration files that will be modified"
+msgstr ""
+
+msgid "Configuration vs runtime"
+msgstr "配置与运行时"
+
+msgid "Configuration, service and runtime are reported separately so a stopped service is not mistaken for a broken configuration."
+msgstr ""
+
+msgid "Configuration, services, batman-adv runtime and link state, each reported separately."
+msgstr "分别报告配置、服务、batman-adv 运行状态和链路状态。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Configuration-level checks across /etc/config/network, dhcp, firewall and wireless. Runtime reachability is not probed."
+msgstr "对 /etc/config/network、dhcp、firewall 和 wireless 进行配置级检查。不会探测运行时连通性。"
+
+msgid "Configured"
+msgstr "已配置"
+
+msgid "Configured radio layout, runtime state and allocation checks side by side."
+msgstr "并排查看已配置的射频布局、运行状态和分配检查。"
+
+msgid "Configured to run"
+msgstr "配置为运行"
+
+msgid "Configured values come from UCI. Runtime values come from iwinfo; a value the driver does not expose stays “-” instead of being guessed."
+msgstr ""
+
+msgid "Configured values come from UCI. Up/down and channel information come from the running system and may lag behind a pending configuration change."
+msgstr ""
+
+msgid "Configured: channel %s, %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Confirm migration"
+msgstr "确认迁移"
+
+msgid "Confirm restore"
+msgstr "确认恢复"
+
+msgid "Conflict"
+msgstr "冲突"
+
+msgid "Connected clients"
+msgstr "已连接客户端"
+
+msgid "Consistent"
+msgstr "一致"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "Copy legacy backup"
+msgstr "复制旧版备份"
+
+msgid "Copying the archive to the download area…"
+msgstr ""
+
+msgid "Country code"
+msgstr "国家代码"
+
+msgid "Create Backup"
+msgstr "创建备份"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Create MLO interface"
+msgstr "创建 MLO 接口"
+
+msgid "Create a backup"
+msgstr "创建备份"
+
+msgid "Create a backup before every restore"
+msgstr "每次恢复前创建备份"
+
+msgid "Create backup"
+msgstr "创建备份"
+
+msgid "Create copy"
+msgstr "创建副本"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Create interface"
+msgstr "创建接口"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Create wireless interface"
+msgstr "创建无线接口"
+
+msgid "Created"
+msgstr "创建时间"
+
+msgid "Created by luci-app-meshassistant 2.7.x."
+msgstr "由 luci-app-meshassistant 2.7.x 创建。"
+
+msgid "Creating backup"
+msgstr "正在创建备份"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Current channel utilization: %d%%."
+msgstr "当前信道占用率：%d%%。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Current configuration compared with the newest backup"
+msgstr "当前配置与最新备份对比"
+
+msgid "Current state"
+msgstr "当前状态"
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "DAWN"
+msgstr "DAWN"
+
+msgid "DAWN (roaming)"
+msgstr "DAWN（漫游）"
+
+msgid "DAWN (syslog entries)"
+msgstr "DAWN（syslog 条目）"
+
+msgid "DAWN client steering"
+msgstr "DAWN 客户端引导"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "DAWN decisions"
+msgstr "DAWN 决策"
+
+msgid "DAWN has been restarted %d time(s) since it started. Repeated restarts point to a configuration or driver problem; check the DAWN log."
+msgstr ""
+
+msgid "DAWN installed"
+msgstr "DAWN 已安装"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "DAWN is managed but not running. The watchdog in the minute ticker restarts it at most once every five minutes; the last attempt is recorded in the log."
+msgstr "DAWN 由本插件管理但未运行。每分钟的定时任务最多每五分钟重启一次；最后一次尝试记录在日志中。"
+
+msgid "DAWN is managed by WiFi Manager but is not running. The watchdog restarts it at most once every five minutes."
+msgstr "DAWN 由 WiFi管家管理，但当前未运行。看门狗最多每五分钟重启一次。"
+
+msgid "DAWN is not installed. 802.11k/v can still be enabled, but there is no client-steering service."
+msgstr ""
+
+msgid "DAWN is not managed by WiFi Manager yet. Apply the roaming settings while mesh networking is enabled to write the managed configuration."
+msgstr ""
+
+msgid "DAWN managed by WiFi Manager"
+msgstr "DAWN 由 WiFi管家管理"
+
+msgid "DAWN running"
+msgstr "DAWN 运行中"
+
+msgid "DAWN scores every access point a client can see and asks the client to move when another AP is clearly better. It needs 802.11k neighbor reports, 802.11v transition requests and a shared key on every AP."
+msgstr ""
+
+msgid "DAWN starts steering only with at least %d clients per access point, but the busiest access point currently has %d. Steering cannot start until more clients join."
+msgstr "DAWN 仅当每个接入点至少有 %d 个客户端时才开始引导，但当前最繁忙的接入点只有 %d 个。在更多客户端加入前无法开始引导。"
+
+msgid "DAWN status"
+msgstr "DAWN 状态"
+
+msgid "DAWN steering requires mesh networking to be enabled: the engine only writes the managed DAWN configuration while mesh is on."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "DAWN watchdog restart"
+msgstr "DAWN 看门狗重启"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DFS"
+msgstr "DFS"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "DFS channels need a channel availability check and can be vacated when radar is detected."
+msgstr "DFS 信道需要先完成信道可用性检查，检测到雷达时还必须让出信道。"
+
+msgid "DHCP / DNS"
+msgstr "DHCP / 域名解析"
+
+msgid "DHCP DNS server"
+msgstr "DHCP DNS 服务器"
+
+msgid "DHCP client"
+msgstr "DHCP 客户端"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP disabled but still active"
+msgstr "DHCP 已禁用但仍处于活动状态"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP expected but disabled"
+msgstr "应提供 DHCP 但已禁用"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP pool outside its subnet"
+msgstr "DHCP 地址池超出其子网"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "DHCP server on a node/client"
+msgstr "节点/客户端上运行 DHCP 服务器"
+
+msgid "DNS server"
+msgstr "DNS 服务器"
+
+msgid "Daily"
+msgstr "每天"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Default"
+msgstr "默认"
+
+msgid "Delete"
+msgstr "删除"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Delete %s? A Wireless backup is created first, and the interface is restored if it cannot be removed."
+msgstr "删除 %s？将先创建无线备份；如果无法移除该接口，则会恢复。"
+
+msgid "Delete backup"
+msgstr "删除备份"
+
+msgid "Delete the archive %s? The file and its checksum are removed; this cannot be undone."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Delete wireless interface"
+msgstr "删除无线接口"
+
+msgid "Derived from the mesh ID"
+msgstr "由 Mesh ID 派生"
+
+msgid "Description"
+msgstr "描述"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination AP"
+msgstr "目标 AP"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination RSSI"
+msgstr "目标 RSSI"
+
+msgid "Detail"
+msgstr "详情"
+
+msgid "Details"
+msgstr "详情"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Detected"
+msgstr "检测时间"
+
+msgid "Device"
+msgstr "设备"
+
+msgid "Devices associated with this device, with the link that carries each one."
+msgstr "已关联到本设备的终端及其承载链路。"
+
+msgid "Devices reachable over the mesh and the medium each link uses."
+msgstr "Mesh 内可达的设备以及每条链路使用的介质。"
+
+msgid "Diagnostics"
+msgstr "诊断"
+
+msgid "Direct neighbors"
+msgstr ""
+
+msgid "Direct neighbors, announced devices and the interfaces attached to the mesh bridge."
+msgstr "直连邻居、已通告设备以及挂接到 Mesh 网桥的接口。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Disable this interface"
+msgstr "禁用此接口"
+
+msgid "Disabled"
+msgstr "已禁用"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Disassociate clients with a low ACK ratio"
+msgstr "断开 ACK 比率较低的客户端"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Disconnect after ignored requests"
+msgstr "忽略请求后断开"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Disconnect after two ignored requests"
+msgstr "两次忽略请求后断开"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Disconnect duration, reconnect duration and packet loss are not observable from the station table, so those fields are recorded and shown as unavailable rather than estimated."
+msgstr "断开时长、重连时长和丢包率无法从站点表观察，因此这些字段会被记录并显示为不可用，而不是估算值。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Disconnect immediately"
+msgstr "立即断开"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Disconnect time"
+msgstr "断开时间"
+
+msgid "Down"
+msgstr "断开"
+
+msgid "Download"
+msgstr "下载"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "Download backup"
+msgstr "下载备份"
+
+msgid "Download started: %s"
+msgstr "下载已开始：%s"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Duplicate DHCP server"
+msgstr "重复的 DHCP 服务器"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Duplicate IPv4 address"
+msgstr "重复的 IPv4 地址"
+
+msgid "E-* findings block a safe allocation; W-* findings are warnings about combinations the driver may reject."
+msgstr ""
+
+msgid "Each MLO link needs at least two radios, and both must be switched to EHT. A DFS channel inside the link can delay association while the radar check runs."
+msgstr ""
+
+msgid "Each line is one backhaul the other device reports for itself. A device reached over both media is drawn with a solid and a dashed line."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Edit"
+msgstr "编辑"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Edit wireless interface: %s"
+msgstr "编辑无线接口：%s"
+
+msgid "Enable 802.11k/v and client steering"
+msgstr "启用 802.11k/v 和客户端引导"
+
+msgid "Enable 802.11r fast transition"
+msgstr "启用 802.11r 快速切换"
+
+msgid "Enable AP mode"
+msgstr "启用 AP 模式"
+
+msgid "Enable MLO"
+msgstr "启用 MLO"
+
+msgid "Enable automatic backups"
+msgstr "启用自动备份"
+
+msgid "Enable mesh networking"
+msgstr "启用 Mesh 组网"
+
+msgid "Enabled"
+msgstr "已启用"
+
+msgid "Enabled at boot"
+msgstr "开机启用"
+
+msgid "Enabled, stopped"
+msgstr "已启用，未运行"
+
+msgid "Encrypt newly created backups by default"
+msgstr "默认加密新建的备份"
+
+msgid "Encrypt the archive with a passphrase"
+msgstr "使用口令加密归档"
+
+msgid "Encrypted"
+msgstr "已加密"
+
+msgid "Encrypted archives use AES-256-CBC with PBKDF2-SHA256 and 200000 iterations. The passphrase must have at least 12 characters and is never stored. Archives written by an older release still restore with their original passphrase."
+msgstr "加密归档使用 AES-256-CBC、PBKDF2-SHA256 和 200000 次迭代。口令至少 12 个字符，且不会被保存。旧版本写入的归档仍可用原口令恢复。"
+
+msgid "Encrypted backup"
+msgstr "加密备份"
+
+msgid "Encryption"
+msgstr "加密"
+
+msgid "Enter a contiguous IPv4 netmask, for example 255.255.255.0."
+msgstr ""
+
+msgid "Enter a mesh ID of 1 to 32 bytes."
+msgstr "请输入 1 到 32 字节的 Mesh ID。"
+
+msgid "Enter a passphrase of 8 to 63 printable characters."
+msgstr ""
+
+msgid "Enter a signal level in dBm between -100 and -10."
+msgstr ""
+
+msgid "Enter a valid IPv4 address."
+msgstr "请输入有效的 IPv4 地址。"
+
+msgid "Enter an SSID of 1 to 32 bytes."
+msgstr "请输入 1 到 32 字节的 SSID。"
+
+msgid "Enter exactly four hexadecimal digits, for example 1a2b."
+msgstr ""
+
+msgid "Enter the passphrase for %s."
+msgstr "请输入 %s 的口令。"
+
+msgid "Enter the passphrase of the uploaded archive."
+msgstr "请输入上传归档的口令。"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Errors first, then warnings and notes. The cards below keep the raw values a finding refers to."
+msgstr "错误在前，其后是警告和提示。下方卡片保留了每条发现所引用的原始数值。"
+
+msgid "Ethernet"
+msgstr "以太网"
+
+msgid "Ethernet + wireless"
+msgstr "以太网 + 无线"
+
+msgid "Ethernet backhaul"
+msgstr "有线回传"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet preference is the default: the wired link is used whenever it is stable and the wireless mesh takes over when the cable is lost."
+msgstr "默认优先使用以太网：有线链路稳定时使用有线，网线断开时由无线 Mesh 接管。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ethernet, with wireless fallback"
+msgstr "以太网优先，无线作为备用"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Evaluation interval"
+msgstr "评估间隔"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Evaluation interval (seconds)"
+msgstr "评估间隔（秒）"
+
+msgid "Event"
+msgstr "事件"
+
+msgid "Event log"
+msgstr "事件日志"
+
+msgid "Events"
+msgstr "事件"
+
+msgid "Every archive is listed with its metadata. Encrypted archives need their passphrase for validation, details and restore."
+msgstr ""
+
+msgid "Every server and node in the mesh must use the same mesh ID. The 802.11s interface is named “<mesh ID>-mesh”."
+msgstr ""
+
+msgid "Explanation"
+msgstr "说明"
+
+msgid "External"
+msgstr "外部"
+
+msgid "Failed to load: %s"
+msgstr "加载失败：%s"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Fallback delay (seconds)"
+msgstr "回退延迟（秒）"
+
+msgid "Fast BSS transition lets a client move between access points with the same SSID without a full re-authentication. All APs must share the same mobility domain; separate SSIDs per radio disable it by design."
+msgstr ""
+
+msgid "Fields"
+msgstr "字段"
+
+msgid "Files in the archive"
+msgstr "归档中的文件"
+
+msgid "Filesystem"
+msgstr "文件系统"
+
+msgid "Finding"
+msgstr "发现"
+
+msgid "Findings from the radio inventory"
+msgstr ""
+
+msgid "Firewall"
+msgstr "防火墙"
+
+msgid "Firewall, DHCP and RA are disabled, the WAN port is bridged into the LAN, and the LAN address changes to the selected DHCP or static address. This page will likely become unreachable and must be opened at the new address. A pre-change backup is created automatically."
+msgstr ""
+
+msgid "Firmware"
+msgstr "固件"
+
+msgid "Flags"
+msgstr "标志"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "For a roam, the source RSSI is the last value seen on the old BSS and the destination RSSI is the first value seen on the new one, both sampled a minute apart."
+msgstr "对于漫游，源 RSSI 是在旧 BSS 上看到的最后一个值，目标 RSSI 是在新 BSS 上看到的第一个值，两者相隔约一分钟采样。"
+
+msgid "Four hexadecimal digits shared by every AP in the roaming group. Leave empty to derive the value from the mesh ID on the next apply."
+msgstr ""
+
+msgid "Free"
+msgstr "空闲"
+
+msgid "Free space"
+msgstr "可用空间"
+
+msgid "Frequency"
+msgstr "频率"
+
+msgid "Full"
+msgstr "完整"
+
+msgid "Gateway"
+msgstr "网关"
+
+msgid "General"
+msgstr "常规"
+
+msgid "Good signal threshold"
+msgstr "良好信号阈值"
+
+msgid "Good threshold: %s"
+msgstr "良好信号阈值：%s"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Healthy"
+msgstr "正常"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Hidden SSID"
+msgstr "隐藏 SSID"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Hide the SSID"
+msgstr "隐藏 SSID"
+
+msgid "Highest memory use"
+msgstr "最高内存使用率"
+
+msgid "Hostname"
+msgstr "主机名"
+
+msgid "How events are collected"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "How long the wired link must stay down before the wired hardif is detached."
+msgstr "有线链路断开多久后才会将硬接口从 bat0 分离。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "How long the wired link must stay up before it is used again."
+msgstr "有线链路恢复后需保持稳定多久才会重新使用。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "How much stronger another access point must be before DAWN considers a move worth it. A larger value reduces steering between similar APs."
+msgstr "另一个接入点需要强多少，DAWN 才认为迁移值得。值越大，相似 AP 之间的引导越少。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "How often DAWN re-evaluates the client table and applies the thresholds above."
+msgstr "DAWN 重新评估客户端表并应用上述阈值的频率。"
+
+msgid "Hybrid backhaul"
+msgstr "混合回传"
+
+msgid "I understand the scope above and want to restore this backup now."
+msgstr ""
+
+msgid "IPv4 address"
+msgstr "IPv4 地址"
+
+msgid "IPv4 addresses"
+msgstr "IPv4 地址"
+
+msgid "If this page lost its connection, the restore may still have succeeded. Reconnect at the new address and check the last operation on the backup overview page."
+msgstr ""
+
+msgid "Import copy"
+msgstr "导入副本"
+
+msgid "Importing backup"
+msgstr "正在导入备份"
+
+msgid "In the %s band, %d client(s) report a median of %d dBm. The current thresholds (good %d dBm, bad %d dBm) differ from the suggested values (good %d dBm, bad %d dBm) by 10 dB or more."
+msgstr "在 %s 频段，%d 个客户端的中位信号为 %d dBm。当前阈值（良好 %d dBm，较差 %d dBm）与建议值（良好 %d dBm，较差 %d dBm）相差 10 dB 或更多。"
+
+msgid "In use"
+msgstr "使用中"
+
+msgid "Information"
+msgstr "提示"
+
+msgid "Init script"
+msgstr "启动脚本"
+
+msgid "Installed"
+msgstr "已安装"
+
+msgid "Integrity is checked from the Restore page, where each archive is validated before it can be restored."
+msgstr ""
+
+msgid "Interface"
+msgstr "接口"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s deleted."
+msgstr "接口 %s 已删除。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved and verified."
+msgstr "接口 %s 已保存并验证。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved. It is disabled, so no runtime check was run."
+msgstr "接口 %s 已保存。该接口已禁用，因此未执行运行时检查。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface %s saved. The configuration is verified; the runtime name is assigned by the driver."
+msgstr "接口 %s 已保存。配置已校验；运行时接口名由驱动分配。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Interface name"
+msgstr "接口名称"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Interface outside every firewall zone"
+msgstr "接口未加入任何防火墙区域"
+
+msgid "Interfaces"
+msgstr "接口"
+
+msgid "Interfaces selected in the configuration"
+msgstr "配置中选择的接口"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Interference"
+msgstr "干扰值"
+
+msgid "Internal flash"
+msgstr "内部闪存"
+
+msgid "Invalid"
+msgstr "无效"
+
+msgid "Keep current (%s)"
+msgstr "保持当前（%s）"
+
+msgid "Keep this on when this server is the only DHCP server on the LAN. Turn it off when another router already hands out addresses; the server then keeps the gateway and DNS role without running DHCP or RA."
+msgstr ""
+
+msgid "Kernel"
+msgstr "内核"
+
+msgid "LAN address mode"
+msgstr "LAN 地址模式"
+
+msgid "Labels and protection"
+msgstr "标签与保护"
+
+msgid "Last %d events"
+msgstr "最近 %d 条事件"
+
+msgid "Last automatic backup"
+msgstr "最近一次自动备份"
+
+msgid "Last backup"
+msgstr "最近备份"
+
+msgid "Last event"
+msgstr "最近事件"
+
+msgid "Last operation"
+msgstr "最近操作"
+
+msgid "Last seen"
+msgstr "最近出现"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Last switch"
+msgstr "上次切换"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Last watchdog restart"
+msgstr "最近一次看门狗重启"
+
+msgid "Leave AP mode"
+msgstr "退出 AP 模式"
+
+msgid "Leave a field empty to use the global threshold. A 6 GHz radio usually needs a higher good threshold than a 2.4 GHz radio because its free-space path loss is higher."
+msgstr ""
+
+msgid "Leave at “Keep current” to keep the configured channel. A DFS channel can be unavailable while the radar check runs."
+msgstr ""
+
+msgid "Leave at “Keep current” to keep the radio mode."
+msgstr ""
+
+msgid "Leave at “Keep current” to keep the radio width."
+msgstr ""
+
+msgid "Leave empty to use the shared SSID above."
+msgstr ""
+
+msgid "Leaving AP mode restores the network configuration that was saved automatically when AP mode was enabled. If that state is missing, check the standard network configuration before rebooting the device."
+msgstr ""
+
+msgid "Legacy (Mesh Assistant)"
+msgstr "旧版（Mesh Assistant）"
+
+msgid "Legacy Mesh Assistant archives are read in place and are never deleted or lossily converted."
+msgstr ""
+
+msgid "Legacy Mesh Assistant backups"
+msgstr "旧版 Mesh Assistant 备份"
+
+msgid "Legacy Mesh Assistant init script, if it is still installed."
+msgstr ""
+
+msgid "Legacy backup imported as %s."
+msgstr "旧版备份已导入为 %s。"
+
+msgid "Legacy backups"
+msgstr "旧版备份"
+
+msgid "Legacy backups shown"
+msgstr "显示旧版备份"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Legacy configuration"
+msgstr "旧版配置"
+
+msgid "Legacy service"
+msgstr "旧版服务"
+
+msgid "Less than 4 MiB is free in the backup storage location; creating a backup may fail."
+msgstr ""
+
+msgid "Level"
+msgstr "级别"
+
+msgid "Links"
+msgstr "链路"
+
+msgid "Links that the other device reports for itself. The announced rate is the value that device measures; a signal and a channel use cannot be measured from here and therefore stay empty."
+msgstr ""
+
+msgid "Load"
+msgstr "负载"
+
+msgid "Load (1 / 5 / 15 min)"
+msgstr "负载（1 / 5 / 15 分钟）"
+
+msgid "Loading…"
+msgstr "加载中…"
+
+msgid "Local backhaul interfaces"
+msgstr "本地回传接口"
+
+msgid "Local interface"
+msgstr "本地接口"
+
+msgid "Location"
+msgstr "位置"
+
+msgid "Log"
+msgstr "日志"
+
+msgid "Log copied to the clipboard."
+msgstr "日志已复制到剪贴板。"
+
+msgid "Logs"
+msgstr "日志"
+
+msgid "Lost on reboot"
+msgstr "重启后丢失"
+
+msgid "LuCI status overview"
+msgstr "LuCI 状态概览"
+
+msgid "MAC"
+msgstr "MAC"
+
+msgid "MAC address"
+msgstr "MAC 地址"
+
+msgid "MLO"
+msgstr "MLO"
+
+msgid "MLO interfaces"
+msgstr "MLO 接口"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "MLO is only available for access point and client interfaces."
+msgstr "MLO 仅适用于接入点和客户端接口。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO links and the mesh share this radio; the driver decides whether both can run."
+msgstr "MLO 链路与 Mesh 共用该电台；两者能否同时运行取决于驱动。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "MLO needs at least two radios."
+msgstr "MLO 至少需要两个射频。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "MLO needs two radios that can run at the same time."
+msgstr "MLO 需要两个可同时工作的电台。"
+
+msgid "MLO requires exactly two radios."
+msgstr "MLO 需要恰好两个射频。"
+
+msgid "MLO-related findings"
+msgstr ""
+
+msgid "Managed DAWN configuration"
+msgstr "受管 DAWN 配置"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/interfaces.js
+msgid "Managed by Mesh"
+msgstr "由 Mesh 管理"
+
+msgid "Managed by WiFi Manager"
+msgstr "由 WiFi管家管理"
+
+msgid "Managed configuration"
+msgstr "受管配置"
+
+msgid "Manual only"
+msgstr "仅手动"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Manual throughput override"
+msgstr "手动吞吐量覆盖"
+
+msgid "Maximum backups kept"
+msgstr "最多保留备份数"
+
+msgid "Maximum storage usage"
+msgstr "最大存储占用"
+
+msgid "Maximum storage usage (MiB)"
+msgstr "最大存储占用（MiB）"
+
+msgid "Maximum transmit power"
+msgstr "最大发射功率"
+
+msgid "Median signal"
+msgstr "中位信号"
+
+msgid "Medium"
+msgstr "介质"
+
+msgid "Medium unknown"
+msgstr "介质未知"
+
+msgid "Memory"
+msgstr "内存"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Memory and client values are measured on this device; the client count covers the access points of this device only and is not the number of clients of the whole mesh."
+msgstr "内存和客户端数值在本设备上测量；客户端数只覆盖本设备的接入点，并不是整个 mesh 的客户端总数。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Memory in use"
+msgstr "内存使用率"
+
+msgid "Mesh"
+msgstr "Mesh"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh Assistant is enabled again; WiFi Manager records the migration as declined."
+msgstr "Mesh Assistant 已重新启用；WiFi管家已将迁移记录为放弃。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Mesh Assistant is installed on this router. WiFi Manager validated its configuration, took a pre-migration backup when it could and stopped the legacy service so two managers never run at once. Confirm the migration to finish the switch, or restore the legacy service."
+msgstr "本路由器安装了 Mesh Assistant。WiFi管家已校验其配置、尽可能创建迁移前备份并停用旧服务，避免两个管理器同时运行。确认迁移以完成切换，或恢复旧服务。"
+
+msgid "Mesh ID"
+msgstr "Mesh ID"
+
+msgid "Mesh MAC"
+msgstr "Mesh MAC"
+
+msgid "Mesh SSID"
+msgstr "Mesh SSID"
+
+msgid "Mesh and backhaul areas need the Wireless and Network areas so a restore can rebuild the bridge."
+msgstr ""
+
+msgid "Mesh and roaming events"
+msgstr "Mesh 与漫游事件"
+
+msgid "Mesh applied"
+msgstr "Mesh 已应用"
+
+msgid "Mesh backhaul"
+msgstr "Mesh 回传"
+
+msgid "Mesh configuration applied."
+msgstr "Mesh 配置已应用。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Mesh consistency"
+msgstr "Mesh 一致性"
+
+msgid "Mesh diagnostics"
+msgstr "Mesh 诊断"
+
+msgid "Mesh enabled"
+msgstr "Mesh 已启用"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Mesh hard interface wiring"
+msgstr "Mesh 硬接口连接"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Mesh interface network"
+msgstr "Mesh 接口网络"
+
+msgid "Mesh is configured as running and bat0 exists with operstate up."
+msgstr ""
+
+msgid "Mesh is configured as running and bat0 exists, but its operstate is not up."
+msgstr ""
+
+msgid "Mesh is configured as running but bat0 does not exist."
+msgstr ""
+
+msgid "Mesh is configured as running, but bat0 does not exist. The service either failed to start or has not finished starting."
+msgstr ""
+
+msgid "Mesh is configured but has not been applied. Neighbor data appears after the next successful apply."
+msgstr ""
+
+msgid "Mesh is configured but no other mesh device is currently visible."
+msgstr "已配置 mesh，但当前看不到其他 mesh 设备。"
+
+msgid "Mesh is configured but not applied yet. Open Mesh Settings and apply the configuration."
+msgstr ""
+
+msgid "Mesh is enabled in the configuration but the bat0 interface does not exist. Apply the mesh configuration and check the system log."
+msgstr "配置中已启用 mesh，但 bat0 接口不存在。请应用 mesh 配置并检查系统日志。"
+
+msgid "Mesh is not configured as running, so runtime state is not compared."
+msgstr ""
+
+msgid "Mesh link down"
+msgstr "Mesh 链路断开"
+
+msgid "Mesh link up"
+msgstr "Mesh 链路建立"
+
+msgid "Mesh manager and timer of WiFi Manager."
+msgstr "WiFi管家的 Mesh 管理器与定时器。"
+
+msgid "Mesh neighbors"
+msgstr "Mesh 邻居"
+
+msgid "Mesh network ID"
+msgstr "Mesh 网络 ID"
+
+msgid "Mesh password"
+msgstr "Mesh 密码"
+
+msgid "Mesh radio"
+msgstr "Mesh 射频"
+
+msgid "Mesh role"
+msgstr "Mesh 角色"
+
+msgid "Mesh roles, BATMAN-adv, 802.11s, backhaul and the mesh-related network settings."
+msgstr ""
+
+msgid "Mesh running"
+msgstr "Mesh 运行中"
+
+msgid "Mesh settings"
+msgstr "Mesh 设置"
+
+msgid "Mesh status"
+msgstr "Mesh 状态"
+
+msgid "Mesh topology"
+msgstr "Mesh 拓扑"
+
+msgid "Mesh-owned"
+msgstr "Mesh 所有"
+
+msgid "Message"
+msgstr "消息"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Migration confirmed. WiFi Manager manages the configuration; the Mesh Assistant service stays stopped."
+msgstr "迁移已确认。WiFi管家接管配置，Mesh Assistant 服务保持停止。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Migration from Mesh Assistant"
+msgstr "从 Mesh Assistant 迁移"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Minimum clients"
+msgstr "最少客户端数"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Minimum clients per steering decision"
+msgstr "每次引导决策的最少客户端数"
+
+msgid "Mismatch"
+msgstr "不一致"
+
+msgid "Missing"
+msgstr "缺失"
+
+msgid "Mobility domain"
+msgstr "移动域"
+
+msgid "Mode"
+msgstr "模式"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Monitor running"
+msgstr "监控运行中"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "More than one 802.11s interface"
+msgstr "存在多个 802.11s 接口"
+
+msgid "More than one device announces the hostname \"%s\". Rename one of them so the topology and logs stay readable."
+msgstr "多个设备通告了相同的主机名“%s”。请重命名其中一个，以保证拓扑和日志可读。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "More than one device announces the server role. Exactly one node should be the mesh server."
+msgstr "多个设备通告了服务器角色。应恰好有一个节点作为 mesh 服务器。"
+
+msgid "Mount"
+msgstr "挂载点"
+
+msgid "Mount point"
+msgstr "挂载点"
+
+msgid "Move one Ethernet port out of the LAN bridge and attach it to bat0, so the mesh can use that cable instead of the wireless backhaul. The wireless mesh link stays available as a fallback."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Multiple default routes"
+msgstr "多个默认路由"
+
+msgid "Must be under /etc, /mnt, /media or /tmp. The directory is created when the setting is saved and receives owner-only permissions. A location that cannot be used falls back to /etc/wifimanager/backup."
+msgstr ""
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Neighbor"
+msgstr "邻居"
+
+msgid "Neighbor and originator queries can be executed."
+msgstr ""
+
+msgid "Neighbor details"
+msgstr "邻居详情"
+
+msgid "Neighbors"
+msgstr "邻居"
+
+msgid "Neighbors and topology need the batctl package; the configuration itself does not."
+msgstr ""
+
+msgid "Neighbors reported by this device’s batman-adv table. Signal, channel use and load are measured on this side of the link."
+msgstr ""
+
+msgid "Neither WiFi Manager nor the legacy mesh service is enabled, so no mesh is started at boot."
+msgstr ""
+
+msgid "Netdev"
+msgstr "网络设备"
+
+msgid "Netmask of the static address."
+msgstr "静态地址的子网掩码。"
+
+msgid "Network"
+msgstr "网络"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Network checks"
+msgstr "网络检查"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Network finding"
+msgstr "网络检查项"
+
+msgid "Network interfaces may restart. If the LAN configuration changes, this page can become unreachable and the restore still continues on the router."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Network name"
+msgstr "网络名称"
+
+msgid "Never"
+msgstr "从未"
+
+msgid "Newest backup"
+msgstr "最新备份"
+
+msgid "No"
+msgstr "否"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No DHCP, DNS, address, route, firewall-zone or mesh-bridge conflict was found in the configuration."
+msgstr "配置中未发现 DHCP、DNS、地址、路由、防火墙区域或 Mesh 桥接冲突。"
+
+msgid "No MLO allocation problem was found."
+msgstr "未发现 MLO 分配问题。"
+
+msgid "No MLO interface is configured on this device."
+msgstr ""
+
+msgid "No access point interface was found."
+msgstr "未找到接入点接口。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No access point was visible, so the ranking only reflects DFS and the current utilization."
+msgstr "没有扫描到接入点，排名只反映 DFS 与当前信道占用率。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No additional information."
+msgstr "没有更多信息。"
+
+msgid "No allocation conflicts were found."
+msgstr "未发现分配冲突。"
+
+msgid "No backup has been created yet."
+msgstr "尚未创建备份。"
+
+msgid "No backup is stored yet."
+msgstr "尚未存储备份。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No candidate channel was reported."
+msgstr "未报告候选信道。"
+
+msgid "No checks."
+msgstr "无检查项。"
+
+msgid "No client is currently associated, so no signal statistics are available."
+msgstr "当前没有客户端关联，因此没有可用的信号统计。"
+
+msgid "No client is currently known."
+msgstr "当前没有已知客户端。"
+
+msgid "No conflict"
+msgstr "无冲突"
+
+msgid "No conflicts were found."
+msgstr "未发现冲突。"
+
+msgid "No conflicts."
+msgstr "无冲突。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "No device announces the server role. One node has to be the mesh server."
+msgstr "没有设备通告服务器角色。必须有一个节点作为 mesh 服务器。"
+
+msgid "No direct mesh neighbor is visible."
+msgstr "未发现直连 Mesh 邻居。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No enabled interface uses this radio."
+msgstr "没有已启用的接口使用该电台。"
+
+msgid "No entries."
+msgstr "无条目。"
+
+msgid "No event has been recorded yet."
+msgstr "尚未记录事件。"
+
+msgid "No external storage is mounted at this location. Mount the volume or choose another path."
+msgstr "此位置没有挂载外部存储。请挂载卷或选择其他路径。"
+
+msgid "No interface is attached to bat0 yet."
+msgstr "尚无接口挂接到 bat0。"
+
+msgid "No interface is currently attached to bat0."
+msgstr ""
+
+msgid "No mesh link is currently visible."
+msgstr "当前没有可见的 Mesh 链路。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "No mesh parameter mismatch was found among the devices that announced them."
+msgstr "在通告了参数的设备之间未发现 mesh 参数不一致。"
+
+msgid "No mesh peer is currently visible. This is expected on a single-node mesh; on a multi-node mesh check the backhaul and the mesh ID."
+msgstr "当前看不到 mesh 邻居。单节点 mesh 中这是正常的；多节点 mesh 请检查回传和 mesh ID。"
+
+msgid "No netdev"
+msgstr "无网络设备"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No network finding."
+msgstr "没有网络检查项。"
+
+msgid "No network interfaces were found."
+msgstr "未找到网络接口。"
+
+msgid "No operation has run yet."
+msgstr "尚未执行操作。"
+
+msgid "No other device has announced itself."
+msgstr "没有其他设备通告自身。"
+
+msgid "No other mesh device is currently visible."
+msgstr ""
+
+msgid "No other mesh manager is enabled."
+msgstr "没有其他 Mesh 管理器处于启用状态。"
+
+msgid "No problem was found in the checked subsystems."
+msgstr "已检查的子系统未发现问题。"
+
+msgid "No radio allocation or channel conflict was found."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No radio is suitable: %s"
+msgstr "没有合适的电台：%s"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "No radio was found."
+msgstr "未找到射频。"
+
+msgid "No radio was found. Mesh settings cannot be applied until a wireless device exists."
+msgstr ""
+
+msgid "No radios were found."
+msgstr "未找到射频。"
+
+msgid "No roaming problem was found in the current configuration and signal sample."
+msgstr "当前配置和信号样本中未发现漫游问题。"
+
+msgid "No runtime topology problem was detected."
+msgstr "未检测到运行时拓扑问题。"
+
+msgid "No service information."
+msgstr "无服务信息。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "No switch has been recorded since boot."
+msgstr "本次启动以来尚未记录切换。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "No upstream resolver"
+msgstr "没有上游 DNS"
+
+msgid "No usable storage location was found."
+msgstr "未找到可用的存储位置。"
+
+msgid "No wireless interfaces were found."
+msgstr "未找到无线接口。"
+
+msgid "Node (bridged, no DHCP)"
+msgstr "节点（桥接，不提供 DHCP）"
+
+msgid "Node (mesh point)"
+msgstr "节点（Mesh 点）"
+
+msgid "None"
+msgstr "无"
+
+msgid "Not applied"
+msgstr "未应用"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Not determinable"
+msgstr "无法确定"
+
+msgid "Not encrypted"
+msgstr "未加密"
+
+msgid "Not installed"
+msgstr "未安装"
+
+msgid "Not managed"
+msgstr "未托管"
+
+msgid "Not present"
+msgstr ""
+
+msgid "Not running"
+msgstr "未运行"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Not set"
+msgstr "未设置"
+
+msgid "Not writable"
+msgstr "不可写"
+
+msgid "Nothing to show."
+msgstr "没有可显示的内容。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "OWE (enhanced open)"
+msgstr "OWE（增强型开放）"
+
+msgid "Older archives are removed according to the backup settings after each backup."
+msgstr ""
+
+msgid "Oldest archives are removed until the total size fits. Between 4 and 4096 MiB."
+msgstr ""
+
+msgid "Only %d client(s) are associated in the %s band; a threshold recommendation needs at least five."
+msgstr "%s 频段仅关联了 %d 个客户端；阈值建议至少需要五个。"
+
+msgid "Only /mnt, /media and /tmp are offered as external locations; /tmp is cleared on reboot and is not suitable for archives that must survive one. The action button copies the suggested path into the field above; nothing is saved until the page is saved."
+msgstr "仅 /mnt、/media 和 /tmp 会被列为外部位置；/tmp 在重启后清空，不适合需要跨重启保留的归档。操作按钮只会把建议路径填入上方字段；在保存页面之前不会写入任何设置。"
+
+msgid "Only IPv4 addresses are listed. The state is the kernel operstate, which is down for interfaces that exist but carry no link."
+msgstr ""
+
+msgid "Only controls whether the read-only legacy archives are listed. They are never converted or deleted by this setting."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Only network interfaces that already exist can be selected."
+msgstr "只能选择已存在的网络接口。"
+
+msgid "Only the areas in the archive scope are modified. A restore never copies the whole /etc/config directory."
+msgstr ""
+
+msgid "Only the most recent events are kept on the router; the log is trimmed when it grows past its limit."
+msgstr ""
+
+msgid "Only these files are replaced or merged. A restore never replaces the whole /etc/config directory."
+msgstr ""
+
+msgid "Open"
+msgstr "打开"
+
+msgid "Open Mesh Settings"
+msgstr "打开 Mesh 设置"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "Open Mesh Settings for the mesh MLO option"
+msgstr "打开 Mesh 设置以配置 Mesh MLO 选项"
+
+msgid "Open the Restore page"
+msgstr "打开恢复页面"
+
+msgid "Open the logs"
+msgstr "打开日志"
+
+msgid "Open the standard Wireless configuration"
+msgstr "打开标准无线配置"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Operating Channel Validation"
+msgstr "工作信道验证"
+
+msgid "Operation"
+msgstr "操作"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Operator estimate for the wired hardif. Leave empty to let BATMAN-adv measure it."
+msgstr "有线硬接口的估算值；留空则由 BATMAN-adv 测量。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Operator estimate for the wireless mesh hardif. Leave empty to let BATMAN-adv measure it."
+msgstr "无线 Mesh 硬接口的估算值；留空则由 BATMAN-adv 测量。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional"
+msgstr "可选"
+
+msgid "Optional DNS server advertised to clients in AP mode."
+msgstr ""
+
+msgid "Optional default gateway in AP mode."
+msgstr "AP 模式下可选的默认网关。"
+
+msgid "Optional description"
+msgstr "可选描述"
+
+msgid "Optional display name"
+msgstr "可选显示名称"
+
+msgid "Optional hostname to set while AP mode is enabled. Leaving it empty keeps the current hostname."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional override."
+msgstr "可选的覆盖值。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional, at most 15 characters. Leave blank to let the driver choose."
+msgstr "可选，最多 15 个字符。留空则由驱动选择。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Optional, for client interfaces."
+msgstr "可选，用于客户端接口。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Overlapping DHCP pools"
+msgstr "DHCP 地址池重叠"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Overlapping IPv4 subnets"
+msgstr "IPv4 子网重叠"
+
+msgid "Overview"
+msgstr "概览"
+
+msgid "PHY mode"
+msgstr "PHY 模式"
+
+msgid "PHY mode (%s)"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Packet loss"
+msgstr "丢包率"
+
+msgid "Passphrase"
+msgstr "口令"
+
+msgid "Password protection"
+msgstr "密码保护"
+
+msgid "Peers"
+msgstr "对端"
+
+msgid "Per-band overrides"
+msgstr "按频段覆盖"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Possible"
+msgstr "可用"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Pre-migration backup"
+msgstr "迁移前备份"
+
+msgid "Pre-restore backup"
+msgstr "恢复前备份"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Preferred backhaul"
+msgstr "首选回程"
+
+msgid "Preparing download"
+msgstr "正在准备下载"
+
+msgid "Product"
+msgstr "产品"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "RSSI"
+msgstr "RSSI"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "RX rate"
+msgstr "接收速率"
+
+msgid "Radio"
+msgstr "射频"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Radio advice"
+msgstr "电台建议"
+
+msgid "Radio allocation"
+msgstr "射频分配"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Radio allocation check"
+msgstr "无线电分配检查"
+
+msgid "Radio allocation, channel plan and conflicts detected from configuration and runtime."
+msgstr "配置与运行时下的射频分配、信道规划及检测到的冲突。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Radio concurrency warning"
+msgstr "无线电并发警告"
+
+msgid "Radio conflicts"
+msgstr "射频冲突"
+
+msgid "Radio inventory"
+msgstr "射频清单"
+
+msgid "Radios"
+msgstr "射频"
+
+msgid "Radios and channels"
+msgstr "射频与信道"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Ranks the channels the driver accepts by the access points a scan can see. A scan is only run after you confirm it."
+msgstr "根据扫描可见的接入点，对驱动允许的信道排序。只有确认后才会执行扫描。"
+
+msgid "Rate"
+msgstr "速率"
+
+msgid "Reading the log…"
+msgstr "正在读取日志…"
+
+msgid "Reads the neighbor announcements of the devices currently visible. Stale announcements, memory pressure, a weak wireless-only backhaul, incomplete announcements and two devices announcing the same LAN MAC are reported. A device that stops announcing is marked offline once its announcement is two minutes old; the peer cache drops it after five minutes, after which it is no longer listed."
+msgstr "读取当前可见设备的邻居通告。通告过期、内存压力、仅无线回程信号偏弱、通告不完整以及两台设备通告同一局域网 MAC 都会报告。设备停止通告后，通告超过两分钟即标记为离线；peer 缓存会在五分钟后将其移除，此后不再列出。"
+
+msgid "Recent backups"
+msgstr "最近备份"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Recommended"
+msgstr "推荐"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Reconnect time"
+msgstr "重连时间"
+
+msgid "Recorded client and mesh link transitions with the gaps the sampler cannot see."
+msgstr "已记录的客户端与 Mesh 链路切换，以及采样器无法覆盖的空档。"
+
+msgid "Recorded events"
+msgstr "已记录事件"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Regulatory domain. Leave at “Keep current” to keep the current country."
+msgstr ""
+
+msgid "Related pages"
+msgstr "相关页面"
+
+msgid "Related settings"
+msgstr "相关设置"
+
+msgid "Repeat passphrase"
+msgstr "重复口令"
+
+msgid "Repeat the passphrase"
+msgstr "重复输入口令"
+
+msgid "Require the password below on the access points and on the mesh link."
+msgstr ""
+
+msgid "Required"
+msgstr "必需"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Resolver points at itself"
+msgstr "DNS 指向自身"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Restart DAWN when it stops"
+msgstr "DAWN 停止时重启"
+
+msgid "Restarts since start"
+msgstr "自启动以来的重启次数"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "Restore backup"
+msgstr "恢复备份"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore legacy service"
+msgstr "恢复旧版服务"
+
+msgid "Restore now"
+msgstr "立即恢复"
+
+msgid "Restore or manage backups"
+msgstr "恢复或管理备份"
+
+msgid "Restore safety"
+msgstr "恢复安全"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore stability time (seconds)"
+msgstr "恢复稳定时间（秒）"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Restore the Mesh Assistant service"
+msgstr "恢复 Mesh Assistant 服务"
+
+msgid "Restoring backup"
+msgstr "正在恢复备份"
+
+msgid "Result"
+msgstr "结果"
+
+msgid "Retention"
+msgstr "保留"
+
+msgid "Retention (days)"
+msgstr "保留天数"
+
+msgid "Retention, storage location and how often backups are created automatically."
+msgstr "保留策略、存储位置以及自动创建备份的频率。"
+
+msgid "Review radio allocation"
+msgstr "查看射频分配"
+
+msgid "Review radios"
+msgstr "查看射频"
+
+msgid "Roaming"
+msgstr "漫游"
+
+msgid "Roaming events"
+msgstr "漫游事件"
+
+msgid "Roaming parameter advice"
+msgstr "漫游参数建议"
+
+msgid "Roaming settings"
+msgstr "漫游设置"
+
+msgid "Roaming settings and thresholds"
+msgstr "漫游设置与阈值"
+
+msgid "Roaming settings applied."
+msgstr "漫游设置已应用。"
+
+msgid "Role"
+msgstr "角色"
+
+msgid "Roles, radios, mesh identity and the spectrum used by the mesh."
+msgstr "角色、射频、Mesh 标识以及 Mesh 使用的频谱。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/system.js
+msgid "Router identity, load, memory, service state, network interfaces and configuration checks."
+msgstr "路由器标识、负载、内存、服务状态、网络接口和配置检查。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Run a scan to rank the channels this radio can use."
+msgstr "运行扫描以对该电台可用的信道排序。"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "Runtime (batman-adv)"
+msgstr "运行时（batman-adv）"
+
+msgid "Runtime backhaul"
+msgstr "运行时回传"
+
+msgid "Runtime state is read from the kernel after the service started. It can lag behind a configuration change until the mesh service is re-applied."
+msgstr ""
+
+msgid "Runtime unavailable"
+msgstr "运行时不可用"
+
+msgid "SSID"
+msgstr "SSID"
+
+msgid "SSID / Mesh ID"
+msgstr "SSID / Mesh ID"
+
+msgid "SSID / mesh ID"
+msgstr "SSID / Mesh ID"
+
+msgid "SSID for %s"
+msgstr ""
+
+msgid "SSID mode"
+msgstr "SSID 模式"
+
+msgid "SSID of the regular access point. It is also used by the MLO access point and by radios without their own SSID."
+msgstr ""
+
+msgid "Same SSID on all radios"
+msgstr "所有射频使用同一 SSID"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save & apply"
+msgstr "保存并应用"
+
+msgid "Save and apply mesh settings"
+msgstr "保存并应用 Mesh 设置"
+
+msgid "Save and apply roaming settings"
+msgstr "保存并应用漫游设置"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Save anyway"
+msgstr "仍然保存"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Save interface"
+msgstr "保存接口"
+
+msgid "Save settings"
+msgstr "保存设置"
+
+msgid "Saving commits /etc/config/wifimanager directly. Other pages keep working with the values they read at load time until they are reloaded."
+msgstr ""
+
+msgid "Saving the form and applying the configuration…"
+msgstr ""
+
+msgid "Saving the form and starting the operation…"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Saving the interface and waiting for it to appear…"
+msgstr "正在保存接口并等待其出现…"
+
+msgid "Saving writes the form to /etc/config/meshassistant. Applying also lets the mesh engine rewrite the wireless and network configuration; it creates a full pre-change backup through Backup & Restore first."
+msgstr ""
+
+msgid "Saving writes the form to /etc/config/meshassistant. Applying also rewrites the managed AP sections, restarts hostapd and reconfigures DAWN; Wi-Fi clients may reconnect briefly."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scan now"
+msgstr "立即扫描"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scanning the radio; its clients may be interrupted briefly…"
+msgstr "正在扫描该电台，其客户端可能短暂中断…"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scanning…"
+msgstr "扫描中…"
+
+msgid "Scheduled backups run from the WiFi Manager timer. \"Before configuration changes\" keeps the timer off, but the mesh engine and every restore still create their own pre-change backup."
+msgstr "计划备份由 WiFi Manager 定时器执行。“配置更改前”会保持定时器关闭，但 mesh 引擎和每次恢复仍会创建各自的前置备份。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Score"
+msgstr "评分"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Scores assume the configured channel width; a different runtime width changes which channels overlap."
+msgstr "评分按配置的信道带宽计算；运行时带宽不同，重叠的信道也会不同。"
+
+msgid "Section"
+msgstr "配置节"
+
+msgid "See connected clients"
+msgstr "查看已连接客户端"
+
+msgid "Seen on"
+msgstr "出现在"
+
+msgid "Select a wired port."
+msgstr "请选择有线端口。"
+
+msgid "Select at least one area for a custom backup."
+msgstr ""
+
+msgid "Select at least one radio."
+msgstr "请至少选择一个射频。"
+
+msgid "Select exactly one mesh radio."
+msgstr "请选择恰好一个 Mesh 射频。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Select exactly one radio unless the interface uses MLO."
+msgstr "除非接口使用 MLO，否则请只选择一个射频。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Select one radio, or two or more when MLO is enabled."
+msgstr "选择一个射频；启用 MLO 时选择两个或更多。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "Select the network the interface belongs to."
+msgstr "请选择该接口所属的网络。"
+
+msgid "Select the radios that carry the regular access point. MLO requires exactly two."
+msgstr ""
+
+msgid "Selected backhaul"
+msgstr "已选回传"
+
+msgid "Selected hardifs"
+msgstr "已选硬接口"
+
+msgid "Separate SSID per radio"
+msgstr "每个射频使用独立 SSID"
+
+msgid "Server (gateway)"
+msgstr "服务器（网关）"
+
+msgid "Server (root node)"
+msgstr "服务器（根节点）"
+
+msgid "Server provides DHCP"
+msgstr "服务器提供 DHCP"
+
+msgid "Service"
+msgstr "服务"
+
+msgid "Service conflict"
+msgstr "服务冲突"
+
+msgid "Services"
+msgstr "服务"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Severity"
+msgstr "严重程度"
+
+msgid "Shortcuts"
+msgstr "快捷入口"
+
+msgid "Show legacy Mesh Assistant backups"
+msgstr "显示旧版 Mesh Assistant 备份"
+
+msgid "Shown in the backup list. The archive id stays timestamp based."
+msgstr ""
+
+msgid "Signal"
+msgstr "信号"
+
+msgid "Signal and rate mirror the strongest neighbor on the same interface: this device does not measure a link to itself."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Signal is measured only on a wireless link this device terminates. Rows announced by another device show the values that device reports; a missing value stays empty instead of being guessed. Memory and client values repeat on every row of a device because the device announces them for itself."
+msgstr "信号只在本设备终结的无线链路上测量。其他设备通告的行显示该设备报告的值；缺失的值保持为空，而不是猜测。内存和客户端数值会出现在同一设备的每一行，因为设备是为自己通告这些值的。"
+
+msgid "Signal level in dBm above which DAWN considers a client well connected and does not steer it away."
+msgstr ""
+
+msgid "Signal level in dBm below which DAWN considers a client a steering candidate. It must be lower than the good threshold."
+msgstr ""
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Source"
+msgstr "来源"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source AP"
+msgstr "源 AP"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source RSSI"
+msgstr "源 RSSI"
+
+msgid "Spectrum"
+msgstr "频谱"
+
+msgid "Standard Wireless configuration"
+msgstr "标准无线配置"
+
+msgid "Standard status overview"
+msgstr "标准状态概览"
+
+msgid "Standby"
+msgstr "待命"
+
+msgid "Started"
+msgstr "开始时间"
+
+msgid "State"
+msgstr "状态"
+
+msgid "Static IPv4 address"
+msgstr "静态 IPv4 地址"
+
+msgid "Static address"
+msgstr "静态地址"
+
+msgid "Static keeps a fixed management address; DHCP takes the address from the upstream router."
+msgstr ""
+
+msgid "Static netmask"
+msgstr "静态子网掩码"
+
+msgid "Stations"
+msgstr "终端数"
+
+msgid "Status of the steering daemon and the 802.11k/v/r flags on the access points."
+msgstr "引导守护进程的状态以及各接入点上的 802.11k/v/r 标志。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Steering RSSI difference"
+msgstr "引导 RSSI 差值"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Steering RSSI difference (dB)"
+msgstr "引导 RSSI 差值（dB）"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Steering decisions"
+msgstr "引导决策"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Steering notes"
+msgstr "引导说明"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "Storage"
+msgstr "存储"
+
+msgid "Storage location"
+msgstr "存储位置"
+
+msgid "Storage used"
+msgstr "已用存储"
+
+msgid "Stored in the archive manifest and shown in the list."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Stored passphrase (leave blank to keep it)"
+msgstr "已保存的密码（留空则保留）"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested MLO pair: %s"
+msgstr "建议的 MLO 组合：%s"
+
+msgid "Suggested bad threshold"
+msgstr "建议的较差阈值"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested channel: %s (%s, %s MHz wide)."
+msgstr "建议信道：%s（%s，%s MHz 带宽）。"
+
+msgid "Suggested good threshold"
+msgstr "建议的良好阈值"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Suggested radio: %s"
+msgstr "建议电台：%s"
+
+msgid "Summary"
+msgstr "概览"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Switch the backhaul automatically"
+msgstr "自动切换回程"
+
+msgid "System"
+msgstr "系统"
+
+msgid "System diagnostics"
+msgstr "系统诊断"
+
+msgid "System log (syslog)"
+msgstr "系统日志（syslog）"
+
+msgid "TX power (config)"
+msgstr "发射功率（配置）"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "TX rate"
+msgstr "发送速率"
+
+msgid "Target"
+msgstr "目标平台"
+
+msgid "The 1-minute load average is %s on %d CPU(s), above the normal range."
+msgstr "%d 个 CPU 上的 1 分钟平均负载为 %s，高于正常范围。"
+
+msgid "The 1-minute load average is %s on %d CPU(s). The router is heavily overloaded; Wi-Fi and routing may stall."
+msgstr "%d 个 CPU 上的 1 分钟平均负载为 %s。路由器严重过载，Wi-Fi 和路由可能卡顿。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The BSSID is invalid."
+msgstr "BSSID 无效。"
+
+msgid "The DAWN status could not be read. The values below may be stale."
+msgstr ""
+
+msgid "The DAWN watchdog failed %d time(s) in a row. Check the DAWN configuration and the system log."
+msgstr "DAWN 看门狗连续失败 %d 次。请检查 DAWN 配置和系统日志。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "The DAWN watchdog failed to restart the service %d time(s) in a row. Check that the dawn package and its configuration are intact."
+msgstr "DAWN 看门狗已连续 %d 次重启失败。请检查 dawn 软件包及其配置是否完整。"
+
+msgid "The LAN address, firewall or DHCP configuration may change. This page can become unreachable; reconnect at the address in the restored configuration."
+msgstr ""
+
+msgid "The LAN, firewall, DHCP and WAN configuration saved before AP mode was enabled is restored. The LAN address may change back, so this page can become unreachable."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The MAC address is invalid."
+msgstr "MAC 地址无效。"
+
+msgid "The MLO area requires the Wireless area."
+msgstr "MLO 区域需要同时选择无线区域。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "The MLO interface could not be saved."
+msgstr "无法保存 MLO 接口。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The Mesh Assistant service is enabled and started again, and WiFi Manager records the migration as declined. This is refused while the WiFi Manager mesh is enabled."
+msgstr "将重新启用并启动 Mesh Assistant 服务，WiFi管家会把迁移记录为已放弃。WiFi管家 Mesh 已启用时此操作会被拒绝。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The SSID is empty."
+msgstr "SSID 为空。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The SSID is longer than 32 bytes."
+msgstr "SSID 超过 32 字节。"
+
+msgid "The WiFi Manager log and the event log never contain archive passphrases. The system log includes entries from every daemon on the router."
+msgstr ""
+
+msgid "The address this device keeps on the LAN in AP mode."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The announced mesh ID, routing algorithm, role, channel and HT mode are compared with this device. The mesh key is never transmitted, so it is not compared. Devices that announce none of these values or use an automatic channel are listed instead of being counted as a mismatch."
+msgstr "将通告的 mesh ID、路由算法、角色、信道和 HT 模式与本设备对比。mesh 密钥从不传输，因此不参与对比。未通告这些值或使用自动信道的设备会被列出，而不会计为不一致。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "The archive contains configuration files with Wi-Fi passphrases, the mesh key and other credentials. An unencrypted archive stores them in clear text. Keep the downloaded file private, do not send it over an untrusted channel, and delete it when it is no longer needed. The download is copied to /tmp/wifimanager-download first."
+msgstr "归档包含带有 Wi-Fi 密码、mesh 密钥和其他凭据的配置文件。未加密的归档以明文保存这些内容。请妥善保管下载的文件，不要通过不受信任的渠道发送，并在不再需要时删除。下载内容会先复制到 /tmp/wifimanager-download。"
+
+msgid "The archive could not be checked."
+msgstr "无法检查归档。"
+
+msgid "The archive could not be downloaded."
+msgstr "无法下载归档。"
+
+msgid "The archive could not be opened."
+msgstr "无法打开归档。"
+
+msgid "The archive could not be opened; a passphrase may be required."
+msgstr ""
+
+msgid "The archive is extracted into a temporary directory; unsafe entry names, symlinks and a failed checksum are rejected."
+msgstr ""
+
+msgid "The archive is not valid."
+msgstr "归档无效。"
+
+msgid "The archive is stored with owner-only permissions in the backup directory."
+msgstr ""
+
+msgid "The archive is validated before anything is changed…"
+msgstr ""
+
+msgid "The backup could not be created."
+msgstr "无法创建备份。"
+
+msgid "The backup could not be deleted."
+msgstr "无法删除备份。"
+
+msgid "The backup could not be imported."
+msgstr "无法导入备份。"
+
+msgid "The backup could not be validated."
+msgstr "无法验证备份。"
+
+msgid "The backup list could not be read."
+msgstr "无法读取备份列表。"
+
+msgid "The backup settings could not be read; the values shown may be defaults."
+msgstr ""
+
+msgid "The backup settings could not be saved."
+msgstr "无法保存备份设置。"
+
+msgid "The backup store could not be queried."
+msgstr "无法查询备份存储。"
+
+msgid "The backup store could not be read. The values below may be incomplete."
+msgstr ""
+
+msgid "The backup was restored and verified."
+msgstr "备份已恢复并通过验证。"
+
+msgid "The bad threshold is not lower than the good threshold in the %s band. DAWN would treat every client as both well and badly connected."
+msgstr "%s 频段的较差阈值不低于良好阈值。DAWN 会把每个客户端同时视为连接良好和较差。"
+
+msgid "The bad threshold must be lower than the good threshold."
+msgstr ""
+
+msgid "The bat0 interface exists but is down. No mesh traffic can flow until it comes up."
+msgstr "bat0 接口存在但处于 down 状态。在它启用之前无法传输 mesh 流量。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The batman-adv routing algorithm differs between nodes. Every node of one mesh must use the same algorithm."
+msgstr "节点之间的 batman-adv 路由算法不一致。同一 mesh 的每个节点必须使用相同的算法。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The channel scan failed."
+msgstr "信道扫描失败。"
+
+msgid "The client list could not be read. The rows below may be incomplete."
+msgstr ""
+
+msgid "The configuration could not be applied."
+msgstr "无法应用配置。"
+
+msgid "The configuration is archived; this can take a moment…"
+msgstr ""
+
+msgid "The configuration is being restored and verified…"
+msgstr ""
+
+msgid "The configured backup path is under /mnt or /media, but no external volume is mounted there. Saving this page will refuse the path until the volume is mounted."
+msgstr "配置的备份路径位于 /mnt 或 /media 下，但该处未挂载外部卷。在挂载卷之前，保存此页面会拒绝该路径。"
+
+msgid "The configured per-interface values, the BSSID in use and whether the interface is up right now. The BSSID is checked for validity and uniqueness in the roaming advice; a value only takes effect after the roaming settings are applied."
+msgstr "各接口的已配置值、当前使用的 BSSID 以及接口此刻是否已启动。漫游建议会检查 BSSID 是否有效且唯一；配置值只有在应用漫游设置后才会生效。"
+
+msgid "The description may not contain control characters and is limited to 200 characters."
+msgstr ""
+
+msgid "The details could not be read."
+msgstr "无法读取详情。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The driver reported no usable channel for this band."
+msgstr "驱动没有报告该频段内可用的信道。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The effective values are written to /etc/config/dawn on apply and are shown on the DAWN status page. Steering needs mesh to be enabled and wpad with 802.11v support."
+msgstr "生效值会在应用时写入 /etc/config/dawn，并显示在 DAWN 状态页。引导需要启用 mesh 以及支持 802.11v 的 wpad。"
+
+msgid "The eight newest backups. Encrypted archives need their passphrase to be opened."
+msgstr ""
+
+msgid "The event log could not be read."
+msgstr "无法读取事件日志。"
+
+msgid "The form is committed and the mesh engine applies it. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+msgid "The form is committed, then the roaming engine rewrites the AP sections, restarts hostapd and reconfigures DAWN. Wi-Fi clients may reconnect."
+msgstr ""
+
+msgid "The form is saved and committed, then the mesh engine applies it. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+msgid "The graph shows the first 8 devices; the table lists all of them."
+msgstr ""
+
+msgid "The hard interface list is what batman-adv has actually attached. The selected list is what the configuration asks for; when they differ, the mesh has not been applied yet or an interface disappeared."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The installed configuration did not parse when the migration was prepared. Check the affected file before confirming; the pre-migration backup stays available."
+msgstr "准备迁移时发现的配置无法解析。确认前请检查受影响的文件；迁移前备份仍然可用。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface could not be deleted."
+msgstr "无法删除该接口。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface could not be saved."
+msgstr "无法保存该接口。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The interface name %s is already in use."
+msgstr "接口名称 %s 已被使用。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The interface name may contain at most 15 letters, digits, dots, dashes or underscores."
+msgstr "接口名称最多包含 15 个字母、数字、点、短横线或下划线。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The interface was not saved. Select different radios or another mode."
+msgstr "接口未保存。请选择其他无线电或其他模式。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The last automatic backhaul switch failed: %s"
+msgstr "上次自动回程切换失败：%s"
+
+msgid "The legacy backup could not be imported."
+msgstr "无法导入旧版备份。"
+
+msgid "The legacy meshassistant daemon and WiFi Manager are running at the same time."
+msgstr ""
+
+msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; finish the migration and disable it."
+msgstr "旧版 meshassistant 服务仍处于启用和运行状态。它可能重写 WiFi管家应用的 mesh 配置；请完成迁移并禁用它。"
+
+msgid "The legacy meshassistant service is still enabled. It is not running now, but it will start after the next reboot and may then fight over the configuration."
+msgstr ""
+
+msgid "The location was copied into the field above. Save the settings to use it."
+msgstr "位置已复制到上方字段。保存设置后生效。"
+
+msgid "The log could not be copied."
+msgstr "无法复制日志。"
+
+msgid "The log could not be read."
+msgstr "无法读取日志。"
+
+msgid "The log could not be read: %s"
+msgstr "无法读取日志：%s"
+
+msgid "The log is empty."
+msgstr "日志为空。"
+
+msgid "The managed AP sections, DAWN configuration and service are rewritten. Wi-Fi clients may reconnect briefly."
+msgstr ""
+
+msgid "The managed access points use different mobility domains (%s). Fast transition only works between APs with the same domain."
+msgstr "受管接入点使用了不同的移动域（%s）。快速转换仅在移动域相同的 AP 之间有效。"
+
+msgid "The manifest format and application are checked before anything is applied."
+msgstr ""
+
+msgid "The maximum number of backups must be between 1 and 200."
+msgstr ""
+
+msgid "The maximum storage usage must be between 4 and 4096 MiB."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh IDs announced by the devices differ. Nodes with different mesh IDs cannot form direct 802.11s links with each other."
+msgstr "各设备通告的 mesh ID 不一致。mesh ID 不同的节点无法彼此建立直接的 802.11s 链路。"
+
+msgid "The mesh diagnostics could not be read."
+msgstr "无法读取 Mesh 诊断信息。"
+
+msgid "The mesh engine is applying the configuration…"
+msgstr ""
+
+msgid "The mesh engine owns the sections it creates (mesh_<radio>, wifi_ap_<radio>, wifi_ap_mlo). Edit other wireless interfaces on the standard Wireless page."
+msgstr ""
+
+msgid "The mesh engine rewrites the wireless and network configuration. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios use different HT modes in the %s band."
+msgstr "%s 频段的 mesh 无线电使用了不同 HT 模式。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios use different channels in the %s band."
+msgstr "%s 频段的 mesh 无线电使用了不同信道。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The minute ticker checks a DAWN configuration that WiFi Manager manages and restarts the service when it is not running. At most one recovery attempt is made every five minutes, and each attempt is recorded in the log and the event log. A DAWN that was released again is never restarted."
+msgstr "每分钟的定时任务检查由 WiFi Manager 管理的 DAWN 配置，并在服务未运行时重启它。最多每五分钟尝试一次恢复，每次尝试都会记录在日志和事件日志中。已释放管理的 DAWN 永远不会被重启。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The monitor samples the wired link carrier, not just the presence of the interface, and detaches the wired hardif from bat0 after the fallback delay. It restores it only after the cable has stayed up for the stability time, so a flapping cable does not move traffic back and forth. The wireless mesh link is never touched."
+msgstr "监控读取有线链路的载波状态（而非仅判断接口是否存在），并在超过回退延迟后将有线硬接口从 bat0 分离；只有网线恢复并稳定达到设定时间后才重新启用，避免网线抖动导致流量反复切换。无线 Mesh 链路不会被动到。"
+
+msgid "The name is too long (64 characters maximum)."
+msgstr ""
+
+msgid "The name may only contain letters, digits, dots, dashes, underscores and spaces."
+msgstr ""
+
+msgid "The neighbor table could not be read, so the topology may be incomplete."
+msgstr ""
+
+msgid "The neighbor table could not be read. The lists below may be empty although the mesh is running."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The network %s does not exist."
+msgstr "网络 %s 不存在。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "The network checks are unavailable. The rest of this page is unaffected."
+msgstr "网络检查不可用。本页其余内容不受影响。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The network name contains invalid characters."
+msgstr "网络名称包含无效字符。"
+
+msgid "The oldest archives are removed after a new one is created. Between 1 and 200."
+msgstr ""
+
+msgid "The one radio that carries the 802.11s mesh backhaul."
+msgstr ""
+
+msgid "The operation did not finish in time."
+msgstr "操作未在限定时间内完成。"
+
+msgid "The operation failed."
+msgstr "操作失败。"
+
+msgid "The passphrase is not stored anywhere. Without it the archive cannot be restored or opened."
+msgstr ""
+
+msgid "The passphrase is only sent to the router for this action and is not stored in the browser."
+msgstr ""
+
+msgid "The passphrase is too long (128 characters maximum)."
+msgstr "口令过长（最多 128 个字符）。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The passphrase must be 8 to 63 printable ASCII characters."
+msgstr "密码必须为 8 到 63 个可打印 ASCII 字符。"
+
+msgid "The peer count is read from the WiFi Manager peer cache, which is refreshed by the mesh engine and travels with the event log. It is not a live batctl query."
+msgstr ""
+
+msgid "The pre-restore backup is disabled in the backup settings."
+msgstr ""
+
+msgid "The pre-restore backup is disabled in the backup settings; only the in-memory snapshot protects a failed restore."
+msgstr ""
+
+msgid "The pre-restore backup is disabled. A restore that fails can then only be rolled back with the in-memory snapshot taken right before it starts."
+msgstr ""
+
+msgid "The pre-restore backup is disabled. Every restore still keeps an in-memory snapshot for rollback, but there is no archive to fall back to afterwards."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The radio %s does not exist."
+msgstr "射频 %s 不存在。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The radio allocation check could not be run. Saving without it may apply a combination the driver rejects."
+msgstr "无法运行无线电分配检查。未经检查保存可能会应用驱动拒绝的组合。"
+
+msgid "The radio inventory could not be read."
+msgstr "无法读取射频清单。"
+
+msgid "The radio inventory could not be read: %s"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The radio is disabled; enable it before scanning."
+msgstr "该电台已禁用，请先启用再扫描。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/backhaul.js
+msgid "The radio is the wireless device behind the hardif. TX and RX rates are measured on the wireless station of the best neighbor; “Rate” is the link throughput batman-adv reports. A wired hardif has no radio and no station rates, so those cells stay empty."
+msgstr "无线电是承载该硬接口的无线设备。发送和接收速率在最佳邻居的无线站点上测量；“速率”是 batman-adv 报告的链路吞吐量。有线硬接口没有无线电，也没有站点速率，因此这些单元格留空。"
+
+msgid "The request failed."
+msgstr "请求失败。"
+
+msgid "The restore failed."
+msgstr "恢复失败。"
+
+msgid "The retention period must be between 0 and 3650 days."
+msgstr ""
+
+msgid "The roaming advice could not be loaded; only the configured values are known."
+msgstr "无法加载漫游建议；目前只能显示已配置的值。"
+
+msgid "The roaming capabilities could not be read; the checks below may be incomplete."
+msgstr ""
+
+msgid "The roaming engine is applying the configuration…"
+msgstr ""
+
+msgid "The roaming settings could not be applied."
+msgstr ""
+
+msgid "The router did not answer."
+msgstr "路由器未响应。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "The same radio is selected more than once."
+msgstr "同一射频被多次选择。"
+
+msgid "The saved values are applied now. Wi-Fi clients may reconnect and this page may be unreachable for a short time."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The scan is a snapshot of the access points visible from this radio; it does not prove a channel will stay free."
+msgstr "扫描只是该电台当前可见接入点的快照，不能证明某个信道会一直空闲。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "The scan is read-only; it changes no configuration."
+msgstr "扫描是只读操作，不会修改任何配置。"
+
+msgid "The selected PHY mode does not support this channel width."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "The selected radios may not support this combination:"
+msgstr "所选无线电可能不支持此组合："
+
+msgid "The server is the gateway of the mesh and provides DHCP, DNS and firewall duties. A node bridges the mesh into its LAN but runs no DHCP server. A client uses the mesh only as an uplink and keeps its LAN separate."
+msgstr ""
+
+msgid "The shared key is never shown here. Edits made to the managed DAWN file outside WiFi Manager are overwritten on the next apply."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/wireless.js
+msgid "The station count is read from the running interface; “No netdev” means the configured interface is not attached to a netdev yet. Signal and rates belong to the station with the strongest signal on that interface; an interface without stations shows no value."
+msgstr "站点数量从运行中的接口读取；“无 netdev”表示配置的接口尚未挂载到网络设备。信号和速率属于该接口上信号最强的站点；没有站点的接口不显示数值。"
+
+msgid "The station table and the mesh link state are sampled once a minute, so a client that joins and leaves between two samples is not recorded."
+msgstr ""
+
+msgid "The storage location must be an absolute path under /etc, /mnt, /media or /tmp without \"..\"."
+msgstr "存储位置必须是 /etc、/mnt、/media 或 /tmp 下不含“..”的绝对路径。"
+
+msgid "The system information could not be read."
+msgstr ""
+
+msgid "The two passphrases do not match."
+msgstr "两次输入的口令不一致。"
+
+msgid "The uploaded archive is checked and stored…"
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "The values this engine writes to the managed DAWN configuration. Change them on the roaming settings page; DAWN only steers clients while mesh networking is enabled."
+msgstr "本引擎写入受管 DAWN 配置的值。请在漫游设置页修改它们；只有启用 mesh 组网时 DAWN 才会引导客户端。"
+
+msgid "The wireless diagnostics could not be read."
+msgstr ""
+
+msgid "The wireless interfaces could not be read."
+msgstr ""
+
+msgid "These archives live in /etc/meshassistant/backup. They are listed and validated in place; they are never deleted or rewritten by WiFi Manager. A copy with a current manifest can be created from the Restore page."
+msgstr ""
+
+msgid "These are the configured values from /etc/config/wireless. The running hostapd picks them up after the roaming settings are applied."
+msgstr ""
+
+msgid "These checks compare configuration only. They do not restart radios and do not change anything."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "These devices sent no mesh parameters, most likely because they run an older announcement version. They were not compared."
+msgstr "这些设备未发送 mesh 参数，很可能运行的是较旧的通告版本。它们未参与对比。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "These devices use an automatic channel. The channel could not be compared."
+msgstr "这些设备使用自动信道，无法对比信道。"
+
+msgid "These differences do not block the restore, but check them first: the archive may come from different hardware or firmware."
+msgstr "这些差异不会阻止恢复，但请先确认：该归档可能来自不同的硬件或固件。"
+
+msgid "These settings apply to the whole backup store, not only to automatic archives."
+msgstr ""
+
+msgid "This LuCI version has no upload support; copy the archive over SSH and use \"Import copy\" for legacy archives."
+msgstr "此 LuCI 版本不支持上传；请通过 SSH 复制归档，并使用“导入副本”处理旧版归档。"
+
+msgid "This archive was created by Mesh Assistant. It is read in place and is never rewritten by WiFi Manager."
+msgstr ""
+
+msgid "This browser does not allow copying from the page. Select the text and copy it manually."
+msgstr ""
+
+msgid "This device"
+msgstr "本设备"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This is the channel the radio already uses."
+msgstr "该电台当前就在使用此信道。"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This is the mesh radio; another interface here depends on the driver and may reduce mesh throughput."
+msgstr "这是 Mesh 电台；在此再添加接口取决于驱动，并可能降低 Mesh 吞吐。"
+
+msgid "This legacy Mesh Assistant archive is read in place. It is not converted, rewritten or deleted by the restore."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/interfaces.js
+msgid "This list is read from /etc/config/wireless and from the running system, including each interface’s runtime state. Mesh-owned interfaces are edited in Mesh Settings. A Wireless backup is created before every save or delete."
+msgstr "此列表读取自 /etc/config/wireless 和运行中的系统，包含每个接口的运行时状态。Mesh 拥有的接口在 Mesh 设置中编辑。每次保存或删除前都会创建无线备份。"
+
+msgid "This log file does not exist yet. It is created when the first entry is written."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "This radio combination cannot be used:"
+msgstr "无法使用此无线电组合："
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "This radio is disabled in the wireless configuration."
+msgstr "该电台在无线配置中已禁用。"
+
+msgid "This radio reports no frequency band, so no spectrum settings are available."
+msgstr ""
+
+msgid "This setting only preselects encryption on the Create backup page; it never changes an archive that already exists."
+msgstr "此设置仅用于在“创建备份”页面预选加密，绝不会更改已存在的归档。"
+
+msgid "This wpad build does not support 802.11v, so an access point cannot send a BSS transition request. The thresholds below then only affect the DAWN metrics."
+msgstr "此 wpad 版本不支持 802.11v，因此接入点无法发送 BSS 转换请求。下方阈值此时只影响 DAWN 指标。"
+
+msgid "This wpad build has no 802.11v support. 802.11k and DAWN start, but the AP cannot send BSS transition requests, so steering is advisory only."
+msgstr ""
+
+msgid "This wpad build has no 802.11v support. DAWN can collect metrics, but the AP cannot send a BSS transition request, so it cannot steer a client away."
+msgstr ""
+
+msgid "Thresholds"
+msgstr "阈值"
+
+msgid "Time"
+msgstr "时间"
+
+msgid "Topology"
+msgstr "拓扑"
+
+msgid "Topology monitoring"
+msgstr "拓扑监控"
+
+msgid "Total"
+msgstr "总计"
+
+msgid "Transmit power in dBm. Leave empty to keep the current value."
+msgstr ""
+
+msgid "Turn the mesh on or off on this device. Turning it off restores the LAN, DHCP, hostname and services that the mesh engine changed."
+msgstr ""
+
+msgid "Type"
+msgstr "类型"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "U-APSD"
+msgstr "U-APSD"
+
+msgid "Unavailable"
+msgstr "不可用"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Unchanged"
+msgstr "未更改"
+
+msgid "Unified diagnosis"
+msgstr "统一诊断"
+
+msgid "Unified wireless, MLO, mesh and roaming control for this device."
+msgstr "统一管理本设备的无线、MLO、Mesh 与漫游。"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Unknown band"
+msgstr "未知频段"
+
+msgid "Unknown device"
+msgstr "未知设备"
+
+msgid "Unknown error"
+msgstr "未知错误"
+
+msgid "Unknown radio"
+msgstr "未知射频"
+
+msgid "Until the count or size limit is reached"
+msgstr "直到达到数量或大小上限"
+
+msgid "Up"
+msgstr "正常"
+
+msgid "Upload backup"
+msgstr "上传备份"
+
+msgid "Uploads are accepted from the browser only. A legacy Mesh Assistant archive can be copied into the current store with \"Import copy\"; the original stays read-only."
+msgstr "仅接受来自浏览器的上传。旧版 Mesh Assistant 归档可通过“导入副本”复制到当前存储；原文件保持只读。"
+
+msgid "Uptime"
+msgstr "运行时间"
+
+msgid "Use"
+msgstr "使用"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "Use MLO across the selected radios"
+msgstr "在所选的射频上使用 MLO"
+
+msgid "Use a passphrase of at least 12 characters."
+msgstr "请使用至少 12 个字符的口令。"
+
+msgid "Use a wired backhaul"
+msgstr "使用有线回传"
+
+msgid "Use one SSID on every radio, or a separate SSID per radio. Separate SSIDs turn off seamless 802.11r roaming between them."
+msgstr ""
+
+msgid "Use passphrase"
+msgstr "使用口令"
+
+msgid "Valid"
+msgstr "有效"
+
+msgid "Validate, inspect, download or restore a stored configuration archive."
+msgstr "验证、查看、下载或恢复已存储的配置归档。"
+
+msgid "Validation"
+msgstr "验证"
+
+msgid "Validation extracts the archive and checks its checksums. It is required before a restore and is not repeated automatically."
+msgstr ""
+
+msgid "Values are read at page load; the page refreshes while it stays visible."
+msgstr ""
+
+msgid "Values as stored in /etc/config/meshassistant. They describe intent and are not proof of what is running."
+msgstr ""
+
+msgid "Verified"
+msgstr "已验证"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Visible devices"
+msgstr "可见设备"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "WAN port inside the LAN bridge"
+msgstr "WAN 端口位于 LAN 网桥内"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "WAN shares the LAN device"
+msgstr "WAN 与 LAN 共用设备"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "WDS"
+msgstr "WDS"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA/WPA2 mixed"
+msgstr "WPA/WPA2 混合"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA2-PSK"
+msgstr "WPA2-PSK"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA2/WPA3 mixed"
+msgstr "WPA2/WPA3 混合"
+
+msgid "WPA2/WPA3 passphrase, 8 to 63 printable characters. The value is written to UCI and never shown in logs."
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless.js
+msgid "WPA3-SAE"
+msgstr "WPA3-SAE"
+
+msgid "Warning"
+msgstr "警告"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Watchdog"
+msgstr "看门狗"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "Watchdog failures"
+msgstr "看门狗失败次数"
+
+msgid "Weakest backhaul signal"
+msgstr "最弱回传信号"
+
+msgid "Weakest signal"
+msgstr "最弱信号"
+
+msgid "Weekly"
+msgstr "每周"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Whether DAWN may ask a client to move to another access point. 0 disables kicking, 1 only advises, 2 disconnects a client that does not move and 3 disconnects it immediately."
+msgstr "DAWN 是否可以要求客户端迁移到另一个接入点。0 禁用踢除，1 仅建议，2 断开不迁移的客户端，3 立即断开。"
+
+msgid "While client steering is enabled and mesh networking is on, WiFi Manager owns /etc/config/dawn: it writes the metric sections, per-band thresholds and a shared key derived from the mesh password, and restarts DAWN. A pre-existing DAWN configuration is backed up first and restored when client steering is turned off."
+msgstr ""
+
+msgid "Wi-Fi 7 Multi-Link Operation across two radios."
+msgstr "跨两个射频的 Wi-Fi 7 多链路操作。"
+
+msgid "Wi-Fi 7 Multi-Link Operation combines two radios into one access point."
+msgstr "Wi-Fi 7 多链路操作（MLO）将两个射频合并为一个接入点。"
+
+msgid "Wi-Fi network SSID"
+msgstr "Wi-Fi 网络 SSID"
+
+msgid "WiFi Manager"
+msgstr "WiFi管家"
+
+msgid "WiFi Manager log"
+msgstr "WiFi管家日志"
+
+msgid "WiFi Manager operation log, mesh and roaming events, and the system log."
+msgstr "WiFi管家操作日志、Mesh 与漫游事件以及系统日志。"
+
+msgid "WiFi Manager service"
+msgstr "WiFi管家服务"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "WiFi Manager takes over the Mesh Assistant configuration. The Mesh Assistant service stays stopped; its configuration and backups are not deleted. Continue?"
+msgstr "WiFi管家将接管 Mesh Assistant 的配置。Mesh Assistant 服务保持停止；其配置和备份不会被删除。是否继续？"
+
+msgid "Wired"
+msgstr "有线"
+
+msgid "Wired backhaul"
+msgstr "有线回传"
+
+msgid "Wired backhaul configured"
+msgstr "有线回传已配置"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "Wired backhaul wiring"
+msgstr "有线回程连接"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired carrier"
+msgstr "有线载波"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired link rate"
+msgstr "有线协商速率"
+
+msgid "Wired port"
+msgstr "有线端口"
+
+msgid "Wired port in use"
+msgstr "有线端口使用中"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wired throughput override (Mbit/s)"
+msgstr "有线吞吐量覆盖（Mbit/s）"
+
+msgid "Wireless"
+msgstr "无线"
+
+msgid "Wireless backhaul"
+msgstr "无线回传"
+
+msgid "Wireless diagnostics"
+msgstr "无线诊断"
+
+msgid "Wireless interfaces"
+msgstr "无线接口"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless link"
+msgstr "无线链路"
+
+msgid "Wireless radios, access points, MLO interfaces and wireless security only."
+msgstr ""
+
+msgid "Wireless settings are part of the restore; Wi-Fi clients will reconnect."
+msgstr ""
+
+msgid "Wireless stations and devices learned on the LAN bridge. A signal strength exists only for a wireless station; a bridged device is shown without one instead of a guessed value."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless throughput override (Mbit/s)"
+msgstr "无线吞吐量覆盖（Mbit/s）"
+
+msgid "Wireless, MLO, mesh, backhaul, roaming, DAWN, network, DHCP/DNS, firewall, system and WiFi Manager settings."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "Wireless, with Ethernet fallback"
+msgstr "无线优先，以太网作为备用"
+
+msgid "Writable"
+msgstr "可写"
+
+msgid "Yes"
+msgstr "是"
+
+#: htdocs/luci-static/resources/view/wifimanager
+msgid "advisory only: it never changes the selection and only uses configuration and mesh settings already known to the router."
+msgstr "仅为建议：不会改变选择，只使用路由器已知的配置与 Mesh 设置。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "attempt %s"
+msgstr "第 %s 次尝试"
+
+msgid "auto"
+msgstr "自动"
+
+msgid "bat0 MAC"
+msgstr "bat0 MAC"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 bridged on a client"
+msgstr "客户端上 bat0 被桥接"
+
+msgid "bat0 device"
+msgstr "bat0 设备"
+
+msgid "bat0 exists"
+msgstr "bat0 存在"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 in the LAN zone on a client"
+msgstr "客户端上 bat0 位于 LAN 区域"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 missing from the LAN zone"
+msgstr "bat0 不在 LAN 区域"
+
+#: htdocs/luci-static/resources/wifimanager/utils/network.js
+msgid "bat0 not bridged into the LAN"
+msgstr "bat0 未桥接到 LAN"
+
+msgid "bat0 operstate"
+msgstr "bat0 运行状态"
+
+msgid "batctl"
+msgstr "batctl"
+
+msgid "batctl could not query bat0"
+msgstr "batctl 无法查询 bat0"
+
+msgid "batman-adv error"
+msgstr "batman-adv 错误"
+
+msgid "batman-adv hard interfaces"
+msgstr "batman-adv 硬接口"
+
+msgid "channel differs from runtime"
+msgstr "配置信道与运行时不一致"
+
+msgid "configured TX power and runtime TX power differ"
+msgstr ""
+
+msgid "configured channel and runtime channel differ"
+msgstr ""
+
+msgid "dashed line: wireless backhaul"
+msgstr ""
+
+msgid "dnsmasq (DHCP/DNS)"
+msgstr "dnsmasq（DHCP/DNS）"
+
+msgid "driver default"
+msgstr "驱动默认值"
+
+msgid "global"
+msgstr "全局"
+
+msgid "hostapd (access points)"
+msgstr "hostapd（接入点）"
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "lan (missing)"
+msgstr "lan（缺失）"
+
+msgid "link down"
+msgstr "链路断开"
+
+msgid "link up"
+msgstr "链路建立"
+
+msgid "meshassistant (legacy)"
+msgstr "meshassistant（旧版）"
+
+msgid "missing"
+msgstr "缺失"
+
+msgid "not set"
+msgstr "未设置"
+
+msgid "odhcpd (DHCPv6)"
+msgstr "odhcpd（DHCPv6）"
+
+msgid "runtime TX power unavailable"
+msgstr "运行时发射功率不可用"
+
+msgid "runtime channel unavailable"
+msgstr "运行时信道不可用"
+
+msgid "runtime not readable"
+msgstr "运行时信息不可读"
+
+msgid "signal unknown"
+msgstr "信号未知"
+
+msgid "solid line: Ethernet backhaul"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
+msgid "unknown band"
+msgstr "未知频段"
+
+msgid "wifimanager (this package)"
+msgstr "wifimanager（本软件包）"
+
+msgid "wpad (supplicant)"
+msgstr "wpad（客户端）"
+
+msgid "“Available” is the kernel estimate of memory that can be given to new workloads without swapping; “free” is unallocated memory."
+msgstr ""
+
+msgid "“Installed” reflects the presence of /etc/init.d; “enabled” is the boot-time decision; “running” is the current process state."
+msgstr ""
+
+msgid "“Not installed” means /etc/init.d has no matching script; it does not by itself indicate a fault."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "WiFi Manager Backup or OpenWrt Sysupgrade Backup?"
+msgstr "WiFi管家备份还是 OpenWrt Sysupgrade 备份？"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "WiFi Manager Backup stores and restores only the configuration files in the selected scope. A restore replaces or merges those files, can restart the network, and can make this page unreachable."
+msgstr "WiFi管家备份只保存和恢复所选范围内的配置文件。恢复会替换或合并这些文件，可能重启网络，并使此页面暂时无法访问。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "OpenWrt Sysupgrade Backup is a separate mechanism: it covers the whole system configuration and is applied by the firmware during an upgrade. WiFi Manager neither creates nor replaces it."
+msgstr "OpenWrt Sysupgrade 备份是另一种机制：它覆盖整个系统配置，并在升级时由固件应用。WiFi管家既不会创建也不会替换它。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Use a Sysupgrade backup before flashing firmware. Use a WiFi Manager backup to undo a WiFi, mesh or roaming change without touching the rest of the system."
+msgstr "刷写固件前请使用 Sysupgrade 备份。若要撤销 WiFi、Mesh 或漫游更改而不影响系统其余部分，请使用 WiFi管家备份。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Even a Full backup is limited to the configuration files WiFi Manager knows about; it is not a system image."
+msgstr "即使是完整备份，也只包含 WiFi管家所知的配置文件；它不是系统镜像。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Mesh disabled"
+msgstr "Mesh 已禁用"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "WiFi channel"
+msgstr "WiFi 信道"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "CPU load"
+msgstr "CPU 负载"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Nodes"
+msgstr "节点"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Node role"
+msgstr "节点角色"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Link status"
+msgstr "链路状态"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "One row per device. MAC address, role, CPU load, channel, memory and client count are the values that device announces for itself; a value an older announcement does not carry stays empty instead of being guessed. Signal is the strongest backhaul signal reported for that device. Node state is normal, weak signal (a wireless-only backhaul below -75 dBm) or offline (no announcement for two minutes)."
+msgstr "每台设备一行。MAC 地址、角色、CPU 负载、信道、内存和客户端数量都是该设备自行通告的值；旧版通告不包含的值保持空白，不做推测。信号是该设备报告的最强回程信号。节点状态分为正常、信号较差（仅无线回程且低于 -75 dBm）和离线（两分钟没有通告）。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "FT over DS (fast transition over the distribution system)"
+msgstr "FT over DS（基于分发系统的快速切换）"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Off sends the fast-transition frames over the air, which is the hostapd default and works without a wired path between the access points. On sends them over the distribution system; enable it only when every AP of the mobility domain is reachable over the wired network. hostapd supports one transport per interface, so this selects DS instead of air rather than both."
+msgstr "关闭时快速切换帧通过空口发送，这是 hostapd 的默认值，且不要求各接入点之间存在有线路径。开启时通过分发系统发送；仅当漫游域内所有 AP 都能通过有线网络到达时才应启用。hostapd 每个接口只支持一种传输方式，因此这里是用 DS 替代空口，而不是同时使用两者。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Over DS"
+msgstr "基于 DS"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Over the air"
+msgstr "基于空口"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "FT transport"
+msgstr "FT 传输方式"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Node state"
+msgstr "节点状态"
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Normal"
+msgstr "正常"
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Weak signal"
+msgstr "信号较差"
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "Offline"
+msgstr "离线"
+
+#: htdocs/luci-static/resources/wifimanager/utils/topology.js
+msgid "The LAN MAC address %s is announced by more than one device (%s). Their rows are merged into one device; one of them may have a cloned MAC or a stale announcement."
+msgstr "局域网 MAC 地址 %s 被多台设备通告（%s）。这些设备的记录会被合并成一台；其中一台可能存在 MAC 克隆或过期的通告。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/create.js
+msgid "The Roaming area requires the Wireless area."
+msgstr "漫游区域需要同时选择无线区域。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/backup.js
+msgid "DAWN is selected without Roaming. The DAWN configuration and the wireless roaming options are restored together, so the wireless configuration changes as well."
+msgstr "DAWN 在未选择漫游区域的情况下被选中。恢复时会同时恢复 DAWN 配置并合并无线漫游选项，因此无线配置也会随之改变。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/backup.js
+msgid "DHCP/DNS or Firewall is selected without Network. Those files are restored, but the network interfaces they refer to are not part of this backup."
+msgstr "在未选择网络区域的情况下选择了 DHCP/DNS 或防火墙。恢复这些文件时，它们引用的网络接口不包含在此备份中。"
+
+msgid "Wireless (includes MLO)"
+msgstr "无线（包含 MLO）"
+
+msgid "Last automatic backup result"
+msgstr "最近一次自动备份结果"
+
+msgid "Succeeded"
+msgstr "成功"
+
+msgid "Failed"
+msgstr "失败"
+
+msgid "The last automatic backup failed (%s). No archive was created; manual backups and the next scheduled attempt are unaffected."
+msgstr "最近一次自动备份失败（%s）。没有创建归档；手动备份和下一次计划尝试不受影响。"
+
+msgid "The BSSID %s of access point %s is not a valid unicast MAC address. A neighbor report built from it is invalid, so 802.11k cannot help clients find that AP."
+msgstr "BSSID %s（接入点 %s）不是有效的单播 MAC 地址。据此生成的邻居报告无效，802.11k 无法帮助客户端找到该接入点。"
+
+msgid "The access points %s share the BSSID %s. A neighbor report cannot tell them apart; give each radio a unique MAC address."
+msgstr "接入点 %s 共用 BSSID %s。邻居报告无法区分它们；请为每个射频设置唯一的 MAC 地址。"
+
+msgid "802.11r is enabled, but the access points of SSID %s do not share the same authentication configuration (%s). Fast transition fails between APs with different encryption, PMF or keys."
+msgstr "已启用 802.11r，但 SSID %s 的接入点认证配置不一致（%s）。加密方式、PMF 或密钥不同的接入点之间无法完成快速切换。"
+
+msgid "Runtime state"
+msgstr "运行状态"
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Neighbouring access point scan"
+msgstr "邻居接入点扫描"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scanning %s takes the radio off its channel for a few seconds. Connected clients may see a short interruption and the mesh may re-converge."
+msgstr "扫描 %s 会让射频暂时离开所用信道数秒。已连接的客户端可能出现短暂中断，Mesh 也可能重新收敛。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "The scan failed."
+msgstr "扫描失败。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Not scanned"
+msgstr "未扫描"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "%d access point(s)"
+msgstr "%d 个接入点"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scan this radio"
+msgstr "扫描此射频"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "%s: %s"
+msgstr "%s：%s"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The scans returned no access point. The radio may be the only one in range, or the driver may report nothing while it is up."
+msgstr "扫描未返回任何接入点。可能该射频是范围内唯一的设备，也可能驱动在射频运行时不返回扫描结果。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Scan a radio to list the access points it can hear. Each scan runs only after you confirm it."
+msgstr "扫描某个射频以列出它能听到的接入点。每次扫描都只在您确认后运行。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "No neighbouring access point needs attention: none broadcasts one of your SSIDs with a different security setting."
+msgstr "没有需要关注的邻居接入点：没有用不同安全设置广播您的 SSID 的设备。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Security"
+msgstr "安全性"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "A scan is a snapshot of one moment and of one radio; it does not prove that a neighbour is permanent or reachable from the other access points."
+msgstr "一次扫描只是某个射频在某一时刻的快照，不能证明该邻居长期存在，也不能证明其他接入点能到达它。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "“Yours” marks a BSSID configured on this router. A foreign access point that uses one of your SSIDs with a different security setting breaks fast transition for that SSID."
+msgstr "“Yours”标记的是本路由器上配置的 BSSID。若外来接入点使用您的某个 SSID 却采用不同的安全设置，该 SSID 的快速切换将失效。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "The list is read from the driver. A hidden neighbour cannot be shown, and a driver that returns no scan result is reported as a failure rather than as an empty area."
+msgstr "列表来自驱动的报告。隐藏的邻居无法显示；驱动不返回扫描结果时会报告为失败，而不会当作附近没有接入点。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Each radio scans on its own channel, so the merged list may mix 2.4, 5 and 6 GHz observations."
+msgstr "每个射频在自己的信道上扫描，因此合并后的列表可能混合 2.4、5 和 6 GHz 的观测结果。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Neighbouring access points"
+msgstr "邻居接入点"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Lists the access points the selected radio can hear and compares foreign APs that use your SSIDs. A scan briefly takes the radio off its channel and only runs after you confirm it."
+msgstr "列出所选射频能听到的接入点，并比较使用您的 SSID 的外来 AP。扫描会让射频暂时离开信道，且只在您确认后运行。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Reported"
+msgstr "已报告"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Not reported"
+msgstr "未报告"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver did not report its capabilities for this radio, so the wireless settings fall back to the generic checks and ask before a combination is saved."
+msgstr "驱动未报告此射频的能力，因此无线设置会退回通用检查，并在保存组合前询问。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Usable channels"
+msgstr "可用信道"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "PHY modes"
+msgstr "PHY 模式"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver reported no usable band."
+msgstr "驱动未报告可用频段。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Interface modes:"
+msgstr "接口模式："
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Reported interface combinations:"
+msgstr "已报告的接口组合："
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Combinations limit how many interfaces of each mode the driver accepts on one radio. The channel count of one combination is not shown as a limit because a single radio always uses one channel."
+msgstr "组合限定了驱动在一个射频上接受的各模式接口数量。组合中的信道数不作为限制显示，因为单个射频始终只使用一个信道。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "The driver reported no interface combinations, so running several interfaces on this radio cannot be confirmed."
+msgstr "驱动未报告接口组合，因此无法确认此射频能否同时运行多个接口。"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Hardware capability"
+msgstr "硬件能力"
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/radios.js
+msgid "Bands, interface modes and interface combinations the driver reports for each radio. Values the driver does not report stay “not reported”; nothing here is inferred from the configuration."
+msgstr "驱动为每个射频报告的频段、接口模式和接口组合。驱动未报告的值显示为“未报告”；这里的内容不会从配置推断。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WEP"
+msgstr "WEP"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA"
+msgstr "WPA"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA/WPA2"
+msgstr "WPA/WPA2"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA2"
+msgstr "WPA2"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA2/WPA3"
+msgstr "WPA2/WPA3"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA3"
+msgstr "WPA3"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "OWE"
+msgstr "OWE"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "WPA-Enterprise"
+msgstr "WPA-企业级"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Yours"
+msgstr "本机"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Other network"
+msgstr "其他网络"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Same SSID, different security"
+msgstr "相同 SSID，不同安全设置"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "Same SSID"
+msgstr "相同 SSID"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "%d neighbouring access point(s) broadcast %s, which this router also uses. Check whether they belong to your network; a client may otherwise connect to a foreign AP and lose this network."
+msgstr "有 %d 个邻居接入点广播 %s，本路由器也使用该 SSID。请确认它们是否属于您的网络；否则客户端可能连接到外来 AP 并断开本网络。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "A neighbouring access point of SSID %s uses %s, while your access points use %s. A client cannot roam between them with the same security settings."
+msgstr "SSID 为 %s 的邻居接入点使用 %s，而您的接入点使用 %s。客户端无法在相同的安全设置下在两者之间漫游。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "unknown security"
+msgstr "未知安全设置"
+
+#: htdocs/luci-static/resources/wifimanager/utils/neighbors.js
+msgid "The BSSID %s was seen with different SSIDs in one scan (%s). Verify that this is not a spoofed or misconfigured access point."
+msgstr "在一次扫描中，BSSID %s 被发现使用了不同的 SSID（%s）。请确认这不是伪造或配置错误的接入点。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report this interface mode on this radio."
+msgstr "驱动未报告此射频支持该接口模式。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report a usable channel in this band."
+msgstr "驱动未报告该频段中有可用信道。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not report this PHY mode in this band."
+msgstr "驱动未报告该频段支持此 PHY 模式。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The reported interface combinations do not allow this mix."
+msgstr "已报告的接口组合不允许这种搭配。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver does not advertise the configured channel as usable."
+msgstr "驱动未声明所配置的信道可用。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "The driver did not report its capabilities, so this combination cannot be confirmed."
+msgstr "驱动未报告其能力，因此无法确认此组合。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Access Point (AP)"
+msgstr "接入点（AP）"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "AP VLAN"
+msgstr "AP VLAN"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "802.11s mesh point"
+msgstr "802.11s 网格点"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Ad-Hoc (IBSS)"
+msgstr "Ad-Hoc（IBSS）"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Monitor"
+msgstr "监听"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "No PHY mode reported"
+msgstr "未报告 PHY 模式"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Supported"
+msgstr "支持"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Not supported"
+msgstr "不支持"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "Driver reports AP + STA: %s."
+msgstr "驱动报告 AP + STA：%s。"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "total ≤ %d"
+msgstr "总计 ≤ %d"
+
+#: htdocs/luci-static/resources/wifimanager/utils/radio.js
+msgid "channels ≤ %d"
+msgstr "信道 ≤ %d"
+
+msgid "The saved wired port %s carries the WAN uplink. The engine will not use it and keeps the wireless backhaul; select another port."
+msgstr "已保存的有线端口 %s 承载 WAN 上行。引擎不会使用它，并保留无线回程；请选择其他端口。"
+
+msgid "The WAN uplink port cannot be used for the wired backhaul."
+msgstr "WAN 上行端口不能用于有线回程。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Some devices run the mesh with a key and others without one. Nodes with a different mesh protection cannot form direct links. The key itself is never announced, so its value is not compared."
+msgstr "部分设备启用了 mesh 密码，另一些没有。加密方式不同的节点无法建立直接链路。密码本身从不经通告传输，因此不会比较其内容。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh encryption differs between nodes. Every node must use the same 802.11s encryption."
+msgstr "节点之间的 mesh 加密方式不一致。每个节点必须使用相同的 802.11s 加密。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh radios have no frequency band in common. At least two nodes must run the mesh on the same band to link directly."
+msgstr "各节点的 mesh 射频没有共同的频段。至少两个节点必须在同一频段上运行 mesh 才能直接互联。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/backhaul.js
+msgid "LAN bridge"
+msgstr "LAN 网桥"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "No direct neighbor is currently known to batman-adv."
+msgstr "batman-adv 当前没有记录任何直接邻居。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batctl is not installed, so the neighbor table cannot be read."
+msgstr "未安装 batctl，无法读取邻居表。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Direct batman-adv neighbours of this node and when each was last heard. The table is read live from batctl and is empty when bat0 is not running."
+msgstr "本节点的直接 batman-adv 邻居及其最后被听到的时间。该表实时读取自 batctl，bat0 未运行时为空。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Originators"
+msgstr "源节点"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Originator"
+msgstr "源节点"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Table row"
+msgstr "表行"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batman-adv has not learned any originator yet."
+msgstr "batman-adv 尚未学习到任何源节点。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "batctl is not installed, so the originator table cannot be read."
+msgstr "未安装 batctl，无法读取源节点表。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/mesh.js
+msgid "Nodes batman-adv can reach and the path it selected, as printed by batctl originators. Only the local view of this node is shown; the topology page combines the announcements of every node."
+msgstr "batman-adv 可到达的节点及其选定的路径，由 batctl originators 输出。这里只显示本节点的本地视图；拓扑页会综合每个节点的通告。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The DAWN log is empty."
+msgstr "DAWN 日志为空。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Roaming diagnostics"
+msgstr "漫游诊断"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The roaming diagnostics could not be read."
+msgstr "无法读取漫游诊断信息。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN, the 802.11k/v/r flags on each access point, recent roaming events and the DAWN log."
+msgstr "DAWN、各接入点的 802.11k/v/r 标志、最近的漫游事件以及 DAWN 日志。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN service"
+msgstr "DAWN 服务"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Watchdog enabled"
+msgstr "看门狗已启用"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Consecutive watchdog failures"
+msgstr "看门狗连续失败次数"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Steering mode"
+msgstr "引导模式"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "%s seconds"
+msgstr "%s 秒"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The service state is read from init.d; the parameters are the values the managed DAWN configuration holds. DAWN is managed only while mesh networking and 802.11k or 802.11v are enabled."
+msgstr "服务状态读取自 init.d；参数为受管 DAWN 配置中的值。只有在 mesh 组网且启用 802.11k 或 802.11v 时才会管理 DAWN。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11k/v/r status"
+msgstr "802.11k/v/r 状态"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11k configured"
+msgstr "已配置 802.11k"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11v configured"
+msgstr "已配置 802.11v"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "No access point is configured."
+msgstr "未配置任何接入点。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "802.11v is enabled but this wpad build cannot send BSS transition requests. The radio flags are written, yet no steering request reaches the client."
+msgstr "已启用 802.11v，但此 wpad 版本无法发送 BSS 转换请求。射频标志已写入，但客户端不会收到引导请求。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The flags are the values stored in /etc/config/wireless for each AP section. hostapd reads them at start, so a change takes effect after Wi-Fi is reloaded."
+msgstr "这些标志是 /etc/config/wireless 中各 AP 段存储的值。hostapd 在启动时读取，因此修改需重新加载 Wi-Fi 后生效。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Recent roaming events"
+msgstr "最近的漫游事件"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "No roaming event has been recorded yet."
+msgstr "尚未记录任何漫游事件。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "All roaming events"
+msgstr "全部漫游事件"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The sampler compares the station table every 15 seconds. A join and a leave between two samples are not visible, and disconnect duration, reconnect duration and packet loss are recorded as unavailable."
+msgstr "采样器每 15 秒比对一次站点表。两次采样之间的接入与离开无法看到，断开时长、重连时长和丢包率均记为不可用。"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "DAWN log"
+msgstr "DAWN 日志"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "Open the log viewer"
+msgstr "打开日志查看器"
+
+#: htdocs/luci-static/resources/view/wifimanager/diagnostics/roaming.js
+msgid "The last 80 lines that syslog carries for the dawn service."
+msgstr "syslog 中 dawn 服务的最后 80 行。"
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "Every visible device is drawn. The rings follow the routing hops from this device; a line runs from one device to the next hop on the path to it, using the medium the link was reported with. Two devices joined by both media are drawn with solid and dashed links."
+msgstr "所有可见设备都会被绘制。圆环表示距离本设备的路由跳数；连线从一台设备指向通往它的下一跳，并使用该链路报告的介质。同时通过两种介质相连的两台设备会画成实线与虚线连线。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "802.11k neighbor reports"
+msgstr "802.11k 邻居报告"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
+msgid "802.11v client steering"
+msgstr "802.11v 客户端引导"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source SSID"
+msgstr "源 SSID"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination SSID"
+msgstr "目标 SSID"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Source BSSID"
+msgstr "源 BSSID"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "Destination BSSID"
+msgstr "目标 BSSID"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "The station table and the mesh link state are sampled every 15 seconds, so a client that joins and leaves between two samples is not recorded."
+msgstr "站点表与 mesh 链路状态每 15 秒采样一次，因此在两次采样之间接入并离开的客户端不会被记录。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/events.js
+msgid "For a roam, the source RSSI is the last value seen on the old BSS and the destination RSSI is the first value seen on the new one, up to 15 seconds apart."
+msgstr "对于漫游，源 RSSI 是在旧 BSS 上看到的最后一个值，目标 RSSI 是在新 BSS 上看到的第一个值，两者最多相隔 15 秒。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Enable 802.11k neighbor reports"
+msgstr "启用 802.11k 邻居报告"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "802.11k lets a client ask its access point for a list of neighbouring access points. DAWN and the client use these radio measurements to decide where to roam."
+msgstr "802.11k 允许客户端向其接入点索取相邻接入点列表。DAWN 和客户端利用这些无线测量来决定漫游目标。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "Enable 802.11v client steering"
+msgstr "启用 802.11v 客户端引导"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "802.11v lets the access point suggest a better access point to a client. DAWN uses it to steer clients; without wpad support for 802.11v the neighbor reports still work, but no steering request is sent."
+msgstr "802.11v 允许接入点向客户端推荐更合适的接入点。DAWN 借此引导客户端；若 wpad 不支持 802.11v，邻居报告仍然有效，但不会发送引导请求。"
+
+#: htdocs/luci-static/resources/view/wifimanager/roaming/settings.js
+msgid "DAWN is not installed. 802.11k and 802.11v can still be enabled, but there is no client-steering service."
+msgstr "未安装 DAWN。仍可启用 802.11k 和 802.11v，但没有客户端引导服务。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/overview.js
+msgid "Always"
+msgstr "始终"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "If the restored configuration cuts off the path to this router, the automatic rollback cannot reach it either. Be ready to reach the device over the local network, the serial console or failsafe mode."
+msgstr "如果恢复的配置切断了通往本路由器的路径，自动回滚同样无法访问它。请提前准备通过本地网络、串口控制台或 failsafe 模式访问设备。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/restore.js
+msgid "The restored configuration is applied before it is verified: network, wireless, mesh and DAWN are started from the restored files and checked. If they do not come up, the previous files are restored from the snapshot, reloaded and the restore is reported as rolled back."
+msgstr "恢复的配置会先被应用，然后再进行校验：网络、无线、Mesh 和 DAWN 会按恢复后的文件启动并检查。若它们未能启动，则从快照还原先前的文件、重新加载，并把本次恢复报告为已回滚。"
+
+#: htdocs/luci-static/resources/view/wifimanager/backup/settings.js
+msgid "Every restore first creates a full pre-restore backup. This cannot be turned off: the in-memory snapshot used for the automatic rollback does not survive a reboot, so the archive is the copy that remains."
+msgstr "每次恢复都会先创建一份完整的恢复前备份。此项无法关闭：用于自动回滚的内存快照不会在重启后保留，因此归档才是真正留存的那份副本。"
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "Mesh runtime"
+msgstr "Mesh 运行状态"
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "bat0 up"
+msgstr "bat0 已启动"
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "bat0 down"
+msgstr "bat0 未启动"

@@ -1,0 +1,41 @@
+{
+	"luci-app-wifimanager-backup": {
+		"description": "Grant access to the WiFi Manager backup and restore pages only",
+		"read": {
+			"ubus": {
+				"wifimanager": [
+					"status",
+					"op_status",
+					"backup_list",
+					"backup_details",
+					"backup_validate",
+					"backup_status",
+					"backup_settings_get",
+					"backup_storage"
+				]
+			},
+			"file": {
+				"/etc/wifimanager/backup/*": [ "read" ],
+				"/tmp/wifimanager-download/*": [ "read" ]
+			},
+			"uci": [ "wifimanager" ]
+		},
+		"write": {
+			"ubus": {
+				"wifimanager": [
+					"backup_create",
+					"backup_delete",
+					"backup_restore",
+					"backup_settings_set",
+					"backup_import",
+					"backup_legacy_import",
+					"backup_export"
+				]
+			},
+			"file": {
+				"/tmp/wifimanager-upload": [ "write" ],
+				"/tmp/wifimanager-upload/*": [ "write" ]
+			}
+		}
+	}
+}

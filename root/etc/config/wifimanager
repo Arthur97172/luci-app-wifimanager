@@ -1,0 +1,16 @@
+# WiFi Manager settings.
+# The mesh/roaming form values stay in /etc/config/meshassistant so that a
+# mixed WiFi Manager / Mesh Assistant fleet reads the same configuration.
+
+config wifimanager 'settings'
+	option legacy_service_disabled '0'
+
+config backup 'backup'
+	option enabled '1'
+	option frequency 'before_change'
+	option max_count '10'
+	option max_size_mb '64'
+	option retention_days '0'
+	option path '/etc/wifimanager/backup'
+	option require_pre_restore '1'
+	option legacy_enabled '1'

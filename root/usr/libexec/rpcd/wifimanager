@@ -1,0 +1,296 @@
+#!/bin/sh
+# rpcd plugin: the only ubus surface of WiFi Manager.
+#
+# The menu, views and ACLs live under /usr/share; this script is a thin,
+# allowlisted dispatcher.  It never takes a command name from the client and
+# never hands client input to a shell: arguments are read with jsonfilter, ids
+# and paths are validated inside the called helper.
+
+. /usr/lib/wifimanager/common.sh
+
+# Return 1 when another operation holds the run lock.  The descriptor is closed
+# again before dispatching so the worker can take the lock itself.
+wm_busy() {
+	mkdir -p "$WM_RUN_DIR" 2>/dev/null
+	exec 7>"$WM_LOCK"
+	if command -v flock >/dev/null 2>&1 && ! flock -n 7; then
+		exec 7>&-
+		return 0
+	fi
+	exec 7>&-
+	return 1
+}
+
+# spawn <op> <worker command...>: queue a detached worker and return at once.
+spawn() {
+	local op="$1"
+	shift
+	if wm_busy; then
+		wm_error E-BUSY "Another operation is already running."
+		return 1
+	fi
+	wm_init_dirs
+	wm_op_write queued "$op" "Queued" "$(date +%s)"
+	if command -v setsid >/dev/null 2>&1; then
+		( setsid /usr/lib/wifimanager/worker.sh "$@" </dev/null >/dev/null 2>&1 & )
+	else
+		( /usr/lib/wifimanager/worker.sh "$@" </dev/null >/dev/null 2>&1 & )
+	fi
+	printf '{"ok":true,"queued":true,"op":"%s"}\n' "$op"
+}
+
+# Write a restore password to a 0600 file the worker deletes after reading.
+password_file() {
+	local pw="$1" file="$WM_RUN_DIR/restore-pass.$$"
+	mkdir -p "$WM_RUN_DIR" 2>/dev/null
+	( umask 077; printf '%s' "$pw" >"$file" ) 2>/dev/null || return 1
+	chmod 600 "$file" 2>/dev/null
+	printf '%s\n' "$file"
+}
+
+methods() {
+	cat <<'EOF'
+{
+	"status": {},
+	"radio_inventory": {},
+	"radio_advice": {},
+	"radio_check": {
+		"mode": "string",
+		"device": { "type": "array", "elem": { "type": "string" } },
+		"mlo": "boolean",
+		"section": "string"
+	},
+	"backup_list": { "include_legacy": "boolean" },
+	"backup_details": { "id": "string", "password": "string" },
+	"backup_validate": { "id": "string", "password": "string" },
+	"backup_status": {},
+	"backup_settings_get": {},
+	"backup_storage": {},
+	"backup_settings_set": {
+		"enabled": "boolean",
+		"frequency": "string",
+		"max_count": "integer",
+		"max_size_mb": "integer",
+		"retention_days": "integer",
+		"path": "string",
+		"legacy_enabled": "boolean",
+		"encrypt_default": "boolean"
+	},
+	"backup_create": {
+		"type": "string",
+		"scope": { "type": "array", "elem": { "type": "string" } },
+		"description": "string",
+		"name": "string",
+		"password": "string"
+	},
+	"backup_delete": { "id": "string" },
+	"backup_restore": { "id": "string", "confirm": "boolean", "password": "string" },
+	"backup_import": { "path": "string", "password": "string" },
+	"backup_legacy_import": { "id": "string" },
+	"backup_export": { "id": "string" },
+	"wireless_iface_save": {
+		"section": "string",
+		"mode": "string",
+		"device": { "type": "array", "elem": { "type": "string" } },
+		"network": "string",
+		"ssid": "string",
+		"encryption": "string",
+		"key": "string",
+		"hidden": "boolean",
+		"ieee80211w": "string",
+		"ifname": "string",
+		"macaddr": "string",
+		"bssid": "string",
+		"wds": "boolean",
+		"uapsd": "boolean",
+		"ocv": "boolean",
+		"disassoc_low_ack": "boolean",
+		"disabled": "boolean",
+		"mlo": "boolean"
+	},
+	"wireless_iface_delete": { "section": "string", "confirm": "boolean" },
+	"network_check": {},
+	"channel_advice": { "radio": "string" },
+	"roaming_advice": {},
+	"roaming_neighbor_scan": { "radio": "string" },
+	"mesh_status": {},
+	"mesh_events": { "limit": "integer" },
+	"backhaul_status": {},
+	"diagnostics": { "section": "string" },
+	"logs": { "name": "string", "lines": "integer" },
+	"op_status": {},
+	"migration_status": {},
+	"migration_confirm": { "confirm": "boolean" },
+	"migration_restore_legacy": { "confirm": "boolean" },
+	"mesh_apply": {},
+	"mesh_disable": {},
+	"mesh_dumbap": {},
+	"mesh_undumbap": {},
+	"roaming_apply": {}
+}
+EOF
+}
+
+case "$1" in
+	list)
+		methods
+		;;
+	call)
+		method="$2"
+		args="$3"
+		[ -n "$args" ] || args='{}'
+
+		read_only=0
+		case "$method" in
+			status) status_json ;;
+			radio_inventory|radio_advice|radio_check|network_check|channel_advice|backup_list|backup_details|backup_validate|backup_status|\
+			backup_settings_get|mesh_status|mesh_events|backhaul_status|diagnostics|logs|op_status|\
+			migration_status|roaming_advice|roaming_neighbor_scan|backup_storage)
+				read_only=1
+				;;
+		esac
+
+		if [ "$read_only" = 1 ]; then
+			. /usr/lib/wifimanager/radio.sh
+			. /usr/lib/wifimanager/channel.sh
+			. /usr/lib/wifimanager/roaming.sh
+			. /usr/lib/wifimanager/apscan.sh
+			. /usr/lib/wifimanager/backup.sh
+			. /usr/lib/wifimanager/peer.sh
+			. /usr/lib/wifimanager/diagnostics.sh
+			. /usr/lib/wifimanager/backhaul.sh
+			. /usr/lib/wifimanager/migration.sh
+			case "$method" in
+				status) status_json ;;
+				radio_inventory) radio_inventory_json ;;
+				radio_advice) radio_advice_json ;;
+				radio_check) radio_check_json "$args" ;;
+				channel_advice) channel_advice_json "$(jget "$args" '@.radio')" ;;
+				network_check) . /usr/lib/wifimanager/network.sh; network_check_json ;;
+				backup_list) backup_list_json "$(jget "$args" '@.include_legacy')" ;;
+				backup_details) backup_details_json "$(jget "$args" '@.id')" "$(jget "$args" '@.password')" ;;
+				backup_validate) backup_validate_json "$(jget "$args" '@.id')" "$(jget "$args" '@.password')" ;;
+				backup_status) backup_status_json ;;
+				backup_settings_get) backup_settings_json ;;
+				backup_storage) backup_storage_json ;;
+				roaming_advice) roaming_advice_json ;;
+				roaming_neighbor_scan) roaming_neighbor_scan_json "$(jget "$args" '@.radio')" ;;
+				mesh_status) mesh_status_json ;;
+				mesh_events) roaming_events_json "$(jget "$args" '@.limit')" ;;
+				backhaul_status) backhaul_status_json ;;
+				diagnostics) diagnostics_json "$(jget "$args" '@.section')" ;;
+				logs) logs_json "$(jget "$args" '@.name')" "$(jget "$args" '@.lines')" ;;
+				op_status) op_status_json ;;
+				migration_status) migration_status_json ;;
+			esac
+			exit 0
+		fi
+
+		. /usr/lib/wifimanager/radio.sh
+		. /usr/lib/wifimanager/roaming.sh
+		. /usr/lib/wifimanager/backup.sh
+		. /usr/lib/wifimanager/peer.sh
+		. /usr/lib/wifimanager/diagnostics.sh
+		. /usr/lib/wifimanager/mesh.sh
+		. /usr/lib/wifimanager/wireless.sh
+		. /usr/lib/wifimanager/migration.sh
+
+		case "$method" in
+			wireless_iface_save)
+				wireless_iface_save_json "$args"
+				;;
+			wireless_iface_delete)
+				wireless_iface_delete_json "$args"
+				;;
+			backup_create)
+				backup_create_json "$args"
+				;;
+			backup_delete)
+				backup_delete_json "$(jget "$args" '@.id')"
+				;;
+			backup_settings_set)
+				out=$(backup_settings_set "$args")
+				if [ "$?" = 0 ]; then
+					json_init
+					json_add_boolean ok 1
+					json_add_string message "$out"
+					json_dump
+					echo
+				else
+					wm_error E-INPUT "$out"
+				fi
+				;;
+			backup_import)
+				path=$(jget "$args" '@.path')
+				pass=$(jget "$args" '@.password')
+				if [ -n "$pass" ]; then
+					passfile=$(password_file "$pass")
+					if [ -z "$passfile" ]; then
+						wm_error E-IO "Unable to store the import password."
+					else
+						backup_import "$path" "@$passfile"
+						rm -f "$passfile"
+					fi
+				else
+					backup_import "$path"
+				fi
+				;;
+			backup_legacy_import)
+				backup_legacy_import "$(jget "$args" '@.id')"
+				;;
+			backup_export)
+				backup_export_json "$(jget "$args" '@.id')"
+				;;
+			backup_restore)
+				id=$(jget "$args" '@.id')
+				confirm=$(jget "$args" '@.confirm')
+				if [ "$confirm" != true ] && [ "$confirm" != 1 ]; then
+					wm_error E-CONFIRM "Restore requires explicit confirmation."
+					exit 0
+				fi
+				pass=$(jget "$args" '@.password')
+				passfile=""
+				if [ -n "$pass" ]; then
+					passfile=$(password_file "$pass")
+					if [ -z "$passfile" ]; then
+						wm_error E-IO "Unable to store the restore password."
+						exit 0
+					fi
+				fi
+				if [ -n "$passfile" ]; then
+					spawn backup_restore restore "$id" "$passfile"
+				else
+					spawn backup_restore restore "$id"
+				fi
+				;;
+			migration_confirm)
+				migration_confirm_json "$args"
+				;;
+			migration_restore_legacy)
+				migration_restore_legacy_json "$args"
+				;;
+			mesh_apply)
+				spawn mesh_apply mesh_apply
+				;;
+			mesh_disable)
+				spawn mesh_disable mesh_disable
+				;;
+			mesh_dumbap)
+				spawn mesh_dumbap dumbap_enable
+				;;
+			mesh_undumbap)
+				spawn mesh_undumbap dumbap_disable
+				;;
+			roaming_apply)
+				spawn roaming_apply roaming_apply
+				;;
+			*)
+				wm_error E-METHOD "Unknown method."
+				;;
+		esac
+		;;
+	*)
+		echo "Usage: $0 {list|call}" >&2
+		exit 1
+		;;
+esac

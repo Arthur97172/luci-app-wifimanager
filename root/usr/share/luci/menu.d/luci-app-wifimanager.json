@@ -1,17 +1,424 @@
 {
 	"admin/network/wifimanager": {
 		"title": "WiFi Manager",
-		"order": 16,
+		"order": 60,
 		"action": {
-			"type": "view",
-			"path": "wifimanager"
+			"type": "firstchild"
 		},
 		"depends": {
-			"acl": [ "luci-app-wifimanager" ],
 			"uci": {
-				"wireless": {
-					"@wifi-device": true
-				}
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/overview": {
+		"title": "Overview",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/overview"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/wireless": {
+		"title": "Wireless",
+		"order": 20,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/wireless/radios": {
+		"title": "Radios",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/wifi/radios"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/wireless/interfaces": {
+		"title": "Interfaces",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/wifi/interfaces"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/wireless/mlo": {
+		"title": "MLO",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/wifi/mlo"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/wireless/clients": {
+		"title": "Clients",
+		"order": 40,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/wifi/clients"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/mesh": {
+		"title": "Mesh",
+		"order": 30,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/mesh/settings": {
+		"title": "Settings",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/mesh/settings"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/mesh/topology": {
+		"title": "Topology",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/mesh/topology"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/mesh/neighbors": {
+		"title": "Neighbors",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/mesh/neighbors"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/mesh/backhaul": {
+		"title": "Backhaul",
+		"order": 40,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/mesh/backhaul"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/roaming": {
+		"title": "Roaming",
+		"order": 40,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/roaming/settings": {
+		"title": "Settings",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/roaming/settings"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/roaming/dawn": {
+		"title": "DAWN",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/roaming/dawn"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/roaming/events": {
+		"title": "Events",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/roaming/events"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/backup": {
+		"title": "Backup & Restore",
+		"order": 50,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager-backup"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/backup/overview": {
+		"title": "Overview",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/backup/overview"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager-backup"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/backup/create": {
+		"title": "Create Backup",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/backup/create"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager-backup"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/backup/restore": {
+		"title": "Restore",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/backup/restore"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager-backup"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/backup/settings": {
+		"title": "Settings",
+		"order": 40,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/backup/settings"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager-backup"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics": {
+		"title": "Diagnostics",
+		"order": 60,
+		"action": {
+			"type": "firstchild"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics/wireless": {
+		"title": "Wireless",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/diagnostics/wireless"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics/mesh": {
+		"title": "Mesh",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/diagnostics/mesh"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics/roaming": {
+		"title": "Roaming",
+		"order": 25,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/diagnostics/roaming"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics/system": {
+		"title": "System",
+		"order": 30,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/diagnostics/system"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
+			}
+		}
+	},
+	"admin/network/wifimanager/diagnostics/logs": {
+		"title": "Logs",
+		"order": 40,
+		"action": {
+			"type": "view",
+			"path": "wifimanager/diagnostics/logs"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-wifimanager"
+			],
+			"uci": {
+				"wifimanager": true
 			}
 		}
 	}
