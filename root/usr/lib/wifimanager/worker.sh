@@ -8,7 +8,6 @@
 #   worker.sh events                    one roaming sampler pass
 #   worker.sh dawn_watchdog             one DAWN recovery pass
 #   worker.sh backup_tick               one backup timer pass
-#   worker.sh migrate_prepare           detect and prepare a Mesh Assistant migration
 #   worker.sh backhaul-daemon           automatic backhaul switching sampler
 #   worker.sh backhaul_tick             one backhaul decision pass
 #   worker.sh mesh_apply|mesh_disable
@@ -59,10 +58,6 @@ case "$cmd" in
 		;;
 	backup_tick)
 		backup_tick
-		;;
-	migrate_prepare)
-		. /usr/lib/wifimanager/migration.sh
-		migration_prepare
 		;;
 	backhaul_tick)
 		backhaul_monitor_once

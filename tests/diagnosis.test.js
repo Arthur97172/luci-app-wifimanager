@@ -320,22 +320,20 @@ test('diagnosis: network findings keep their code and severity', function() {
 	includes(result.findings[0].message, '192.168.1.1');
 });
 
-test('diagnosis: mesh runtime and legacy service conflicts are reported', function() {
+test('diagnosis: mesh runtime findings are reported', function() {
 	const result = diagnosis.diagnose({
 		system: system(),
 		network: { ok: true, checks: [] },
 		mesh: {
 			state: { active: true },
 			bat0: { exists: false, up: false },
-			counts: { peers: 0 },
-			service: { legacy_enabled: true, legacy_running: true }
+			counts: { peers: 0 }
 		},
 		roaming: roaming()
 	});
 	const found = codes(result);
 
 	ok(found.indexOf('D-MESH-01') !== -1, 'missing bat0');
-	ok(found.indexOf('D-MESH-04') !== -1, 'legacy service conflict');
 	equal(result.findings.filter(function(f) { return f.code === 'D-MESH-01'; })[0].level, 'error');
 });
 

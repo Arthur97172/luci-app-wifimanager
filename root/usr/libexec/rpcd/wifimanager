@@ -119,9 +119,6 @@ methods() {
 	"diagnostics": { "section": "string" },
 	"logs": { "name": "string", "lines": "integer" },
 	"op_status": {},
-	"migration_status": {},
-	"migration_confirm": { "confirm": "boolean" },
-	"migration_restore_legacy": { "confirm": "boolean" },
 	"mesh_apply": {},
 	"mesh_disable": {},
 	"mesh_dumbap": {},
@@ -152,7 +149,7 @@ case "$1" in
 		case "$method" in
 			status|radio_inventory|radio_advice|radio_check|network_check|channel_advice|backup_list|backup_details|backup_validate|backup_status|\
 			backup_settings_get|mesh_status|mesh_events|backhaul_status|diagnostics|logs|op_status|\
-			migration_status|roaming_advice|roaming_neighbor_scan|backup_storage)
+			roaming_advice|roaming_neighbor_scan|backup_storage)
 				read_only=1
 				;;
 		esac
@@ -184,9 +181,6 @@ case "$1" in
 					;;
 				backup_*)
 					. /usr/lib/wifimanager/backup.sh
-					;;
-				migration_*)
-					. /usr/lib/wifimanager/migration.sh
 					;;
 				network_check)
 					. /usr/lib/wifimanager/network.sh
@@ -226,7 +220,6 @@ case "$1" in
 				diagnostics) diagnostics_json "$(jget "$args" '@.section')" ;;
 				logs) logs_json "$(jget "$args" '@.name')" "$(jget "$args" '@.lines')" ;;
 				op_status) op_status_json ;;
-				migration_status) migration_status_json ;;
 			esac
 			exit 0
 		fi
@@ -238,7 +231,6 @@ case "$1" in
 		. /usr/lib/wifimanager/diagnostics.sh
 		. /usr/lib/wifimanager/mesh.sh
 		. /usr/lib/wifimanager/wireless.sh
-		. /usr/lib/wifimanager/migration.sh
 
 		case "$method" in
 			wireless_iface_save)
@@ -307,12 +299,6 @@ case "$1" in
 				else
 					spawn backup_restore restore "$id"
 				fi
-				;;
-			migration_confirm)
-				migration_confirm_json "$args"
-				;;
-			migration_restore_legacy)
-				migration_restore_legacy_json "$args"
 				;;
 			mesh_apply)
 				spawn mesh_apply mesh_apply

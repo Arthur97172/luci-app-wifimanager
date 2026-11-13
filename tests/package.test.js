@@ -27,11 +27,11 @@ function rpcMethods() {
 	return out;
 }
 
-test('package: the Makefile carries the 2.0.7 identity and its dependencies', function() {
+test('package: the Makefile carries the 2.0.8 identity and its dependencies', function() {
 	const source = lib.read(MAKEFILE);
 
 	includes(source, 'PKG_NAME:=luci-app-wifimanager');
-	includes(source, 'PKG_VERSION:=2.0.7');
+	includes(source, 'PKG_VERSION:=2.0.8');
 	includes(source, 'PKG_RELEASE:=1');
 	includes(source, 'PKG_LICENSE:=GPL-3.0-only');
 	includes(source, 'LUCI_DEPENDS:=+luci-base');

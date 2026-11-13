@@ -455,9 +455,6 @@ EOF
 	json_add_int clients "$(diag_int "$client_count")"
 	json_close_object
 	json_add_object service
-	json_add_boolean legacy_installed "$([ -x /etc/init.d/meshassistant ] && echo 1 || echo 0)"
-	json_add_boolean legacy_enabled "$(service_enabled_flag meshassistant)"
-	json_add_boolean legacy_running "$(service_running_flag meshassistant)"
 	json_add_boolean wifimanager_enabled "$(service_enabled_flag wifimanager)"
 	json_add_boolean wifimanager_running "$(service_running_flag wifimanager)"
 	json_close_object
@@ -527,9 +524,6 @@ diag_mesh_json() {
 	json_add_object service
 	json_add_boolean wifimanager_enabled "$(service_enabled_flag wifimanager)"
 	json_add_boolean wifimanager_running "$(service_running_flag wifimanager)"
-	json_add_boolean legacy_installed "$([ -x /etc/init.d/meshassistant ] && echo 1 || echo 0)"
-	json_add_boolean legacy_enabled "$(service_enabled_flag meshassistant)"
-	json_add_boolean legacy_running "$(service_running_flag meshassistant)"
 	json_add_boolean batctl "$(command -v batctl >/dev/null 2>&1 && echo 1 || echo 0)"
 	json_close_object
 	json_add_object runtime
@@ -614,8 +608,6 @@ EOF
 	json_add_object checks
 	# Configured as running but no bat0 is a real mismatch, not a UI state.
 	json_add_boolean config_runtime_mismatch "$([ "$cfg_running" = 1 ] && [ "$bat0_exists" = 0 ] && echo 1 || echo 0)"
-	# Both the legacy daemon and ours running means two managers fight.
-	json_add_boolean legacy_conflict "$([ "$(service_running_flag meshassistant)" = 1 ] && [ "$(service_running_flag wifimanager)" = 1 ] && echo 1 || echo 0)"
 	json_close_object
 	json_dump
 	echo
@@ -751,7 +743,7 @@ diag_system_json() {
 	json_close_object
 	json_add_array services
 	local svc
-	for svc in network firewall dnsmasq odhcpd wpad hostapd dawn meshassistant wifimanager; do
+	for svc in network firewall dnsmasq odhcpd wpad hostapd dawn wifimanager; do
 		json_add_object
 		json_add_string name "$svc"
 		json_add_boolean installed "$([ -x "/etc/init.d/$svc" ] && echo 1 || echo 0)"

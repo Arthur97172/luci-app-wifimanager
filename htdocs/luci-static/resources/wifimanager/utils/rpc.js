@@ -83,9 +83,6 @@ return baseclass.extend({
 	diagnostics: declare('diagnostics', [ 'section' ]),
 	logs: declare('logs', [ 'name', 'lines' ]),
 	opStatus: declare('op_status'),
-	migrationStatus: declare('migration_status'),
-	migrationConfirm: declare('migration_confirm', [ 'confirm' ]),
-	migrationRestoreLegacy: declare('migration_restore_legacy', [ 'confirm' ]),
 
 	meshApply: declare('mesh_apply'),
 	meshDisable: declare('mesh_disable'),

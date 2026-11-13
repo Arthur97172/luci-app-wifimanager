@@ -20,7 +20,6 @@ const SERVICE_LABELS = {
 	wpad: _('wpad (supplicant)'),
 	hostapd: _('hostapd (access points)'),
 	dawn: _('DAWN (roaming)'),
-	meshassistant: _('meshassistant (legacy)'),
 	wifimanager: _('wifimanager (this package)')
 };
 

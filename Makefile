@@ -6,7 +6,7 @@
 #
 
 PKG_NAME:=luci-app-wifimanager
-PKG_VERSION:=2.0.7
+PKG_VERSION:=2.0.8
 PKG_RELEASE:=1
 
 PKG_LICENSE:=GPL-3.0-only
@@ -56,13 +56,6 @@ if [ -f /etc/wifimanager/config/dawn.managed ]; then
 		rm -f /etc/config/dawn
 	fi
 	rm -f /etc/wifimanager/config/dawn.managed /etc/wifimanager/config/dawn.orig
-fi
-
-# Re-enable the legacy daemon if this package was the one that stopped it.
-legacy_disabled=$$(uci -q get wifimanager.settings.legacy_service_disabled)
-if [ "$$legacy_disabled" = "1" ] && [ -x /etc/init.d/meshassistant ]; then
-	/etc/init.d/meshassistant enable >/dev/null 2>&1 || true
-	/etc/init.d/meshassistant restart >/dev/null 2>&1 || true
 fi
 
 rm -f /tmp/luci-indexcache* 2>/dev/null || true

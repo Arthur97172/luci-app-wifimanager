@@ -120,31 +120,6 @@ function checkRows(diag) {
 		]);
 	}
 
-	if (checks.legacy_conflict === true) {
-		rows.push([
-			_('Service conflict'),
-			badge(_('Conflict'), 'error'),
-			_('Both meshassistant and wifimanager are running. Two managers write the same configuration; stop one of them.'),
-			adminLink('admin/network/wifimanager/mesh/settings', _('Mesh settings'))
-		]);
-	}
-	else if (isOn(service.legacy_installed) && isOn(service.legacy_enabled)) {
-		rows.push([
-			_('Service conflict'),
-			badge(_('Warning'), 'warn'),
-			_('The legacy meshassistant service is still enabled. It is not running now, but it will start after the next reboot and may then fight over the configuration.'),
-			''
-		]);
-	}
-	else {
-		rows.push([
-			_('Service conflict'),
-			badge(_('Clear'), 'ok'),
-			_('No other mesh manager is enabled.'),
-			''
-		]);
-	}
-
 	rows.push([
 		_('batctl'),
 		isOn(service.batctl) ? badge(_('Available'), 'ok') : badge(_('Missing'), 'warn'),
@@ -195,14 +170,6 @@ return view.extend({
 				notices.push(alert('error',
 					_('Mesh is configured as running but bat0 does not exist.')));
 
-			if (checks.legacy_conflict === true)
-				notices.push(alert('error',
-					_('The legacy meshassistant daemon and WiFi Manager are running at the same time.')));
-
-			if (isOn(service.legacy_installed) && !isOn(service.legacy_enabled) && !isOn(service.wifimanager_enabled))
-				notices.push(alert('info',
-					_('Neither WiFi Manager nor the legacy mesh service is enabled, so no mesh is started at boot.')));
-
 			dom.content(content, [
 				E('div', {}, notices),
 				card(_('Configuration'), [
@@ -225,14 +192,8 @@ return view.extend({
 					], [
 						[ 'wifimanager',
 						  serviceBadge(true, service.wifimanager_enabled, service.wifimanager_running),
-						  _('Mesh manager and timer of WiFi Manager.') ],
-						[ 'meshassistant',
-						  serviceBadge(service.legacy_installed, service.legacy_enabled, service.legacy_running),
-						  _('Legacy Mesh Assistant init script, if it is still installed.') ]
-					], { empty: _('No service information.') }),
-					E('p', { 'class': 'wm-muted' }, [
-						_('“Installed” reflects the presence of /etc/init.d; “enabled” is the boot-time decision; “running” is the current process state.')
-					])
+						  _('Mesh manager and timer of WiFi Manager.') ]
+					], { empty: _('No service information.') })
 				]),
 				card(_('Runtime (batman-adv)'), [
 					kv([

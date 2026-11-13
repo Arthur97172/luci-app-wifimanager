@@ -1,9 +1,9 @@
 #!/bin/sh
 # First-install and upgrade setup for WiFi Manager.
 #
-# Idempotent: every step tests before acting, so reinstall, upgrade and the
-# coexistence case (both packages installed) all end in the same state.
-# Nothing here deletes or rewrites a user's configuration.
+# Idempotent: every step tests before acting, so reinstall and upgrade always
+# end in the same state.  Nothing here deletes or rewrites a user's
+# configuration.
 
 [ -n "${IPKG_INSTROOT}" ] && exit 0
 
@@ -27,35 +27,7 @@ for pair in \
 	[ -n "$(uci -q get "wifimanager.backup.$key")" ] ||
 		uci set "wifimanager.backup.$key=$value"
 done
-[ -n "$(uci -q get wifimanager.settings.legacy_service_disabled)" ] ||
-	uci set wifimanager.settings.legacy_service_disabled=0
 uci -q commit wifimanager
-
-# Migration from Mesh Assistant (DESIGN §15): keep its configuration and its backups
-# untouched, validate them, take a pre-migration backup and stop its
-# daemon so two managers do not fight over the same UCI sections.  The switch
-# is recorded as pending and must still be confirmed on the Overview page, so
-# the operator decides; the postrm script re-enables the service if this
-# package is removed.
-if [ -f /etc/config/meshassistant ]; then
-	/usr/lib/wifimanager/worker.sh migrate_prepare >/dev/null 2>&1
-
-	# Fallback when the worker is unavailable or failed: the two managers must
-	# still never run at the same time, and the decision stays visible.
-	if [ "$(uci -q get wifimanager.settings.migration_pending)" != 1 ] &&
-		[ "$(uci -q get wifimanager.settings.migration_confirmed)" != 1 ] &&
-		[ -x /etc/init.d/meshassistant ]; then
-		if /etc/init.d/meshassistant enabled >/dev/null 2>&1; then
-			/etc/init.d/meshassistant disable >/dev/null 2>&1
-			/etc/init.d/meshassistant stop >/dev/null 2>&1
-			uci set wifimanager.settings.legacy_service_disabled=1
-		fi
-		uci set wifimanager.settings.migration_pending=1
-		uci set wifimanager.settings.migration_legacy_present=1
-		uci set wifimanager.settings.migration_detected_at="$(date +%s)"
-		uci -q commit wifimanager
-	fi
-fi
 
 # Older Configurations may carry a meshassistant section without the option
 # names this package reads; create only the missing ones.

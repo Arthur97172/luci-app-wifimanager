@@ -79,10 +79,7 @@ return view.extend({
 					[ _('Backhaul interfaces'), (bat0.hardifs || []).join(', ') || '-'],
 					[ _('Selected backhaul'), (bat0.selected || []).join(', ') || '-'],
 					[ _('WiFi Manager service'), service.wifimanager_running
-						? badge(_('Running'), 'ok') : badge(_('Stopped'), 'muted') ],
-					[ _('Legacy service'), service.legacy_installed
-						? (service.legacy_running ? badge(_('Running'), 'warn') : badge(_('Stopped'), 'muted'))
-						: _('Not installed') ]
+						? badge(_('Running'), 'ok') : badge(_('Stopped'), 'muted') ]
 				])
 			]);
 		};

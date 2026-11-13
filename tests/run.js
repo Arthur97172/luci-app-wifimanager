@@ -8,7 +8,7 @@
  *   ./tests/run.js backup       run one suite (wifi, wireless, capabilities,
  *                               mlo, network, mesh, neighbors, backhaul,
  *                               roaming, diagnosis, backup, restore,
- *                               migration, i18n, package)
+ *                               i18n, package)
  *
  * Suites are plain CommonJS files that register tests through tests/lib.js.
  * The runner needs only node and the standard shell tools (sh, msgfmt is not
@@ -31,7 +31,6 @@ const SUITES = [
 	'diagnosis',
 	'backup',
 	'restore',
-	'migration',
 	'i18n',
 	'package'
 ];

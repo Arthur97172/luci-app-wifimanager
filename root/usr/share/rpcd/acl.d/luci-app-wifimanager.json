@@ -17,8 +17,7 @@
 					"backhaul_status",
 					"diagnostics",
 					"logs",
-					"op_status",
-					"migration_status"
+					"op_status"
 				],
 				"luci-rpc": [
 					"getWirelessDevices",
@@ -54,9 +53,7 @@
 					"mesh_disable",
 					"mesh_dumbap",
 					"mesh_undumbap",
-					"roaming_apply",
-					"migration_confirm",
-					"migration_restore_legacy"
+					"roaming_apply"
 				]
 			},
 			"uci": [

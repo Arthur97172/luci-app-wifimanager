@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: luci-app-wifimanager 2.0.7\n"
+"Project-Id-Version: luci-app-wifimanager 2.0.8\n"
 "Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
 "POT-Creation-Date: 2026-11-12 00:00+0800\n"
 "PO-Revision-Date: 2026-11-12 00:00+0800\n"
@@ -538,9 +538,6 @@ msgstr "最佳信号"
 msgid "Both links are on the same band, so MLO brings less benefit."
 msgstr "两条链路位于同一频段，MLO 带来的收益较小。"
 
-msgid "Both meshassistant and wifimanager are running. Two managers write the same configuration; stop one of them."
-msgstr "meshassistant 和 wifimanager 同时运行。两个管理器会写入同一份配置，请停止其中一个。"
-
 msgid "Bridge"
 msgstr "网桥"
 
@@ -628,9 +625,6 @@ msgstr "选择承载 Mesh 流量的介质以及接入点的 LAN 行为。"
 
 msgid "Choose these radios in Mesh Settings"
 msgstr "在 Mesh 设置中选择这些射频"
-
-msgid "Clear"
-msgstr "正常"
 
 #: htdocs/luci-static/resources/wifimanager/utils/wireless.js
 msgid "Client (STA)"
@@ -743,10 +737,6 @@ msgstr "配置值来自 UCI。启用/禁用和信道信息来自运行中的系�
 
 msgid "Configured: channel %s, %s"
 msgstr "已配置：信道 %s，%s"
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Confirm migration"
-msgstr "确认迁移"
 
 msgid "Confirm restore"
 msgstr "确认恢复"
@@ -1435,9 +1425,6 @@ msgstr "旧版 Mesh Assistant 归档以原位读取，绝不会被删除或有�
 msgid "Legacy Mesh Assistant backups"
 msgstr "旧版 Mesh Assistant 备份"
 
-msgid "Legacy Mesh Assistant init script, if it is still installed."
-msgstr "旧版 Mesh Assistant 的 init 脚本（如果仍已安装）。"
-
 msgid "Legacy backup imported as %s."
 msgstr "旧版备份已导入为 %s。"
 
@@ -1450,9 +1437,6 @@ msgstr "显示旧版备份"
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Legacy configuration"
 msgstr "旧版配置"
-
-msgid "Legacy service"
-msgstr "旧版服务"
 
 msgid "Less than 4 MiB is free in the backup storage location; creating a backup may fail."
 msgstr "备份存储位置可用空间不足 4 MiB，创建备份可能失败。"
@@ -1588,14 +1572,6 @@ msgstr "内存使用率"
 msgid "Mesh"
 msgstr "Mesh"
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Mesh Assistant is enabled again; WiFi Manager records the migration as declined."
-msgstr "Mesh Assistant 已重新启用；WiFi管家已将迁移记录为放弃。"
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Mesh Assistant is installed on this router. WiFi Manager validated its configuration, took a pre-migration backup when it could and stopped the legacy service so two managers never run at once. Confirm the migration to finish the switch, or restore the legacy service."
-msgstr "本路由器安装了 Mesh Assistant。WiFi管家已校验其配置、尽可能创建迁移前备份并停用旧服务，避免两个管理器同时运行。确认迁移以完成切换，或恢复旧服务。"
-
 msgid "Mesh ID"
 msgstr "Mesh ID"
 
@@ -1710,14 +1686,6 @@ msgstr "Mesh 所有"
 msgid "Message"
 msgstr "消息"
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Migration confirmed. WiFi Manager manages the configuration; the Mesh Assistant service stays stopped."
-msgstr "迁移已确认。WiFi管家接管配置，Mesh Assistant 服务保持停止。"
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Migration from Mesh Assistant"
-msgstr "从 Mesh Assistant 迁移"
-
 #: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
 msgid "Minimum clients"
 msgstr "最少客户端数"
@@ -1789,9 +1757,6 @@ msgstr "邻居和拓扑功能需要 batctl 软件包；配置本身不需要。"
 
 msgid "Neighbors reported by this device’s batman-adv table. Signal, channel use and load are measured on this side of the link."
 msgstr "本设备 batman-adv 表报告的邻居。信号、信道占用和负载在链路本端测得。"
-
-msgid "Neither WiFi Manager nor the legacy mesh service is enabled, so no mesh is started at boot."
-msgstr "WiFi管家和旧版 Mesh 服务均未启用，因此开机时不会启动 Mesh。"
 
 msgid "Netdev"
 msgstr "网络设备"
@@ -1932,9 +1897,6 @@ msgstr "没有其他设备通告自身。"
 
 msgid "No other mesh device is currently visible."
 msgstr "当前没有可见的其他 Mesh 设备。"
-
-msgid "No other mesh manager is enabled."
-msgstr "没有其他 Mesh 管理器处于启用状态。"
 
 msgid "No problem was found in the checked subsystems."
 msgstr "已检查的子系统未发现问题。"
@@ -2157,10 +2119,6 @@ msgstr "按频段覆盖"
 msgid "Possible"
 msgstr "可用"
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Pre-migration backup"
-msgstr "迁移前备份"
-
 msgid "Pre-restore backup"
 msgstr "恢复前备份"
 
@@ -2285,10 +2243,6 @@ msgstr "恢复"
 
 msgid "Restore backup"
 msgstr "恢复备份"
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Restore legacy service"
-msgstr "恢复旧版服务"
 
 msgid "Restore now"
 msgstr "立即恢复"
@@ -2518,9 +2472,6 @@ msgstr "服务器提供 DHCP"
 msgid "Service"
 msgstr "服务"
 
-msgid "Service conflict"
-msgstr "服务冲突"
-
 msgid "Services"
 msgstr "服务"
 
@@ -2721,10 +2672,6 @@ msgstr "MLO 区域需要同时选择无线区域。"
 msgid "The MLO interface could not be saved."
 msgstr "无法保存 MLO 接口。"
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The Mesh Assistant service is enabled and started again, and WiFi Manager records the migration as declined. This is refused while the WiFi Manager mesh is enabled."
-msgstr "将重新启用并启动 Mesh Assistant 服务，WiFi管家会把迁移记录为已放弃。WiFi管家 Mesh 已启用时此操作会被拒绝。"
-
 #: htdocs/luci-static/resources/wifimanager/utils/wireless.js
 msgid "The SSID is empty."
 msgstr "SSID 为空。"
@@ -2871,10 +2818,6 @@ msgstr "图中显示前 8 台设备；表格列出全部设备。"
 msgid "The hard interface list is what batman-adv has actually attached. The selected list is what the configuration asks for; when they differ, the mesh has not been applied yet or an interface disappeared."
 msgstr "硬接口列表是 batman-adv 实际接入的接口。选定列表是配置所要求的接口；两者不一致时，说明 Mesh 尚未应用，或者某个接口已消失。"
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The installed configuration did not parse when the migration was prepared. Check the affected file before confirming; the pre-migration backup stays available."
-msgstr "准备迁移时发现的配置无法解析。确认前请检查受影响的文件；迁移前备份仍然可用。"
-
 #: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
 msgid "The interface could not be deleted."
 msgstr "无法删除该接口。"
@@ -2901,15 +2844,6 @@ msgstr "上次自动回程切换失败：%s"
 
 msgid "The legacy backup could not be imported."
 msgstr "无法导入旧版备份。"
-
-msgid "The legacy meshassistant daemon and WiFi Manager are running at the same time."
-msgstr "旧版 meshassistant 守护进程与 WiFi管家同时在运行。"
-
-msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; disable it."
-msgstr "旧版 meshassistant 服务仍处于启用和运行状态。它可能重写 WiFi管家应用的 Mesh 配置；请将其禁用。"
-
-msgid "The legacy meshassistant service is still enabled. It is not running now, but it will start after the next reboot and may then fight over the configuration."
-msgstr "旧版 meshassistant 服务仍处于启用状态。它当前未运行，但会在下次重启后启动，并可能与 WiFi管家争用配置。"
 
 msgid "The location was copied into the field above. Save the settings to use it."
 msgstr "位置已复制到上方字段。保存设置后生效。"
@@ -3574,9 +3508,6 @@ msgstr "链路断开"
 msgid "link up"
 msgstr "链路建立"
 
-msgid "meshassistant (legacy)"
-msgstr "meshassistant（旧版）"
-
 msgid "missing"
 msgstr "缺失"
 
@@ -3613,9 +3544,6 @@ msgstr "wpad（客户端）"
 
 msgid "“Available” is the kernel estimate of memory that can be given to new workloads without swapping; “free” is unallocated memory."
 msgstr "“可用”是内核对可在不换页的情况下分配给新工作负载的内存估计；“空闲”是未分配的内存。"
-
-msgid "“Installed” reflects the presence of /etc/init.d; “enabled” is the boot-time decision; “running” is the current process state."
-msgstr "“已安装”表示 /etc/init.d 中存在对应脚本；“已启用”是开机时的决定；“运行中”是当前进程状态。"
 
 msgid "“Not installed” means /etc/init.d has no matching script; it does not by itself indicate a fault."
 msgstr "“未安装”表示 /etc/init.d 中没有对应脚本，本身并不表示存在故障。"

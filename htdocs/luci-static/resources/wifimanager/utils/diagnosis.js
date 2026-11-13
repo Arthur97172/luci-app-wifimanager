@@ -135,7 +135,6 @@ function diagnose(input) {
 	const state = mesh.state || {};
 	const bat0 = mesh.bat0 || {};
 	const counts = mesh.counts || {};
-	const service = mesh.service || {};
 
 	if (state.active) {
 		if (!isOn(bat0.exists))
@@ -149,10 +148,6 @@ function diagnose(input) {
 			add('mesh', 'info', 'D-MESH-03',
 				_('No mesh peer is currently visible. This is expected on a single-node mesh; on a multi-node mesh check the backhaul and the mesh ID.'));
 	}
-
-	if (isOn(service.legacy_enabled) && isOn(service.legacy_running))
-		add('mesh', 'warn', 'D-MESH-04',
-			_('The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; disable it.'));
 
 	/* Roaming ------------------------------------------------------------ */
 

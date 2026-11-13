@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: luci-app-wifimanager 2.0.7\n"
+"Project-Id-Version: luci-app-wifimanager 2.0.8\n"
 "Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
 "POT-Creation-Date: 2026-11-12 00:00+0800\n"
 "PO-Revision-Date: 2026-11-12 00:00+0800\n"
@@ -661,10 +661,6 @@ msgid "Both links are on the same band, so MLO brings less benefit."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "Both meshassistant and wifimanager are running. Two managers write the same configuration; stop one of them."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "Bridge"
 msgstr ""
 
@@ -770,10 +766,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Choose these radios in Mesh Settings"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Clear"
 msgstr ""
 
 #: htdocs/luci-static/resources/wifimanager/utils/wireless.js
@@ -914,10 +906,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Configured: channel %s, %s"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Confirm migration"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -1765,10 +1753,6 @@ msgid "Legacy Mesh Assistant backups"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "Legacy Mesh Assistant init script, if it is still installed."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "Legacy backup imported as %s."
 msgstr ""
 
@@ -1782,10 +1766,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Legacy configuration"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Legacy service"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -1957,14 +1937,6 @@ msgid "Mesh"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "Mesh Assistant is enabled again; WiFi Manager records the migration as declined."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Mesh Assistant is installed on this router. WiFi Manager validated its configuration, took a pre-migration backup when it could and stopped the legacy service so two managers never run at once. Confirm the migration to finish the switch, or restore the legacy service."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "Mesh ID"
 msgstr ""
 
@@ -2112,14 +2084,6 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Migration confirmed. WiFi Manager manages the configuration; the Mesh Assistant service stays stopped."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Migration from Mesh Assistant"
-msgstr ""
-
 #: htdocs/luci-static/resources/view/wifimanager/roaming/dawn.js
 msgid "Minimum clients"
 msgstr ""
@@ -2206,10 +2170,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Neighbors reported by this device’s batman-adv table. Signal, channel use and load are measured on this side of the link."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Neither WiFi Manager nor the legacy mesh service is enabled, so no mesh is started at boot."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -2382,10 +2342,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "No other mesh device is currently visible."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "No other mesh manager is enabled."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -2657,10 +2613,6 @@ msgid "Possible"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "Pre-migration backup"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "Pre-restore backup"
 msgstr ""
 
@@ -2810,10 +2762,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "Restore backup"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "Restore legacy service"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -3101,10 +3049,6 @@ msgid "Service"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "Service conflict"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "Services"
 msgstr ""
 
@@ -3348,10 +3292,6 @@ msgstr ""
 msgid "The MLO interface could not be saved."
 msgstr ""
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The Mesh Assistant service is enabled and started again, and WiFi Manager records the migration as declined. This is refused while the WiFi Manager mesh is enabled."
-msgstr ""
-
 #: htdocs/luci-static/resources/wifimanager/utils/wireless.js
 msgid "The SSID is empty."
 msgstr ""
@@ -3536,10 +3476,6 @@ msgstr ""
 msgid "The hard interface list is what batman-adv has actually attached. The selected list is what the configuration asks for; when they differ, the mesh has not been applied yet or an interface disappeared."
 msgstr ""
 
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The installed configuration did not parse when the migration was prepared. Check the affected file before confirming; the pre-migration backup stays available."
-msgstr ""
-
 #: htdocs/luci-static/resources/wifimanager/utils/wireless-form.js
 msgid "The interface could not be deleted."
 msgstr ""
@@ -3566,18 +3502,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "The legacy backup could not be imported."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The legacy meshassistant daemon and WiFi Manager are running at the same time."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; disable it."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "The legacy meshassistant service is still enabled. It is not running now, but it will start after the next reboot and may then fight over the configuration."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -4393,10 +4317,6 @@ msgid "link up"
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "meshassistant (legacy)"
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
 msgid "missing"
 msgstr ""
 
@@ -4442,10 +4362,6 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
 msgid "“Available” is the kernel estimate of memory that can be given to new workloads without swapping; “free” is unallocated memory."
-msgstr ""
-
-#: htdocs/luci-static/resources/view/wifimanager
-msgid "“Installed” reflects the presence of /etc/init.d; “enabled” is the boot-time decision; “running” is the current process state."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager

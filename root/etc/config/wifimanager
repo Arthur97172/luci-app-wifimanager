@@ -3,7 +3,6 @@
 # mixed WiFi Manager / Mesh Assistant fleet reads the same configuration.
 
 config wifimanager 'settings'
-	option legacy_service_disabled '0'
 
 config backup 'backup'
 	option enabled '1'
