@@ -138,6 +138,14 @@ case "$1" in
 	call)
 		method="$2"
 		args="$3"
+
+		# rpcd hands the call arguments to an executable plugin on stdin, so
+		# they never show up in the process list; older builds put them in
+		# $3.  A terminal on stdin means a human ran the script, where
+		# reading would block.
+		if [ -z "$args" ] && [ ! -t 0 ]; then
+			args=$(cat)
+		fi
 		[ -n "$args" ] || args='{}'
 
 		read_only=0

@@ -27,11 +27,11 @@ function rpcMethods() {
 	return out;
 }
 
-test('package: the Makefile carries the 2.0.5 identity and its dependencies', function() {
+test('package: the Makefile carries the 2.0.6 identity and its dependencies', function() {
 	const source = lib.read(MAKEFILE);
 
 	includes(source, 'PKG_NAME:=luci-app-wifimanager');
-	includes(source, 'PKG_VERSION:=2.0.5');
+	includes(source, 'PKG_VERSION:=2.0.6');
 	includes(source, 'PKG_RELEASE:=1');
 	includes(source, 'PKG_LICENSE:=GPL-3.0-only');
 	includes(source, 'LUCI_DEPENDS:=+luci-base');
@@ -200,6 +200,12 @@ test('package: the rpcd plugin has no eval and falls back to a refused method', 
 	// loaded, producing an empty reply that rpcd reports as an unknown method.
 	const dispatch = source.slice(source.indexOf('read_only=0'),
 		source.indexOf('if [ "$read_only" = 1 ]'));
+
+	// rpcd passes the call arguments to an executable plugin on stdin, so
+	// the dispatcher has to read them there; with only $3 every method that
+	// takes arguments would silently receive an empty object.
+	includes(source, 'args=$(cat)');
+	includes(source, '[ ! -t 0 ]');
 
 	notIncludes(dispatch, 'status_json');
 	includes(dispatch, 'status|radio_inventory|radio_advice');
