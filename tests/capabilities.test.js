@@ -405,7 +405,7 @@ test('capabilities: the save check runs the same channel and MLO rules as the in
 	includes(source, '# A disabled section is not carried by the radio at runtime');
 	includes(source, 'count=$(radio_channel_conflicts_json $devices)');
 	includes(source, 'count=$(radio_mlo_dfs_conflicts_json $devices)');
-	includes(source, 'count=$(radio_mlo_dfs_conflicts_json $(uci -q get "wireless.$section.device"))');
+	includes(source, 'count=$(radio_mlo_dfs_conflicts_json $(wm_wireless_get "$section.device"))');
 	includes(source, 'mode=${stored_mode:-ap}');
 	includes(source, '"Radio \'%s\' is used by both MLO and mesh; the driver may reject this."');
 

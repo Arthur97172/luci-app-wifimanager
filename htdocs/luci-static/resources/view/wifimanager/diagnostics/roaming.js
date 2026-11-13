@@ -63,7 +63,13 @@ function logBlock(lines) {
 
 return view.extend({
 	load: function() {
-		return Promise.all([
+		// The diagnostics, events and log replies land in under a second, but
+		// the page can paint before them all the same.
+		return null;
+	},
+
+	render: function() {
+		const pending = Promise.all([
 			rpc.diagnostics('roaming').catch(function(err) {
 				return { ok: false, message: err && err.message };
 			}),
@@ -72,9 +78,14 @@ return view.extend({
 		]).then(function(result) {
 			return { roaming: result[0], events: result[1], log: result[2] };
 		});
+
+		return widgets.deferredPage(_('Roaming diagnostics'),
+			_('DAWN, the 802.11k/v/r flags on each access point, recent roaming events and the DAWN log.'),
+			pending, this.renderBody.bind(this),
+			_('The roaming diagnostics could not be read.'));
 	},
 
-	render: function(data) {
+	renderBody: function(data) {
 		const roaming = (data && data.roaming) || {};
 
 		if (roaming.ok === false)

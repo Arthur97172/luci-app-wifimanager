@@ -165,7 +165,6 @@ test('migration: confirmation waits for the legacy daemon and records the mesh r
 
 	includes(status, 'json_add_boolean mesh_running');
 	includes(status, 'json_add_string checked_at');
-	includes(lib.read(OVERVIEW), "_('Mesh runtime')");
 });
 
 test('migration: restoring the legacy service is refused while the mesh is applied', function() {
@@ -208,10 +207,12 @@ test('migration: the RPC, ACL and UI expose the confirmation step', function() {
 	includes(rpc, "migrationStatus: declare('migration_status')");
 	includes(rpc, "migrationConfirm: declare('migration_confirm', [ 'confirm' ])");
 	includes(rpc, "migrationRestoreLegacy: declare('migration_restore_legacy', [ 'confirm' ])");
-	includes(view, 'rpc.migrationStatus()');
-	includes(view, 'if (!migration.pending)');
-	includes(view, 'rpc.migrationConfirm(true)');
-	includes(view, 'rpc.migrationRestoreLegacy(true)');
+	// The switch is handled by the installer and the backend; the overview no
+	// longer offers it as a card.
+	notIncludes(view, 'rpc.migrationStatus()');
+	notIncludes(view, 'rpc.migrationConfirm(');
+	notIncludes(view, 'rpc.migrationRestoreLegacy(');
+	notIncludes(view, 'Migration from Mesh Assistant');
 });
 
 test('migration: removing WiFi Manager restores the legacy service it stopped', function() {

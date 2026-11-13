@@ -28,12 +28,19 @@ function runtimeBadge(entry) {
 
 return view.extend({
 	load: function() {
-		return rpc.radioInventory().catch(function(err) {
-			return { ok: false, message: err.message };
-		});
+		// The inventory takes up to two seconds on a router; the page paints
+		// at once and fills in when the reply arrives.
+		return null;
 	},
 
-	render: function(inventory) {
+	render: function() {
+		return widgets.deferredPage(_('Radios'),
+			_('Radio allocation, channel plan and conflicts detected from configuration and runtime.'),
+			rpc.radioInventory(), this.renderBody.bind(this),
+			_('The radio inventory could not be read.'));
+	},
+
+	renderBody: function(inventory) {
 		if (!inventory || inventory.ok === false)
 			return widgets.page(_('Radios'), null, [
 				widgets.errorBox(new Error((inventory && inventory.message) || _('The radio inventory could not be read.')))

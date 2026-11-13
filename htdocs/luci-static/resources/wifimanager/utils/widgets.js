@@ -1,6 +1,7 @@
 'use strict';
 'require baseclass';
 'require ui';
+'require dom';
 'require wifimanager.utils.rpc as wmRpc';
 
 /*
@@ -99,12 +100,51 @@ function stateBadge(up) {
 	return up ? badge(_('Up'), 'ok') : badge(_('Down'), 'error');
 }
 
+const ALERT_CLASSES = {
+	ok: 'success',
+	success: 'success',
+	warn: 'warning',
+	warning: 'warning',
+	error: 'error',
+	danger: 'danger',
+	info: 'notice'
+};
+
 function alert(kind, text) {
-	return E('div', { 'class': 'alert-message ' + (kind || 'info') }, [ text ]);
+	return E('div', {
+		'class': 'alert-message ' + (ALERT_CLASSES[kind] || ALERT_CLASSES.info)
+	}, [ text ]);
 }
 
 function loading(text) {
 	return E('p', { 'class': 'wm-muted' }, [ text || _('Loading…') ]);
+}
+
+/*
+ * Paint a page before its data is ready.  LuCI keeps its "loading view"
+ * indicator until load() resolves, and the inventory and mesh RPCs take one to
+ * two seconds on a router; with this the tab shows its title and a loading
+ * note at once, then `body` replaces the note when `pending` settles.
+ */
+function deferredPage(title, subtitle, pending, body, errorText) {
+	const container = E('div', {});
+
+	dom.content(container, [ page(title, subtitle, [ loading() ]) ]);
+
+	Promise.resolve(pending).then(function(data) {
+		if (data && data.ok !== false) {
+			dom.content(container, [ body(data) ]);
+			return;
+		}
+
+		dom.content(container, [ page(title, subtitle, [
+			errorBox(new Error((data && data.message) || errorText || _('The data could not be read.')))
+		]) ]);
+	}).catch(function(err) {
+		dom.content(container, [ page(title, subtitle, [ errorBox(err) ]) ]);
+	});
+
+	return container;
 }
 
 function empty(text) {
@@ -393,6 +433,7 @@ return baseclass.extend({
 	loading: loading,
 	empty: empty,
 	errorBox: errorBox,
+	deferredPage: deferredPage,
 	table: table,
 	kv: kv,
 	list: list,

@@ -27,12 +27,20 @@ function load() {
 
 return view.extend({
 	load: function() {
-		return load().catch(function(err) {
-			return { error: err };
-		});
+		// The client list waits on the inventory and the station tables; paint
+		// the page first and fill it in when the reply arrives.
+		return null;
 	},
 
-	render: function(data) {
+	render: function() {
+		return widgets.deferredPage(_('Clients'),
+			_('Devices associated with this device, with the link that carries each one.'),
+			load().catch(function(err) { return { error: err }; }),
+			this.renderBody.bind(this),
+			_('The client list could not be read.'));
+	},
+
+	renderBody: function(data) {
 		if (!data || data.error)
 			return widgets.page(_('Clients'), null, [ widgets.errorBox(data && data.error) ]);
 

@@ -27,11 +27,11 @@ function rpcMethods() {
 	return out;
 }
 
-test('package: the Makefile carries the 2.0.3 identity and its dependencies', function() {
+test('package: the Makefile carries the 2.0.5 identity and its dependencies', function() {
 	const source = lib.read(MAKEFILE);
 
 	includes(source, 'PKG_NAME:=luci-app-wifimanager');
-	includes(source, 'PKG_VERSION:=2.0.3');
+	includes(source, 'PKG_VERSION:=2.0.5');
 	includes(source, 'PKG_RELEASE:=1');
 	includes(source, 'PKG_LICENSE:=GPL-3.0-only');
 	includes(source, 'LUCI_DEPENDS:=+luci-base');
@@ -194,6 +194,15 @@ test('package: the rpcd plugin has no eval and falls back to a refused method', 
 	includes(source, 'wm_error E-METHOD "Unknown method."');
 	includes(source, 'read_only=1');
 	includes(source, 'jget "$args"');
+
+	// A read-only method is dispatched after its module is sourced.  Calling
+	// status_json from the first case would run it before diagnostics.sh is
+	// loaded, producing an empty reply that rpcd reports as an unknown method.
+	const dispatch = source.slice(source.indexOf('read_only=0'),
+		source.indexOf('if [ "$read_only" = 1 ]'));
+
+	notIncludes(dispatch, 'status_json');
+	includes(dispatch, 'status|radio_inventory|radio_advice');
 });
 
 test('package: JSON sources are valid and every JS file parses', function() {

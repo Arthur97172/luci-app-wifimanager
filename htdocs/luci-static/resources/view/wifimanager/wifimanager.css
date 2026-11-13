@@ -9,15 +9,92 @@
 
 .wm-subtitle {
 	margin: -0.25rem 0 1rem 0;
+	padding-inline: var(--section-inset, 1rem);
 	opacity: 0.8;
+}
+
+/*
+ * Argon renders every menu level as its own <ul class="tabs"> inside
+ * #tabmenu, so the primary and secondary tab rows sit flush against each
+ * other.  A small gap separates them without pushing the content down.
+ */
+body[data-page^="admin-network-wifimanager"] #tabmenu {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
 }
 
 .wm-card {
 	margin-bottom: 1rem;
+	/* Argon-style cards leave the last block flush with the bottom edge. */
+	padding-block-end: var(--field-gap, 0.75rem);
 }
 
 .wm-card > h3 {
 	margin-top: 0;
+}
+
+/*
+ * Argon pads headings, paragraphs and .cbi-value rows itself; the blocks
+ * this application builds (toolbars, tables, checkbox groups) would touch
+ * the card edge without the same inset.  The rule also covers themes that
+ * pad nothing, using the Argon variables when they exist.  A table ignores
+ * padding, so its inset has to be a margin.
+ */
+.wm-page .wm-card > :where(div, p, pre, ul, ol):not(.alert-message) {
+	padding-inline: var(--section-inset, 1rem);
+}
+
+.wm-page .wm-card > table {
+	margin-inline: var(--section-inset, 1rem);
+}
+
+/* A button placed straight in a card is a box of its own: padding would
+ * stretch it, so the inset has to come from the margin. */
+.wm-page .wm-card > :where(button, .btn) {
+	margin-inline: var(--section-inset, 1rem);
+}
+
+/*
+ * Argon gives a bare .alert-message fixed positioning, because it is also
+ * how ui.addNotification draws its toast.  A hint that sits inside a card is
+ * part of the page and has to stay in the flow; the top-level notifications
+ * (#maincontent > .alert-message) are not matched here.
+ */
+body[data-page^="admin-network-wifimanager"] .wm-page .alert-message {
+	position: static;
+	inset: auto;
+	transform: none;
+	width: auto;
+	max-width: 100%;
+	z-index: auto;
+	font-weight: normal;
+	margin: 0.25rem var(--section-inset, 1rem) var(--field-gap, 0.75rem);
+	border: 1px solid var(--border-color, rgba(0, 0, 0, 0.15));
+	border-radius: var(--radius-panel, 0.5rem) !important;
+	box-shadow: none;
+}
+
+/*
+ * A checkbox and its label are separate inline boxes; themes with a tall
+ * line-height or a block-styled input can push the text onto the next line.
+ * Flex keeps them on one row and centers the box against the text.
+ */
+body[data-page^="admin-network-wifimanager"] :is(.wm-page, .modal) label:has(> input[type="checkbox"]),
+body[data-page^="admin-network-wifimanager"] :is(.wm-page, .modal) label:has(> input[type="radio"]) {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	line-height: 1.4;
+	vertical-align: middle;
+}
+
+/* Argon nudges the bare input down and right (top/right: 0.4rem/0.2rem);
+ * inside the flex label that offset would put the box below the text. */
+body[data-page^="admin-network-wifimanager"] :is(.wm-page, .modal) label > :is(input[type="checkbox"], input[type="radio"]) {
+	flex: 0 0 auto;
+	position: static;
+	margin: 0;
 }
 
 .wm-toolbar {

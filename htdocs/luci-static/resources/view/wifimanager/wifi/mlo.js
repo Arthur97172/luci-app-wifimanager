@@ -44,7 +44,13 @@ function openForm(inventory, entry) {
 
 return view.extend({
 	load: function() {
-		return rpc.radioInventory().then(function(inventory) {
+		// The inventory and the per-link checks take a couple of seconds on a
+		// router; the page paints at once and fills in later.
+		return null;
+	},
+
+	render: function() {
+		const pending = rpc.radioInventory().then(function(inventory) {
 			const links = (inventory.interfaces || []).filter(function(entry) {
 				return entry.mlo;
 			});
@@ -62,9 +68,13 @@ return view.extend({
 		}).catch(function(err) {
 			return { error: err };
 		});
+
+		return widgets.deferredPage(_('MLO'),
+			_('Wi-Fi 7 Multi-Link Operation across two radios.'),
+			pending, this.renderBody.bind(this), _('The MLO interfaces could not be read.'));
 	},
 
-	render: function(data) {
+	renderBody: function(data) {
 		if (!data || data.error)
 			return widgets.page(_('MLO'), null, [ widgets.errorBox(data && data.error) ]);
 

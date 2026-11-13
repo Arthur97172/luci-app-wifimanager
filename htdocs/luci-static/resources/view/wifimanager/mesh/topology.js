@@ -588,12 +588,20 @@ function findingLevel(finding) {
 
 return view.extend({
 	load: function() {
-		return load().catch(function(err) {
-			return { error: err };
-		});
+		// The mesh status takes over a second on a router; the page paints at
+		// once and fills in when the reply arrives.
+		return null;
 	},
 
-	render: function(data) {
+	render: function() {
+		return widgets.deferredPage(_('Mesh topology'),
+			_('Devices reachable over the mesh and the medium each link uses.'),
+			load().catch(function(err) { return { error: err }; }),
+			this.renderBody.bind(this),
+			_('The mesh topology could not be read.'));
+	},
+
+	renderBody: function(data) {
 		if (!data || data.error)
 			return widgets.page(_('Mesh topology'), null,
 				[ widgets.errorBox(data && data.error) ]);

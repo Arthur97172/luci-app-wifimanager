@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: luci-app-wifimanager 2.0.3\n"
+"Project-Id-Version: luci-app-wifimanager 2.0.5\n"
 "Report-Msgid-Bugs-To: https://github.com/Arthur97172/luci-app-wifimanager/issues\n"
 "POT-Creation-Date: 2026-11-12 00:00+0800\n"
 "PO-Revision-Date: 2026-11-12 00:00+0800\n"
@@ -3573,7 +3573,7 @@ msgid "The legacy meshassistant daemon and WiFi Manager are running at the same 
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
-msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; finish the migration and disable it."
+msgid "The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; disable it."
 msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager
@@ -5071,4 +5071,24 @@ msgstr ""
 
 #: htdocs/luci-static/resources/view/wifimanager/overview.js
 msgid "bat0 down"
+msgstr ""
+
+#: htdocs/luci-static/resources/wifimanager/utils/widgets.js
+msgid "The data could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/overview.js
+msgid "The WiFi Manager status could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/mlo.js
+msgid "The MLO interfaces could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/mesh/topology.js
+msgid "The mesh topology could not be read."
+msgstr ""
+
+#: htdocs/luci-static/resources/view/wifimanager/wifi/clients.js
+msgid "The client list could not be read."
 msgstr ""

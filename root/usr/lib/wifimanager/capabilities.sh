@@ -48,21 +48,12 @@ cap_bands() {
 	inband && /^[[:space:]]*(Band [0-9]+:|valid interface combinations:|Supported interface modes:|Available antennas:)/ {
 		infreq = 0
 	}
-	inband && /HT20/ { ht = 1 }
-	inband && /HT40/ { ht = 1; ht40 = 1 }
-	inband && /VHT Capabilities/ { vht = 1 }
-	inband && /Supported Channel Width:/ {
-		if ($0 !~ /neither/ && $0 ~ /160/)
-			vht160 = 1
-	}
-	inband && /HE Iftypes/ { he = 1 }
-	inband && /EHT Iftypes/ { eht = 1 }
-	inband && infreq && /\* [0-9.]+ MHz \[[0-9]+\]/ {
+	# The frequency table is the bulk of the output; match it first so the
+	# capability checks below only run for the few flag lines.
+	inband && infreq && /^[[:space:]]*\* [0-9.]+ MHz \[[0-9]+\]/ {
 		if (firstfreq == 0 && match($0, /[0-9.]+ MHz/))
 			firstfreq = substr($0, RSTART, RLENGTH) + 0
-		if ($0 ~ /disabled/ || $0 ~ /no IR/)
-			next
-		if (match($0, /\[[0-9]+\]/)) {
+		if ($0 !~ /disabled/ && $0 !~ /no IR/ && match($0, /\[[0-9]+\]/)) {
 			ch = substr($0, RSTART + 1, RLENGTH - 2)
 			channels = (channels == "" ? ch : channels "," ch)
 		}
@@ -70,6 +61,15 @@ cap_bands() {
 			dfs = 1
 		next
 	}
+	inband && index($0, "HT20") { ht = 1 }
+	inband && index($0, "HT40") { ht = 1; ht40 = 1 }
+	inband && index($0, "VHT Capabilities") { vht = 1 }
+	inband && index($0, "Supported Channel Width:") {
+		if ($0 !~ /neither/ && index($0, "160"))
+			vht160 = 1
+	}
+	inband && index($0, "HE Iftypes") { he = 1 }
+	inband && index($0, "EHT Iftypes") { eht = 1 }
 	END { flush_band() }
 	'
 }
@@ -315,11 +315,37 @@ cap_combinations_support() {
 # capability_json_add <phy>: append a "capabilities" object to the current JSON
 # object.  available=0 means the driver (or iw itself) reported nothing; the
 # UI then shows the capability as unconfirmed instead of inventing zeros.
+#
+# Radios often share one phy (a tri-band front end on a single wiphy) and each
+# inventory entry asks for the same capabilities.  The parsed result of the
+# last phy is kept for the life of the process, which turns three driver
+# parses into one.
 capability_json_add() {
 	local phy="$1" info="" mode band ht ht40 vht vht160 he eht dfs chlist
-	local combos reported line part cmodes climit total chans m
+	local combos="" reported=0 modes="" bands="" line part cmodes climit total chans m
 
-	[ -n "$phy" ] && command -v iw >/dev/null 2>&1 && info=$(iw phy "$phy" info 2>/dev/null)
+	if [ -n "$WM_CAP_PHY_SET" ] && [ "$phy" = "$WM_CAP_PHY" ]; then
+		info="$WM_CAP_INFO"
+		modes="$WM_CAP_MODES"
+		bands="$WM_CAP_BANDS"
+		combos="$WM_CAP_COMBOS"
+		reported="$WM_CAP_REPORTED"
+	else
+		[ -n "$phy" ] && command -v iw >/dev/null 2>&1 && info=$(iw phy "$phy" info 2>/dev/null)
+		if [ -n "$info" ]; then
+			modes=$(printf '%s\n' "$info" | cap_modes)
+			bands=$(printf '%s\n' "$info" | cap_bands)
+			combos=$(printf '%s\n' "$info" | cap_combinations)
+			reported=$(printf '%s\n' "$info" | cap_combinations_reported)
+		fi
+		WM_CAP_PHY_SET=1
+		WM_CAP_PHY="$phy"
+		WM_CAP_INFO="$info"
+		WM_CAP_MODES="$modes"
+		WM_CAP_BANDS="$bands"
+		WM_CAP_COMBOS="$combos"
+		WM_CAP_REPORTED="$reported"
+	fi
 
 	json_add_object capabilities
 	json_add_string phy "${phy:-}"
@@ -330,7 +356,7 @@ capability_json_add() {
 		while IFS= read -r mode; do
 			[ -n "$mode" ] && json_add_string "" "$mode"
 		done <<EOF
-$(printf '%s\n' "$info" | cap_modes)
+$modes
 EOF
 	fi
 	json_close_array
@@ -355,17 +381,10 @@ EOF
 			json_close_array
 			json_close_object
 		done <<EOF
-$(printf '%s\n' "$info" | cap_bands)
+$bands
 EOF
 	fi
 	json_close_array
-
-	combos=""
-	reported=0
-	if [ -n "$info" ]; then
-		combos=$(printf '%s\n' "$info" | cap_combinations)
-		reported=$(printf '%s\n' "$info" | cap_combinations_reported)
-	fi
 
 	json_add_array combinations
 	if [ -n "$combos" ]; then

@@ -30,12 +30,19 @@ function flags(entry) {
 
 return view.extend({
 	load: function() {
-		return rpc.radioInventory().catch(function(err) {
-			return { ok: false, message: err.message };
-		});
+		// The inventory takes up to two seconds on a router; the page paints
+		// at once and fills in when the reply arrives.
+		return null;
 	},
 
-	render: function(inventory) {
+	render: function() {
+		return widgets.deferredPage(_('Interfaces'),
+			_('Access points, mesh links, client links and their runtime state.'),
+			rpc.radioInventory(), this.renderBody.bind(this),
+			_('The wireless interfaces could not be read.'));
+	},
+
+	renderBody: function(inventory) {
 		if (!inventory || inventory.ok === false)
 			return widgets.page(_('Interfaces'), null, [
 				widgets.errorBox(new Error((inventory && inventory.message) || _('The wireless interfaces could not be read.')))

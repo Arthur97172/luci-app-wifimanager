@@ -7,15 +7,111 @@
 . /usr/lib/wifimanager/common.sh
 . /usr/lib/wifimanager/capabilities.sh
 
+# An inventory call reads many options of every radio and interface.  uci is a
+# fork per lookup, so read the whole wireless config once and resolve options
+# from that text; the cache lives for one RPC process only.
+WM_WIRELESS_SHOW_READY=""
+WM_WIRELESS_SHOW=""
+
+wm_wireless_show() {
+	if [ -z "$WM_WIRELESS_SHOW_READY" ]; then
+		WM_WIRELESS_SHOW_READY=1
+		WM_WIRELESS_SHOW=$(uci -q show wireless 2>/dev/null)
+	fi
+	printf '%s\n' "$WM_WIRELESS_SHOW"
+}
+
+# wm_wireless_get <section>.<option> -> the configured value (empty when unset).
+# Callers that read many options should prime the cache with
+# "wm_wireless_show >/dev/null" first; without it the lookup reads uci directly
+# so a value written earlier in the same process is never missed.
+wm_wireless_get() {
+	local want="wireless.$1=" value pre post
+	[ -n "$WM_WIRELESS_SHOW_READY" ] || {
+		uci -q get "wireless.$1"
+		return
+	}
+	case "$WM_WIRELESS_SHOW" in
+		*"$want"*) ;;
+		*) return 1 ;;
+	esac
+	# Cut at the first occurrence of the option name and then at the end of
+	# that line; a shell read loop over the whole config was measurably slower
+	# than two parameter expansions per lookup.
+	value=${WM_WIRELESS_SHOW#*"$want"}
+	value=${value%%"
+"*}
+	# uci show single-quotes the value and escapes an embedded quote as '\''.
+	value=${value#\'}
+	value=${value%\'}
+	while :; do
+		case "$value" in
+			*"'\\''"*)
+				pre=${value%%"'\''"*}; post=${value#*"'\\''"}
+				value=$pre"'"$post
+				;;
+			*) break ;;
+		esac
+	done
+	printf '%s\n' "$value"
+}
+
+# wm_wireless_sections <type> -> the section names of that type.
+# Parsed in the shell: listing sections is done on every inventory and does not
+# need a sed fork for a 100-line file.
+wm_wireless_sections() {
+	local type="$1" line name
+	while IFS= read -r line; do
+		case "$line" in
+			wireless.*"=$type")
+				name=${line#wireless.}
+				printf '%s\n' "${name%"=$type"}"
+				;;
+		esac
+	done <<EOF
+$(wm_wireless_show)
+EOF
+}
+
+# Device-to-interface mapping, built once per shell.  The inventory asks for
+# the interfaces of each radio several times; building this in a subshell each
+# time repeated the scan for every call.
+wm_iface_radio_map() {
+	local line section devs dev
+	if [ -n "$WM_IFACE_RADIO_MAP_READY" ]; then
+		printf '%s' "$WM_IFACE_RADIO_MAP"
+		return 0
+	fi
+	WM_IFACE_RADIO_MAP_READY=1
+	while IFS= read -r line; do
+		case "$line" in
+			wireless.*.device=*)
+				section=${line#wireless.}
+				section=${section%%.device=*}
+				devs=${line#wireless.*.device=}
+				devs=${devs#\'}
+				devs=${devs%\'}
+				for dev in $devs; do
+					WM_IFACE_RADIO_MAP="$WM_IFACE_RADIO_MAP$dev $section
+"
+				done
+				;;
+		esac
+	done <<EOF
+$(wm_wireless_show)
+EOF
+	printf '%s' "$WM_IFACE_RADIO_MAP"
+}
+
 radio_band() { # uci radio name
 	local dev="$1" band channel hwmode
-	band=$(uci -q get "wireless.$dev.band")
+	band=$(wm_wireless_get "$dev.band")
 	[ -n "$band" ] && {
 		echo "$band"
 		return
 	}
-	hwmode=$(uci -q get "wireless.$dev.hwmode")
-	channel=$(uci -q get "wireless.$dev.channel")
+	hwmode=$(wm_wireless_get "$dev.hwmode")
+	channel=$(wm_wireless_get "$dev.channel")
 	case "$hwmode" in
 		11a) echo 5g; return ;;
 		11g|11b) echo 2g; return ;;
@@ -28,8 +124,8 @@ radio_band() { # uci radio name
 
 radio_phy() { # uci radio name -> phyN when it can be mapped
 	local dev="$1" path mac phy target
-	path=$(uci -q get "wireless.$dev.path")
-	mac=$(uci -q get "wireless.$dev.macaddr" | tr 'A-F' 'a-f')
+	path=$(wm_wireless_get "$dev.path")
+	mac=$(wm_wireless_get "$dev.macaddr" | tr 'A-F' 'a-f')
 	for phy in /sys/class/ieee80211/*; do
 		[ -e "$phy" ] || continue
 		phy=${phy##*/}
@@ -73,8 +169,7 @@ iface_runtime_map() {
 	WM_IFACE_RUNTIME_MAP=""
 	status=$(ubus call network.wireless status 2>/dev/null)
 	[ -n "$status" ] || return 1
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
+	for dev in $(wm_wireless_sections wifi-device); do
 		case "$dev" in
 			''|*[!A-Za-z0-9_]*) continue ;;
 		esac
@@ -108,7 +203,7 @@ iface_runtime_ifname() { # section -> runtime name, configured name as fallback
 		printf '%s\n' "$name"
 		return 0
 	}
-	uci -q get "wireless.$section.ifname"
+	wm_wireless_get "$section.ifname"
 }
 
 iface_station_count() {
@@ -151,27 +246,67 @@ iface_station_summary() {
 }
 
 iface_runtime_info() { # ifname -> "channel txpower"
-	local ifname="$1" channel txpower
+	local ifname="$1" info channel txpower
 	[ -n "$ifname" ] || return 0
-	channel=$(iwinfo "$ifname" info 2>/dev/null |
+	# One iwinfo call answers both values; the driver info is collected once
+	# per radio and iwinfo is not cheap on a router.
+	info=$(iwinfo "$ifname" info 2>/dev/null)
+	channel=$(printf '%s\n' "$info" |
 		sed -n 's/.*Channel: \([0-9][0-9]*\).*/\1/p' | head -n 1)
 	if [ -z "$channel" ]; then
 		channel=$(iw dev "$ifname" info 2>/dev/null |
 			sed -n 's/.*channel \([0-9][0-9]*\).*/\1/p' | head -n 1)
 	fi
-	txpower=$(iwinfo "$ifname" info 2>/dev/null |
+	txpower=$(printf '%s\n' "$info" |
 		sed -n 's/.*Tx-Power: \([0-9][0-9]*\) dBm.*/\1/p' | head -n 1)
 	printf '%s %s\n' "${channel:--}" "${txpower:--}"
 }
 
+# iface_station_stats <ifname> -> "<count> <signal|-> <tx|-> <rx|->".
+# One "station dump" per interface; asking for the count and the summary in
+# separate calls reads the station table twice.
+iface_station_stats() {
+	local dump count summary
+	if [ -z "$1" ]; then
+		printf '0 - - -\n'
+		return
+	fi
+	dump=$(iw dev "$1" station dump 2>/dev/null)
+	count=$(printf '%s\n' "$dump" | grep -c '^Station')
+	summary=$(printf '%s\n' "$dump" | awk '
+		BEGIN { best = ""; btx = "-"; brx = "-" }
+		function flush() {
+			if (mac == "") return
+			if (sig ~ /^-?[0-9]+$/ && (best == "" || sig + 0 > best + 0)) {
+				best = sig; btx = tx; brx = rx
+			}
+			mac = ""
+		}
+		/^Station / { flush(); mac = $2; sig = "-"; tx = "-"; rx = "-"; next }
+		/^[[:space:]]*signal:/ { sig = $2; next }
+		/^[[:space:]]*tx bitrate:/ { tx = $3; next }
+		/^[[:space:]]*rx bitrate:/ { rx = $3; next }
+		END {
+			flush()
+			if (best == "")
+				print "- - -"
+			else
+				print best " " btx " " brx
+		}')
+	printf '%s %s\n' "$count" "$summary"
+}
+
 iface_names_of_radio() { # uci radio name
-	uci -q show wireless 2>/dev/null |
-		sed -n "s/^wireless\.\([^.]*\)\.device='\(.*\)'\$/\1 \2/p" |
-		awk -v dev="$1" '{ n = split($2, a, " "); for (i = 1; i <= n; i++) if (a[i] == dev) print $1 }'
+	local dev="$1" name section
+	while read -r name section; do
+		[ "$name" = "$dev" ] && printf '%s\n' "$section"
+	done <<EOF
+$(wm_iface_radio_map)
+EOF
 }
 
 iface_ifname() { # uci iface section
-	uci -q get "wireless.$1.ifname"
+	wm_wireless_get "$1.ifname"
 }
 
 # Mesh-owned wifi-iface detection (kept in sync with docs/04 §5).
@@ -180,9 +315,9 @@ iface_is_mesh_owned() { # section
 	case "$sec" in
 		mesh_radio*|wifi_ap_*|mesh_*) return 0 ;;
 	esac
-	mesh_id=$(uci -q get "wireless.$sec.mesh_id")
+	mesh_id=$(wm_wireless_get "$sec.mesh_id")
 	[ -n "$mesh_id" ] && return 0
-	network=$(uci -q get "wireless.$sec.network")
+	network=$(wm_wireless_get "$sec.network")
 	case " $network " in
 		*mesh_batman*) return 0 ;;
 	esac
@@ -191,9 +326,9 @@ iface_is_mesh_owned() { # section
 
 iface_is_mlo() {
 	local sec="$1" mlo devices
-	mlo=$(uci -q get "wireless.$sec.mlo")
+	mlo=$(wm_wireless_get "$sec.mlo")
 	[ "$mlo" = 1 ] && return 0
-	devices=$(uci -q get "wireless.$sec.device")
+	devices=$(wm_wireless_get "$sec.device")
 	case "$devices" in
 		*' '*) return 0 ;;
 	esac
@@ -202,13 +337,12 @@ iface_is_mlo() {
 
 radio_usage_collect() { # emits "radio|mode|section" lines
 	local dev section mode device d
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
+	for dev in $(wm_wireless_sections wifi-device); do
 		for section in $(iface_names_of_radio "$dev"); do
 			# A disabled section is not carried by the radio at runtime, so it
 			# must not make the concurrency checks report a clash.
-			[ "$(uci -q get "wireless.$section.disabled")" = 1 ] && continue
-			mode=$(uci -q get "wireless.$section.mode")
+			[ "$(wm_wireless_get "$section.disabled")" = 1 ] && continue
+			mode=$(wm_wireless_get "$section.mode")
 			[ -n "$mode" ] || mode=ap
 			printf '%s|%s|%s\n' "$dev" "$mode" "$section"
 		done
@@ -224,8 +358,8 @@ cap_counts_for() {
 
 	for section in $(iface_names_of_radio "$dev"); do
 		[ "$section" = "$skip" ] && continue
-		[ "$(uci -q get "wireless.$section.disabled")" = 1 ] && continue
-		mode=$(uci -q get "wireless.$section.mode")
+		[ "$(wm_wireless_get "$section.disabled")" = 1 ] && continue
+		mode=$(wm_wireless_get "$section.mode")
 		[ -n "$mode" ] || mode=ap
 		case "$mode" in
 			ap) ap=$((ap + 1)) ;;
@@ -274,8 +408,7 @@ radio_channel_is_dfs() {
 radio_channel_conflicts_json() {
 	local selected="$*" dev spec channel c1 c2 d1 d2 devs found=0 involves
 
-	devs=$(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p')
+	devs=$(wm_wireless_sections wifi-device)
 
 	for dev in $devs; do
 		if [ -n "$selected" ]; then
@@ -285,7 +418,7 @@ radio_channel_conflicts_json() {
 			esac
 		fi
 		spec=$(uci -q get "meshassistant.config.spectrum_${dev}_channel")
-		channel=$(uci -q get "wireless.$dev.channel")
+		channel=$(wm_wireless_get "$dev.channel")
 		if [ -n "$spec" ] && [ "$spec" != auto ] && [ -n "$channel" ] &&
 			[ "$channel" != auto ] && [ "$spec" != "$channel" ]; then
 			radio_conflict_emit W-CHAN-01 \
@@ -307,8 +440,8 @@ radio_channel_conflicts_json() {
 				esac
 				[ "$involves" = 1 ] || continue
 			fi
-			c1=$(uci -q get "wireless.$d1.channel")
-			c2=$(uci -q get "wireless.$d2.channel")
+			c1=$(wm_wireless_get "$d1.channel")
+			c2=$(wm_wireless_get "$d2.channel")
 			case "$c1$c2" in *[!0-9]*) continue ;; esac
 			local diff=$((c1 - c2))
 			[ "$diff" -lt 0 ] && diff=$((-diff))
@@ -330,7 +463,7 @@ radio_mlo_dfs_conflicts_json() {
 	local dev channel found=0
 
 	for dev in "$@"; do
-		channel=$(uci -q get "wireless.$dev.channel")
+		channel=$(wm_wireless_get "$dev.channel")
 		if radio_channel_is_dfs "$channel"; then
 			radio_conflict_emit W-CHAN-03 \
 				"MLO link on radio '%s' uses DFS channel %s; CAC may delay the link." "$dev $channel"
@@ -355,14 +488,13 @@ radio_inventory_json() {
 	json_add_string version "$WM_VERSION"
 	json_add_array radios
 
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
+	for dev in $(wm_wireless_sections wifi-device); do
 		radios_count=$((radios_count + 1))
 		band=$(radio_band "$dev")
-		channel=$(uci -q get "wireless.$dev.channel")
-		htmode=$(uci -q get "wireless.$dev.htmode")
-		txpower=$(uci -q get "wireless.$dev.txpower")
-		disabled=$(uci -q get "wireless.$dev.disabled")
+		channel=$(wm_wireless_get "$dev.channel")
+		htmode=$(wm_wireless_get "$dev.htmode")
+		txpower=$(wm_wireless_get "$dev.txpower")
+		disabled=$(wm_wireless_get "$dev.disabled")
 		phy=$(radio_phy "$dev")
 		runtime_ifname=""
 		for section in $(iface_names_of_radio "$dev"); do
@@ -383,7 +515,7 @@ radio_inventory_json() {
 		json_add_string txpower "${txpower:-}"
 		json_add_boolean disabled "$([ "$disabled" = 1 ] && echo 1 || echo 0)"
 		json_add_string phy "${phy:-}"
-		json_add_string path "$(uci -q get "wireless.$dev.path")"
+		json_add_string path "$(wm_wireless_get "$dev.path")"
 		capability_json_add "$phy"
 		json_add_boolean up "$([ "$up" = 1 ] && echo 1 || echo 0)"
 		json_add_string runtime_channel "${ch_runtime:--}"
@@ -398,40 +530,39 @@ radio_inventory_json() {
 	json_close_array
 
 	json_add_array interfaces
-	for section in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-iface$/\1/p'); do
-		mode=$(uci -q get "wireless.$section.mode")
+	for section in $(wm_wireless_sections wifi-iface); do
+		mode=$(wm_wireless_get "$section.mode")
 		[ -n "$mode" ] || mode=ap
-		devices=$(uci -q get "wireless.$section.device")
+		devices=$(wm_wireless_get "$section.device")
 		ifname=$(iface_ifname "$section")
 		runtime_ifname=$(iface_runtime_ifname "$section")
 		up=0
 		[ -n "$runtime_ifname" ] && iface_runtime_up "$runtime_ifname" && up=1
-		stations=$(iface_station_count "$runtime_ifname")
-		set -- $(iface_station_summary "$runtime_ifname")
-		signal="$1"
-		tx_rate="$2"
-		rx_rate="$3"
+		set -- $(iface_station_stats "$runtime_ifname")
+		stations="$1"
+		signal="$2"
+		tx_rate="$3"
+		rx_rate="$4"
 		json_add_object
 		json_add_string section "$section"
 		json_add_string ifname "${ifname:-}"
 		json_add_string runtime_ifname "${runtime_ifname:-}"
 		json_add_string mode "$mode"
 		json_add_string device "$devices"
-		json_add_string ssid "$(uci -q get "wireless.$section.ssid")"
-		json_add_string mesh_id "$(uci -q get "wireless.$section.mesh_id")"
-		json_add_string network "$(uci -q get "wireless.$section.network")"
-		json_add_string encryption "$(uci -q get "wireless.$section.encryption")"
-		json_add_boolean hidden "$([ "$(uci -q get "wireless.$section.hidden")" = 1 ] && echo 1 || echo 0)"
-		json_add_string ieee80211w "$(uci -q get "wireless.$section.ieee80211w")"
-		json_add_string macaddr "$(uci -q get "wireless.$section.macaddr")"
-		json_add_string bssid "$(uci -q get "wireless.$section.bssid")"
-		json_add_boolean wds "$([ "$(uci -q get "wireless.$section.wds")" = 1 ] && echo 1 || echo 0)"
-		json_add_boolean uapsd "$([ "$(uci -q get "wireless.$section.uapsd")" = 1 ] && echo 1 || echo 0)"
-		json_add_boolean ocv "$([ "$(uci -q get "wireless.$section.ocv")" = 1 ] && echo 1 || echo 0)"
-		json_add_boolean disassoc_low_ack "$([ "$(uci -q get "wireless.$section.disassoc_low_ack")" = 1 ] && echo 1 || echo 0)"
-		json_add_boolean has_key "$([ -n "$(uci -q get "wireless.$section.key")" ] && echo 1 || echo 0)"
-		json_add_boolean disabled "$([ "$(uci -q get "wireless.$section.disabled")" = 1 ] && echo 1 || echo 0)"
+		json_add_string ssid "$(wm_wireless_get "$section.ssid")"
+		json_add_string mesh_id "$(wm_wireless_get "$section.mesh_id")"
+		json_add_string network "$(wm_wireless_get "$section.network")"
+		json_add_string encryption "$(wm_wireless_get "$section.encryption")"
+		json_add_boolean hidden "$([ "$(wm_wireless_get "$section.hidden")" = 1 ] && echo 1 || echo 0)"
+		json_add_string ieee80211w "$(wm_wireless_get "$section.ieee80211w")"
+		json_add_string macaddr "$(wm_wireless_get "$section.macaddr")"
+		json_add_string bssid "$(wm_wireless_get "$section.bssid")"
+		json_add_boolean wds "$([ "$(wm_wireless_get "$section.wds")" = 1 ] && echo 1 || echo 0)"
+		json_add_boolean uapsd "$([ "$(wm_wireless_get "$section.uapsd")" = 1 ] && echo 1 || echo 0)"
+		json_add_boolean ocv "$([ "$(wm_wireless_get "$section.ocv")" = 1 ] && echo 1 || echo 0)"
+		json_add_boolean disassoc_low_ack "$([ "$(wm_wireless_get "$section.disassoc_low_ack")" = 1 ] && echo 1 || echo 0)"
+		json_add_boolean has_key "$([ -n "$(wm_wireless_get "$section.key")" ] && echo 1 || echo 0)"
+		json_add_boolean disabled "$([ "$(wm_wireless_get "$section.disabled")" = 1 ] && echo 1 || echo 0)"
 		json_add_boolean mlo "$(iface_is_mlo "$section" && echo 1 || echo 0)"
 		json_add_boolean mesh_owned "$(iface_is_mesh_owned "$section" && echo 1 || echo 0)"
 		json_add_boolean up "$([ "$up" = 1 ] && echo 1 || echo 0)"
@@ -462,10 +593,9 @@ radio_inventory_json() {
 	usage=$(radio_usage_collect)
 
 	# E-ALLOC-02 / W-CONC-03: MLO needs two radios; MLO + mesh is constrained.
-	for section in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-iface$/\1/p'); do
+	for section in $(wm_wireless_sections wifi-iface); do
 		if iface_is_mlo "$section"; then
-			devices=$(uci -q get "wireless.$section.device")
+			devices=$(wm_wireless_get "$section.device")
 			set -- $devices
 			if [ "$#" -lt 2 ]; then
 				radio_conflict_emit E-ALLOC-02 \
@@ -483,11 +613,10 @@ radio_inventory_json() {
 	done
 
 	# E-ALLOC-04: enabled interface on a disabled radio.
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
-		[ "$(uci -q get "wireless.$dev.disabled")" = 1 ] || continue
+	for dev in $(wm_wireless_sections wifi-device); do
+		[ "$(wm_wireless_get "$dev.disabled")" = 1 ] || continue
 		for section in $(iface_names_of_radio "$dev"); do
-			[ "$(uci -q get "wireless.$section.disabled")" = 1 ] && continue
+			[ "$(wm_wireless_get "$section.disabled")" = 1 ] && continue
 			radio_conflict_emit E-ALLOC-04 \
 				"Interface '%s' is enabled on disabled radio '%s'." "$section $dev"
 			conflicts=$((conflicts + 1))
@@ -495,8 +624,7 @@ radio_inventory_json() {
 	done
 
 	# W-CONC-01 / W-CONC-02 / E-ALLOC-03 per radio.
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
+	for dev in $(wm_wireless_sections wifi-device); do
 		local modes
 		modes=$(printf '%s\n' "$usage" | awk -F'|' -v d="$dev" '$1 == d { print $2 }')
 		case " $modes " in
@@ -520,7 +648,7 @@ radio_inventory_json() {
 		# E-ALLOC-03: an operator AP on the mesh radio while the mesh runs.
 		if [ "$meshrunning" = 1 ] && [ "$(mesh_managed_radio)" = "$dev" ]; then
 			for section in $(iface_names_of_radio "$dev"); do
-				[ "$(uci -q get "wireless.$section.mode")" = mesh ] && continue
+				[ "$(wm_wireless_get "$section.mode")" = mesh ] && continue
 				iface_is_mesh_owned "$section" && continue
 				radio_conflict_emit E-ALLOC-03 \
 					"Radio '%s' is the mesh radio but interface '%s' is not mesh-owned." "$dev $section"
@@ -534,10 +662,9 @@ radio_inventory_json() {
 	conflicts=$((conflicts + count))
 
 	# W-CHAN-03: DFS channel inside an MLO link.
-	for section in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-iface$/\1/p'); do
+	for section in $(wm_wireless_sections wifi-iface); do
 		iface_is_mlo "$section" || continue
-		count=$(radio_mlo_dfs_conflicts_json $(uci -q get "wireless.$section.device"))
+		count=$(radio_mlo_dfs_conflicts_json $(wm_wireless_get "$section.device"))
 		conflicts=$((conflicts + count))
 	done
 
@@ -560,7 +687,7 @@ radio_check_json() {
 	# An MLO link still has a real interface mode.  Older callers sent
 	# mode=mlo; recover the section's mode, falling back to AP for a new link.
 	if [ "$mode" = mlo ]; then
-		stored_mode=$(uci -q get "wireless.$section.mode")
+		stored_mode=$(wm_wireless_get "$section.mode")
 		mode=${stored_mode:-ap}
 		mlo=1
 	fi
@@ -582,10 +709,10 @@ radio_check_json() {
 
 	# Unknown / disabled radios.
 	for dev in $devices; do
-		if ! uci -q get "wireless.$dev" >/dev/null 2>&1; then
+		if ! wm_wireless_get "$dev" >/dev/null 2>&1; then
 			radio_conflict_emit E-ALLOC-05 "Radio '%s' does not exist." "$dev"
 			conflicts=$((conflicts + 1))
-		elif [ "$(uci -q get "wireless.$dev.disabled")" = 1 ]; then
+		elif [ "$(wm_wireless_get "$dev.disabled")" = 1 ]; then
 			radio_conflict_emit E-ALLOC-04 "Radio '%s' is disabled." "$dev"
 			conflicts=$((conflicts + 1))
 		fi
@@ -649,7 +776,7 @@ radio_check_json() {
 		# DESIGN §5.1/§5.2: driver-reported capabilities.  Only what the driver
 		# states is used to refuse a combination; when it reports nothing the
 		# combination is unconfirmed and the operator has to acknowledge it.
-		[ "$(uci -q get "wireless.$dev.disabled")" = 1 ] && continue
+		[ "$(wm_wireless_get "$dev.disabled")" = 1 ] && continue
 
 		phy=$(radio_phy "$dev")
 		info=""
@@ -695,7 +822,7 @@ radio_check_json() {
 					"Radio '%s' reports no usable channel in the %s band; every channel is disabled or no-IR." "$dev $band"
 				conflicts=$((conflicts + 1))
 			else
-				channel=$(uci -q get "wireless.$dev.channel")
+				channel=$(wm_wireless_get "$dev.channel")
 				case "$channel" in
 					''|auto|*[!0-9]*) ;;
 					*)
@@ -710,7 +837,7 @@ radio_check_json() {
 						;;
 				esac
 			fi
-			htmode=$(uci -q get "wireless.$dev.htmode")
+			htmode=$(wm_wireless_get "$dev.htmode")
 			hf=$(cap_htmode_field "$htmode")
 			if [ -n "$hf" ] && [ "$(cap_band_field "$bands" "$band" "$hf")" = 0 ]; then
 				radio_conflict_emit E-CAP-03 \
@@ -779,24 +906,23 @@ radio_advice_json() {
 	json_add_string mesh_radio "${mesh_radio:-}"
 	json_add_array radios
 
-	for dev in $(uci -q show wireless 2>/dev/null |
-		sed -n 's/^wireless\.\([^.]*\)=wifi-device$/\1/p'); do
+	for dev in $(wm_wireless_sections wifi-device); do
 		json_add_object
 		json_add_string name "$dev"
 		json_add_string band "$(radio_band "$dev")"
-		json_add_string channel "$(uci -q get "wireless.$dev.channel")"
-		json_add_string htmode "$(uci -q get "wireless.$dev.htmode")"
-		json_add_boolean disabled "$([ "$(uci -q get "wireless.$dev.disabled")" = 1 ] && echo 1 || echo 0)"
+		json_add_string channel "$(wm_wireless_get "$dev.channel")"
+		json_add_string htmode "$(wm_wireless_get "$dev.htmode")"
+		json_add_boolean disabled "$([ "$(wm_wireless_get "$dev.disabled")" = 1 ] && echo 1 || echo 0)"
 		json_add_boolean mesh_radio "$([ "$running" = 1 ] && [ "$mesh_radio" = "$dev" ] && echo 1 || echo 0)"
 		json_add_array interfaces
 		for section in $(iface_names_of_radio "$dev"); do
-			mode=$(uci -q get "wireless.$section.mode")
+			mode=$(wm_wireless_get "$section.mode")
 			[ -n "$mode" ] || mode=ap
 			json_add_object
 			json_add_string section "$section"
 			json_add_string mode "$mode"
 			json_add_boolean mesh_owned "$(iface_is_mesh_owned "$section" && echo 1 || echo 0)"
-			json_add_boolean disabled "$([ "$(uci -q get "wireless.$section.disabled")" = 1 ] && echo 1 || echo 0)"
+			json_add_boolean disabled "$([ "$(wm_wireless_get "$section.disabled")" = 1 ] && echo 1 || echo 0)"
 			json_close_object
 		done
 		json_close_array

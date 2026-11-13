@@ -142,8 +142,7 @@ case "$1" in
 
 		read_only=0
 		case "$method" in
-			status) status_json ;;
-			radio_inventory|radio_advice|radio_check|network_check|channel_advice|backup_list|backup_details|backup_validate|backup_status|\
+			status|radio_inventory|radio_advice|radio_check|network_check|channel_advice|backup_list|backup_details|backup_validate|backup_status|\
 			backup_settings_get|mesh_status|mesh_events|backhaul_status|diagnostics|logs|op_status|\
 			migration_status|roaming_advice|roaming_neighbor_scan|backup_storage)
 				read_only=1
@@ -151,15 +150,53 @@ case "$1" in
 		esac
 
 		if [ "$read_only" = 1 ]; then
-			. /usr/lib/wifimanager/radio.sh
-			. /usr/lib/wifimanager/channel.sh
-			. /usr/lib/wifimanager/roaming.sh
-			. /usr/lib/wifimanager/apscan.sh
-			. /usr/lib/wifimanager/backup.sh
-			. /usr/lib/wifimanager/peer.sh
-			. /usr/lib/wifimanager/diagnostics.sh
-			. /usr/lib/wifimanager/backhaul.sh
-			. /usr/lib/wifimanager/migration.sh
+			# Parsing every module costs about half a second on a router and
+			# most of it is unused by any single method; load what the method
+			# needs (each module sources its own dependencies).
+			case "$method" in
+				radio_inventory|radio_advice|radio_check)
+					. /usr/lib/wifimanager/radio.sh
+					;;
+				channel_advice)
+					. /usr/lib/wifimanager/radio.sh
+					. /usr/lib/wifimanager/channel.sh
+					;;
+				roaming_neighbor_scan)
+					. /usr/lib/wifimanager/radio.sh
+					. /usr/lib/wifimanager/apscan.sh
+					;;
+				roaming_advice|mesh_events)
+					. /usr/lib/wifimanager/roaming.sh
+					;;
+				status|mesh_status|diagnostics|logs|op_status)
+					. /usr/lib/wifimanager/diagnostics.sh
+					;;
+				backhaul_status)
+					. /usr/lib/wifimanager/backhaul.sh
+					;;
+				backup_*)
+					. /usr/lib/wifimanager/backup.sh
+					;;
+				migration_*)
+					. /usr/lib/wifimanager/migration.sh
+					;;
+				network_check)
+					. /usr/lib/wifimanager/network.sh
+					;;
+			esac
+
+			# These methods read a lot of wireless options and runtime interface
+			# names.  Filling the caches once here means the lookups made in
+			# subshells inherit them instead of rebuilding the map or rerunning
+			# uci per lookup.  It is safe here and only here: no method below
+			# writes configuration.
+			case "$method" in
+				radio_inventory|radio_advice|radio_check|channel_advice|diagnostics|mesh_status)
+					wm_wireless_show >/dev/null
+					iface_runtime_map >/dev/null
+					;;
+			esac
+
 			case "$method" in
 				status) status_json ;;
 				radio_inventory) radio_inventory_json ;;

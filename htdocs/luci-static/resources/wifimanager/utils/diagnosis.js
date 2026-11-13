@@ -152,7 +152,7 @@ function diagnose(input) {
 
 	if (isOn(service.legacy_enabled) && isOn(service.legacy_running))
 		add('mesh', 'warn', 'D-MESH-04',
-			_('The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; finish the migration and disable it.'));
+			_('The legacy meshassistant service is still enabled and running. It can rewrite the mesh configuration that WiFi Manager applied; disable it.'));
 
 	/* Roaming ------------------------------------------------------------ */
 
