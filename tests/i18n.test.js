@@ -27,7 +27,7 @@ test('i18n: the Simplified Chinese catalog carries the product name 管家', fun
 	const po = lib.read(PO);
 
 	includes(po, 'Language: zh_Hans');
-	includes(po, 'Project-Id-Version: luci-app-wifimanager 2.0.6');
+	includes(po, 'Project-Id-Version: luci-app-wifimanager 2.0.7');
 	equal(translation(po, '"WiFi Manager"'), 'WiFi管家');
 	includes(po, 'WiFi管家');
 	notIncludes(po, 'WiFi管理');
@@ -125,7 +125,7 @@ test('i18n: internal namespaces stay ASCII and unchanged', function() {
 	const acl = lib.acl();
 
 	includes(makefile, 'PKG_NAME:=luci-app-wifimanager');
-	includes(makefile, 'PKG_VERSION:=2.0.6');
+	includes(makefile, 'PKG_VERSION:=2.0.7');
 	includes(makefile, 'PKG_RELEASE:=1');
 	includes(rpcd, '. /usr/lib/wifimanager/common.sh');
 	ok(acl['luci-app-wifimanager'], 'ACL namespace');

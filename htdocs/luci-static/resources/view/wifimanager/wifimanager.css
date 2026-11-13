@@ -7,8 +7,11 @@
 	max-width: 100%;
 }
 
+/* Argon's h2 is a raised card with no outer margin, so a negative top
+ * margin would tuck the subtitle underneath it; a small positive one keeps
+ * the hint clear of the title. */
 .wm-subtitle {
-	margin: -0.25rem 0 1rem 0;
+	margin: 0.4rem 0 1rem 0;
 	padding-inline: var(--section-inset, 1rem);
 	opacity: 0.8;
 }
