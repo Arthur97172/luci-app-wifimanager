@@ -170,21 +170,53 @@ Backup & Restore is a top-level menu, not a child of Mesh.
 
 ## Installation
 
+### From Releases
+
+1. Open the [Releases](https://github.com/Arthur97172/luci-app-wifimanager/releases)
+   page and download the package for your firmware version.
+2. Upload it to the device (for example `/tmp`), then install:
+
+   **OpenWrt / ImmortalWrt 24.10 and older (opkg)**
+
+   ```sh
+   opkg install /tmp/luci-app-wifimanager_*.ipk
+
+   #Optional, Simplified Chinese language pack:
+   opkg install /tmp/luci-i18n-wifimanager-zh-cn_*.ipk
+   ```
+
+   **OpenWrt / ImmortalWrt 25.12+ (apk)**
+
+   ```sh
+   apk add --allow-untrusted /tmp/luci-app-wifimanager-*.apk
+
+   #Optional, Simplified Chinese language pack:
+   apk add --allow-untrusted /tmp/luci-i18n-wifimanager-zh-cn-*.apk
+   ```
+
+3. Refresh LuCI; the entry appears under **Network → WiFi Manager**.
+
+> Without the language pack the interface stays in English. The package is
+> architecture independent (`all` for ipk, `noarch` for apk), so one artifact
+> works on ARM, x86, MIPS and every other platform; dependencies such as
+> `luci-base`, `rpcd-mod-iwinfo`, `kmod-cfg80211`, `kmod-batman-adv`,
+> `batctl-default`, `luci-proto-batman-adv`, `iw`, `socat`, `flock`, `jshn`
+> and `openssl-util` (encrypted backups) come from the configured package
+> feeds, and the install is refused if any of them is missing.
+
+### From source
+
 ```sh
-opkg update
-opkg install luci-app-wifimanager
-```
-
-Dependencies: `luci-base`, `rpcd-mod-iwinfo`, `kmod-cfg80211`,
-`kmod-batman-adv`, `batctl-default`, `luci-proto-batman-adv`, `iw`, `socat`,
-`flock`, `jshn`, `openssl-util` (encrypted backups).
-
-From an OpenWrt build tree:
-
-```sh
-# place this directory under package/ or a feed, then
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+git clone https://github.com/Arthur97172/luci-app-wifimanager.git package/luci-app-wifimanager
+make menuconfig     # LuCI → Applications → luci-app-wifimanager
 make package/luci-app-wifimanager/compile V=s
 ```
+
+The built packages end up in `bin/packages/<arch>/base/`; both the main package
+and `luci-i18n-wifimanager-zh-cn` are produced together.
 
 The package compiles in practice with the OpenWrt 24.10.8 SDK
 (mediatek/filogic, gcc 13.3.0) and the 25.12.5 SDK (gcc 14.3.0), producing

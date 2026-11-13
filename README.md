@@ -122,21 +122,52 @@
 
 ## 安装
 
+### 从 Releases 安装
+
+1. 打开 [Releases](https://github.com/Arthur97172/luci-app-wifimanager/releases)
+   页面，下载与固件版本对应的安装包。
+2. 把安装包上传到设备（例如 `/tmp`），然后安装：
+
+   **OpenWrt / ImmortalWrt 24.10 及更早（opkg）**
+
+   ```sh
+   opkg install /tmp/luci-app-wifimanager_*.ipk
+
+   #可选，安装简体中文语言包：
+   opkg install /tmp/luci-i18n-wifimanager-zh-cn_*.ipk
+   ```
+
+   **OpenWrt / ImmortalWrt 25.12+（apk）**
+
+   ```sh
+   apk add --allow-untrusted /tmp/luci-app-wifimanager-*.apk
+
+   #可选，安装简体中文语言包：
+   apk add --allow-untrusted /tmp/luci-i18n-wifimanager-zh-cn-*.apk
+   ```
+
+3. 刷新 LuCI，入口出现在「网络 → WiFi管家」。
+
+> 未安装语言包时界面显示英文（菜单为「WiFi Manager」）。安装包架构无关
+> （ipk 记为 `all`，apk 记为 `noarch`），ARM / x86 / MIPS 等平台通用；
+> `luci-base`、`rpcd-mod-iwinfo`、`kmod-cfg80211`、`kmod-batman-adv`、
+> `batctl-default`、`luci-proto-batman-adv`、`iw`、`socat`、`flock`、`jshn`、
+> `openssl-util`（加密备份）等依赖由软件源提供，固件源缺少其中任何一个时
+> 安装会被拒绝。
+
+### 从源码编译
+
 ```sh
-opkg update
-opkg install luci-app-wifimanager
-```
-
-依赖：`luci-base`、`rpcd-mod-iwinfo`、`kmod-cfg80211`、`kmod-batman-adv`、
-`batctl-default`、`luci-proto-batman-adv`、`iw`、`socat`、`flock`、`jshn`、
-`openssl-util`（加密备份）。
-
-在 OpenWrt 构建树中：
-
-```sh
-# 将本目录放入 package/ 或 feed，然后
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+git clone https://github.com/Arthur97172/luci-app-wifimanager.git package/luci-app-wifimanager
+make menuconfig     # LuCI → Applications → luci-app-wifimanager
 make package/luci-app-wifimanager/compile V=s
 ```
+
+编译产物位于 `bin/packages/<架构>/base/` 目录下，主包和
+`luci-i18n-wifimanager-zh-cn` 会一并生成。
 
 本包已用 OpenWrt 24.10.8 SDK（mediatek/filogic，gcc 13.3.0）和 25.12.5 SDK
 （gcc 14.3.0）实际编译通过，分别产出 `luci-app-wifimanager_2.0.0-r1_all.ipk`
